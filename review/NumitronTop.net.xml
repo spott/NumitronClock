@@ -1,0 +1,2268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>/Users/spott/Documents/Electronics/Projects/NumitronClock/hardware/top-board/NumitronTop.kicad_sch</source>
+    <date>2026-09-18T22:44:22</date>
+    <tool>Eeschema 10.0.5</tool>
+    <textvar name="DESIGN_STATUS">SCHEMATIC REVIEW - NOT FOR FABRICATION</textvar>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>Top board: power and interface</title>
+        <company>Numitron Clock</company>
+        <rev>0.1 review</rev>
+        <date>2026-09-18</date>
+        <source>NumitronTop.kicad_sch</source>
+        <comment number="1" value="V1 USB power | No fabrication release"/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="2" name="/Logic / ambient light/" tstamps="/80c1f917-a0fd-5c73-9f82-08b8ac7ddbdb/">
+      <title_block>
+        <title>Top board: control and light sensor</title>
+        <company>Numitron Clock</company>
+        <rev>0.1 review</rev>
+        <date>2026-09-18</date>
+        <source>ControlAndSensor.kicad_sch</source>
+        <comment number="1" value="V1 USB power | No fabrication release"/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="3" name="/Four tube drivers/" tstamps="/a40d193f-bb79-5e27-98ae-d2899fe260e2/">
+      <title_block>
+        <title>Top board: tube drivers</title>
+        <company>Numitron Clock</company>
+        <rev>0.1 review</rev>
+        <date>2026-09-18</date>
+        <source>TubeDrivers.kicad_sch</source>
+        <comment number="1" value="V1 USB power | No fabrication release"/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C1">
+      <value>10u 25V X7R</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <datasheet>${KIPRJMOD}/../../datasheets/avx-x7r.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">KYOCERA AVX</field>
+        <field name="Selection">X7R family; exact order code / DC bias pending</field>
+        <field name="Footprint">Capacitor_SMD:C_1206_3216Metric</field>
+        <field name="Datasheet">${KIPRJMOD}/../../datasheets/avx-x7r.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Numitron" part="C" description=""/>
+      <property name="Manufacturer" value="KYOCERA AVX"/>
+      <property name="Selection" value="X7R family; exact order code / DC bias pending"/>
+      <property name="Sheetname" value="NumitronTop"/>
+      <property name="Sheetfile" value="NumitronTop.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d1c65941-e874-517f-b103-269f280976ee</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C2">
+      <value>10u 25V X7R</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <datasheet>${KIPRJMOD}/../../datasheets/avx-x7r.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">KYOCERA AVX</field>
+        <field name="Selection">X7R family; exact order code / DC bias pending</field>
+        <field name="Footprint">Capacitor_SMD:C_1206_3216Metric</field>
+        <field name="Datasheet">${KIPRJMOD}/../../datasheets/avx-x7r.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Numitron" part="C" description=""/>
+      <property name="Manufacturer" value="KYOCERA AVX"/>
+      <property name="Selection" value="X7R family; exact order code / DC bias pending"/>
+      <property name="Sheetname" value="NumitronTop"/>
+      <property name="Sheetfile" value="NumitronTop.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c6b94d5a-9c54-5a8d-8f74-1af0e0e370c0</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C3">
+      <value>10u 25V X7R</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <datasheet>${KIPRJMOD}/../../datasheets/avx-x7r.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">KYOCERA AVX</field>
+        <field name="Selection">X7R family; exact order code / DC bias pending</field>
+        <field name="Footprint">Capacitor_SMD:C_1206_3216Metric</field>
+        <field name="Datasheet">${KIPRJMOD}/../../datasheets/avx-x7r.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Numitron" part="C" description=""/>
+      <property name="Manufacturer" value="KYOCERA AVX"/>
+      <property name="Selection" value="X7R family; exact order code / DC bias pending"/>
+      <property name="Sheetname" value="NumitronTop"/>
+      <property name="Sheetfile" value="NumitronTop.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>df45ade3-f294-5d4e-912f-d68fd5de12d9</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J1">
+      <value>61201621621</value>
+      <footprint>Connector_IDC:IDC-Header_2x08_P2.54mm_Vertical</footprint>
+      <datasheet>${KIPRJMOD}/../../datasheets/idc-header.pdf</datasheet>
+      <description>Wurth 61201621621; 2.54 mm PCB pin grid for 1.27 mm pitch ribbon</description>
+      <fields>
+        <field name="Manufacturer">Wurth Elektronik</field>
+        <field name="MPN">61201621621</field>
+        <field name="Footprint">Connector_IDC:IDC-Header_2x08_P2.54mm_Vertical</field>
+        <field name="Datasheet">${KIPRJMOD}/../../datasheets/idc-header.pdf</field>
+        <field name="Description">Wurth 61201621621; 2.54 mm PCB pin grid for 1.27 mm pitch ribbon</field>
+      </fields>
+      <libsource lib="Numitron" part="IDC_2x08" description="Wurth 61201621621; 2.54 mm PCB pin grid for 1.27 mm pitch ribbon"/>
+      <property name="Manufacturer" value="Wurth Elektronik"/>
+      <property name="MPN" value="61201621621"/>
+      <property name="Sheetname" value="NumitronTop"/>
+      <property name="Sheetfile" value="NumitronTop.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>67c1ccbb-d223-57aa-aa78-efb0f60017da</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="3"/>
+            <pin num="5"/>
+            <pin num="7"/>
+            <pin num="9"/>
+            <pin num="11"/>
+            <pin num="13"/>
+            <pin num="15"/>
+            <pin num="2"/>
+            <pin num="4"/>
+            <pin num="6"/>
+            <pin num="8"/>
+            <pin num="10"/>
+            <pin num="12"/>
+            <pin num="14"/>
+            <pin num="16"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R1">
+      <value>46.4k 1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>${KIPRJMOD}/../../datasheets/RC0603FR-0746K4L.pdf</datasheet>
+      <fields>
+        <field name="MPN">RC0603FR-0746K4L</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet">${KIPRJMOD}/../../datasheets/RC0603FR-0746K4L.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Numitron" part="R" description=""/>
+      <property name="MPN" value="RC0603FR-0746K4L"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="Sheetname" value="NumitronTop"/>
+      <property name="Sheetfile" value="NumitronTop.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2d14965f-832c-5384-89f5-9580214c003f</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R2">
+      <value>10k 1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>${KIPRJMOD}/../../datasheets/RC0603FR-0710KL.pdf</datasheet>
+      <fields>
+        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet">${KIPRJMOD}/../../datasheets/RC0603FR-0710KL.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Numitron" part="R" description=""/>
+      <property name="MPN" value="RC0603FR-0710KL"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="Sheetname" value="NumitronTop"/>
+      <property name="Sheetfile" value="NumitronTop.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ba579fc3-3045-5ad8-b342-d32fb28de6fa</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP1">
+      <value>+5V</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.5mm</footprint>
+      <description>Bare PCB test pad</description>
+      <fields>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description">Bare PCB test pad</field>
+      </fields>
+      <libsource lib="Numitron" part="TestPoint" description="Bare PCB test pad"/>
+      <property name="Sheetname" value="NumitronTop"/>
+      <property name="Sheetfile" value="NumitronTop.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>555a8bd7-ad7e-5314-9336-27b9fea51efe</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP2">
+      <value>+3V3</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.5mm</footprint>
+      <description>Bare PCB test pad</description>
+      <fields>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description">Bare PCB test pad</field>
+      </fields>
+      <libsource lib="Numitron" part="TestPoint" description="Bare PCB test pad"/>
+      <property name="Sheetname" value="NumitronTop"/>
+      <property name="Sheetfile" value="NumitronTop.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>73195509-e18a-53c2-b661-c896fb36b015</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP3">
+      <value>V_TUBE</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.5mm</footprint>
+      <description>Bare PCB test pad</description>
+      <fields>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description">Bare PCB test pad</field>
+      </fields>
+      <libsource lib="Numitron" part="TestPoint" description="Bare PCB test pad"/>
+      <property name="Sheetname" value="NumitronTop"/>
+      <property name="Sheetfile" value="NumitronTop.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d2e25ba9-9092-50f8-9a6f-e4e1fca45ec1</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP4">
+      <value>GND</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.5mm</footprint>
+      <description>Bare PCB test pad</description>
+      <fields>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description">Bare PCB test pad</field>
+      </fields>
+      <libsource lib="Numitron" part="TestPoint" description="Bare PCB test pad"/>
+      <property name="Sheetname" value="NumitronTop"/>
+      <property name="Sheetfile" value="NumitronTop.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>68477e20-9e5a-59ca-833c-aab3632a9198</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U1">
+      <value>AP7361C-Y5-13</value>
+      <footprint>Package_TO_SOT_SMD:SOT-89-5</footprint>
+      <datasheet>${KIPRJMOD}/../../datasheets/AP7361C.pdf</datasheet>
+      <description>Adjustable LDO; SOT89-5 pinout, tab = pin 2 GND</description>
+      <fields>
+        <field name="Manufacturer">Diodes Incorporated</field>
+        <field name="MPN">AP7361C-Y5-13</field>
+        <field name="LCSC">C507885</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-89-5</field>
+        <field name="Datasheet">${KIPRJMOD}/../../datasheets/AP7361C.pdf</field>
+        <field name="Description">Adjustable LDO; SOT89-5 pinout, tab = pin 2 GND</field>
+      </fields>
+      <libsource lib="Numitron" part="AP7361C_Y5" description="Adjustable LDO; SOT89-5 pinout, tab = pin 2 GND"/>
+      <property name="Manufacturer" value="Diodes Incorporated"/>
+      <property name="MPN" value="AP7361C-Y5-13"/>
+      <property name="LCSC" value="C507885"/>
+      <property name="Sheetname" value="NumitronTop"/>
+      <property name="Sheetfile" value="NumitronTop.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8ebd23d9-fdbd-5281-9a09-a1ef60e6eb73</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="4"/>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="5"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C4">
+      <value>100n 50V X7R</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>${KIPRJMOD}/../../datasheets/avx-x7r.pdf</datasheet>
+      <fields>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet">${KIPRJMOD}/../../datasheets/avx-x7r.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Numitron" part="C" description=""/>
+      <property name="Sheetname" value="Logic / ambient light"/>
+      <property name="Sheetfile" value="ControlAndSensor.kicad_sch"/>
+      <sheetpath names="/Logic / ambient light/" tstamps="/80c1f917-a0fd-5c73-9f82-08b8ac7ddbdb/"/>
+      <tstamps>bb1eb0db-7f49-56f4-a4a5-ebf0dc26100f</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C5">
+      <value>100n 50V X7R</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>${KIPRJMOD}/../../datasheets/avx-x7r.pdf</datasheet>
+      <fields>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet">${KIPRJMOD}/../../datasheets/avx-x7r.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Numitron" part="C" description=""/>
+      <property name="Sheetname" value="Logic / ambient light"/>
+      <property name="Sheetfile" value="ControlAndSensor.kicad_sch"/>
+      <sheetpath names="/Logic / ambient light/" tstamps="/80c1f917-a0fd-5c73-9f82-08b8ac7ddbdb/"/>
+      <tstamps>237286ed-938a-59bf-9bba-2a5c4941ddad</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C6">
+      <value>100n 50V X7R</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>${KIPRJMOD}/../../datasheets/avx-x7r.pdf</datasheet>
+      <fields>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet">${KIPRJMOD}/../../datasheets/avx-x7r.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Numitron" part="C" description=""/>
+      <property name="Sheetname" value="Logic / ambient light"/>
+      <property name="Sheetfile" value="ControlAndSensor.kicad_sch"/>
+      <sheetpath names="/Logic / ambient light/" tstamps="/80c1f917-a0fd-5c73-9f82-08b8ac7ddbdb/"/>
+      <tstamps>d41c506c-df82-5ce8-aef1-16f1aee109b4</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C7">
+      <value>100n 50V X7R</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>${KIPRJMOD}/../../datasheets/avx-x7r.pdf</datasheet>
+      <fields>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet">${KIPRJMOD}/../../datasheets/avx-x7r.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Numitron" part="C" description=""/>
+      <property name="Sheetname" value="Logic / ambient light"/>
+      <property name="Sheetfile" value="ControlAndSensor.kicad_sch"/>
+      <sheetpath names="/Logic / ambient light/" tstamps="/80c1f917-a0fd-5c73-9f82-08b8ac7ddbdb/"/>
+      <tstamps>d324f15a-e6a1-5529-9bde-44dcca0cc739</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="Q1">
+      <value>MMBT3904-7-F</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <datasheet>${KIPRJMOD}/../../datasheets/mmbt3904.pdf</datasheet>
+      <description>NPN, B=1 E=2 C=3</description>
+      <fields>
+        <field name="MPN">MMBT3904-7-F</field>
+        <field name="Manufacturer">Diodes Incorporated</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23</field>
+        <field name="Datasheet">${KIPRJMOD}/../../datasheets/mmbt3904.pdf</field>
+        <field name="Description">NPN, B=1 E=2 C=3</field>
+      </fields>
+      <libsource lib="Numitron" part="MMBT3904" description="NPN, B=1 E=2 C=3"/>
+      <property name="MPN" value="MMBT3904-7-F"/>
+      <property name="Manufacturer" value="Diodes Incorporated"/>
+      <property name="Sheetname" value="Logic / ambient light"/>
+      <property name="Sheetfile" value="ControlAndSensor.kicad_sch"/>
+      <sheetpath names="/Logic / ambient light/" tstamps="/80c1f917-a0fd-5c73-9f82-08b8ac7ddbdb/"/>
+      <tstamps>a6b8b8d7-d1d6-5ba0-a9ab-6b2235e5330a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="3"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R3">
+      <value>33R</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>${KIPRJMOD}/../../datasheets/RC0603FR-0733RL.pdf</datasheet>
+      <fields>
+        <field name="MPN">RC0603FR-0733RL</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet">${KIPRJMOD}/../../datasheets/RC0603FR-0733RL.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Numitron" part="R" description=""/>
+      <property name="MPN" value="RC0603FR-0733RL"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="Sheetname" value="Logic / ambient light"/>
+      <property name="Sheetfile" value="ControlAndSensor.kicad_sch"/>
+      <sheetpath names="/Logic / ambient light/" tstamps="/80c1f917-a0fd-5c73-9f82-08b8ac7ddbdb/"/>
+      <tstamps>560365cb-e8b7-5095-b653-f1ce6594c6d7</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R4">
+      <value>33R</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>${KIPRJMOD}/../../datasheets/RC0603FR-0733RL.pdf</datasheet>
+      <fields>
+        <field name="MPN">RC0603FR-0733RL</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet">${KIPRJMOD}/../../datasheets/RC0603FR-0733RL.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Numitron" part="R" description=""/>
+      <property name="MPN" value="RC0603FR-0733RL"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="Sheetname" value="Logic / ambient light"/>
+      <property name="Sheetfile" value="ControlAndSensor.kicad_sch"/>
+      <sheetpath names="/Logic / ambient light/" tstamps="/80c1f917-a0fd-5c73-9f82-08b8ac7ddbdb/"/>
+      <tstamps>4888a908-0d45-5e10-a654-d365b441c95d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R5">
+      <value>33R</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>${KIPRJMOD}/../../datasheets/RC0603FR-0733RL.pdf</datasheet>
+      <fields>
+        <field name="MPN">RC0603FR-0733RL</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet">${KIPRJMOD}/../../datasheets/RC0603FR-0733RL.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Numitron" part="R" description=""/>
+      <property name="MPN" value="RC0603FR-0733RL"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="Sheetname" value="Logic / ambient light"/>
+      <property name="Sheetfile" value="ControlAndSensor.kicad_sch"/>
+      <sheetpath names="/Logic / ambient light/" tstamps="/80c1f917-a0fd-5c73-9f82-08b8ac7ddbdb/"/>
+      <tstamps>04ea2f3d-85ea-5b6d-81d7-509865ca3751</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R6">
+      <value>33R</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>${KIPRJMOD}/../../datasheets/RC0603FR-0733RL.pdf</datasheet>
+      <fields>
+        <field name="MPN">RC0603FR-0733RL</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet">${KIPRJMOD}/../../datasheets/RC0603FR-0733RL.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Numitron" part="R" description=""/>
+      <property name="MPN" value="RC0603FR-0733RL"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="Sheetname" value="Logic / ambient light"/>
+      <property name="Sheetfile" value="ControlAndSensor.kicad_sch"/>
+      <sheetpath names="/Logic / ambient light/" tstamps="/80c1f917-a0fd-5c73-9f82-08b8ac7ddbdb/"/>
+      <tstamps>ac620c6a-7f7b-5e5d-b222-a0fa72c7ff0b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R7">
+      <value>100k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>${KIPRJMOD}/../../datasheets/RC0603FR-07100KL.pdf</datasheet>
+      <fields>
+        <field name="MPN">RC0603FR-07100KL</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet">${KIPRJMOD}/../../datasheets/RC0603FR-07100KL.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Numitron" part="R" description=""/>
+      <property name="MPN" value="RC0603FR-07100KL"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="Sheetname" value="Logic / ambient light"/>
+      <property name="Sheetfile" value="ControlAndSensor.kicad_sch"/>
+      <sheetpath names="/Logic / ambient light/" tstamps="/80c1f917-a0fd-5c73-9f82-08b8ac7ddbdb/"/>
+      <tstamps>cb42e7bd-e2a6-5fa0-ac4e-59754d945e5a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R8">
+      <value>100k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>${KIPRJMOD}/../../datasheets/RC0603FR-07100KL.pdf</datasheet>
+      <fields>
+        <field name="MPN">RC0603FR-07100KL</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet">${KIPRJMOD}/../../datasheets/RC0603FR-07100KL.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Numitron" part="R" description=""/>
+      <property name="MPN" value="RC0603FR-07100KL"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="Sheetname" value="Logic / ambient light"/>
+      <property name="Sheetfile" value="ControlAndSensor.kicad_sch"/>
+      <sheetpath names="/Logic / ambient light/" tstamps="/80c1f917-a0fd-5c73-9f82-08b8ac7ddbdb/"/>
+      <tstamps>b7e3a4c5-92ab-5649-88dd-71dc05870012</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R9">
+      <value>100k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>${KIPRJMOD}/../../datasheets/RC0603FR-07100KL.pdf</datasheet>
+      <fields>
+        <field name="MPN">RC0603FR-07100KL</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet">${KIPRJMOD}/../../datasheets/RC0603FR-07100KL.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Numitron" part="R" description=""/>
+      <property name="MPN" value="RC0603FR-07100KL"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="Sheetname" value="Logic / ambient light"/>
+      <property name="Sheetfile" value="ControlAndSensor.kicad_sch"/>
+      <sheetpath names="/Logic / ambient light/" tstamps="/80c1f917-a0fd-5c73-9f82-08b8ac7ddbdb/"/>
+      <tstamps>00168615-8357-5252-9564-f96815c9945e</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R10">
+      <value>2.2k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>${KIPRJMOD}/../../datasheets/RC0603FR-072K2L.pdf</datasheet>
+      <fields>
+        <field name="MPN">RC0603FR-072K2L</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet">${KIPRJMOD}/../../datasheets/RC0603FR-072K2L.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Numitron" part="R" description=""/>
+      <property name="MPN" value="RC0603FR-072K2L"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="Sheetname" value="Logic / ambient light"/>
+      <property name="Sheetfile" value="ControlAndSensor.kicad_sch"/>
+      <sheetpath names="/Logic / ambient light/" tstamps="/80c1f917-a0fd-5c73-9f82-08b8ac7ddbdb/"/>
+      <tstamps>657ba970-d83e-5b00-8b3f-fa0df0c4f56b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R11">
+      <value>4.7k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>${KIPRJMOD}/../../datasheets/RC0603FR-074K7L.pdf</datasheet>
+      <fields>
+        <field name="MPN">RC0603FR-074K7L</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet">${KIPRJMOD}/../../datasheets/RC0603FR-074K7L.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Numitron" part="R" description=""/>
+      <property name="MPN" value="RC0603FR-074K7L"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="Sheetname" value="Logic / ambient light"/>
+      <property name="Sheetfile" value="ControlAndSensor.kicad_sch"/>
+      <sheetpath names="/Logic / ambient light/" tstamps="/80c1f917-a0fd-5c73-9f82-08b8ac7ddbdb/"/>
+      <tstamps>2bfb9ba6-80f0-524d-af66-7bb9c4f39ca6</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R12">
+      <value>4.7k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>${KIPRJMOD}/../../datasheets/RC0603FR-074K7L.pdf</datasheet>
+      <fields>
+        <field name="MPN">RC0603FR-074K7L</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet">${KIPRJMOD}/../../datasheets/RC0603FR-074K7L.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Numitron" part="R" description=""/>
+      <property name="MPN" value="RC0603FR-074K7L"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="Sheetname" value="Logic / ambient light"/>
+      <property name="Sheetfile" value="ControlAndSensor.kicad_sch"/>
+      <sheetpath names="/Logic / ambient light/" tstamps="/80c1f917-a0fd-5c73-9f82-08b8ac7ddbdb/"/>
+      <tstamps>4fde7e85-4ef7-5f84-8fe6-d7cccd251c84</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R13">
+      <value>4.7k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>${KIPRJMOD}/../../datasheets/RC0603FR-074K7L.pdf</datasheet>
+      <fields>
+        <field name="MPN">RC0603FR-074K7L</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet">${KIPRJMOD}/../../datasheets/RC0603FR-074K7L.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Numitron" part="R" description=""/>
+      <property name="MPN" value="RC0603FR-074K7L"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="Sheetname" value="Logic / ambient light"/>
+      <property name="Sheetfile" value="ControlAndSensor.kicad_sch"/>
+      <sheetpath names="/Logic / ambient light/" tstamps="/80c1f917-a0fd-5c73-9f82-08b8ac7ddbdb/"/>
+      <tstamps>da758664-bb86-5a71-9420-f46b9ea7317f</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R14">
+      <value>4.7k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>${KIPRJMOD}/../../datasheets/RC0603FR-074K7L.pdf</datasheet>
+      <fields>
+        <field name="MPN">RC0603FR-074K7L</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet">${KIPRJMOD}/../../datasheets/RC0603FR-074K7L.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Numitron" part="R" description=""/>
+      <property name="MPN" value="RC0603FR-074K7L"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="Sheetname" value="Logic / ambient light"/>
+      <property name="Sheetfile" value="ControlAndSensor.kicad_sch"/>
+      <sheetpath names="/Logic / ambient light/" tstamps="/80c1f917-a0fd-5c73-9f82-08b8ac7ddbdb/"/>
+      <tstamps>adb09555-d56b-56e8-89cf-c5c456ddc531</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R15">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>${KIPRJMOD}/../../datasheets/RC0603FR-071KL.pdf</datasheet>
+      <fields>
+        <field name="MPN">RC0603FR-071KL</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet">${KIPRJMOD}/../../datasheets/RC0603FR-071KL.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Numitron" part="R" description=""/>
+      <property name="MPN" value="RC0603FR-071KL"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="Sheetname" value="Logic / ambient light"/>
+      <property name="Sheetfile" value="ControlAndSensor.kicad_sch"/>
+      <sheetpath names="/Logic / ambient light/" tstamps="/80c1f917-a0fd-5c73-9f82-08b8ac7ddbdb/"/>
+      <tstamps>ffd49a70-1292-50cf-aceb-aea3a2851642</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R16">
+      <value>2.2k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>${KIPRJMOD}/../../datasheets/RC0603FR-072K2L.pdf</datasheet>
+      <fields>
+        <field name="MPN">RC0603FR-072K2L</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet">${KIPRJMOD}/../../datasheets/RC0603FR-072K2L.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Numitron" part="R" description=""/>
+      <property name="MPN" value="RC0603FR-072K2L"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="Sheetname" value="Logic / ambient light"/>
+      <property name="Sheetfile" value="ControlAndSensor.kicad_sch"/>
+      <sheetpath names="/Logic / ambient light/" tstamps="/80c1f917-a0fd-5c73-9f82-08b8ac7ddbdb/"/>
+      <tstamps>effc0402-3516-527f-957c-83508b603e80</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R17">
+      <value>4.7k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>${KIPRJMOD}/../../datasheets/RC0603FR-074K7L.pdf</datasheet>
+      <fields>
+        <field name="MPN">RC0603FR-074K7L</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet">${KIPRJMOD}/../../datasheets/RC0603FR-074K7L.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Numitron" part="R" description=""/>
+      <property name="MPN" value="RC0603FR-074K7L"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="Sheetname" value="Logic / ambient light"/>
+      <property name="Sheetfile" value="ControlAndSensor.kicad_sch"/>
+      <sheetpath names="/Logic / ambient light/" tstamps="/80c1f917-a0fd-5c73-9f82-08b8ac7ddbdb/"/>
+      <tstamps>a722b7e4-8ec6-5999-bf42-17ef6070944b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R18">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>${KIPRJMOD}/../../datasheets/RC0603FR-071KL.pdf</datasheet>
+      <fields>
+        <field name="MPN">RC0603FR-071KL</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet">${KIPRJMOD}/../../datasheets/RC0603FR-071KL.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Numitron" part="R" description=""/>
+      <property name="MPN" value="RC0603FR-071KL"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="Sheetname" value="Logic / ambient light"/>
+      <property name="Sheetfile" value="ControlAndSensor.kicad_sch"/>
+      <sheetpath names="/Logic / ambient light/" tstamps="/80c1f917-a0fd-5c73-9f82-08b8ac7ddbdb/"/>
+      <tstamps>81c10480-d21d-5f3a-b77e-71ce14c4af2b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R19">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>${KIPRJMOD}/../../datasheets/RC0603FR-0710KL.pdf</datasheet>
+      <fields>
+        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet">${KIPRJMOD}/../../datasheets/RC0603FR-0710KL.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Numitron" part="R" description=""/>
+      <property name="MPN" value="RC0603FR-0710KL"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="Sheetname" value="Logic / ambient light"/>
+      <property name="Sheetfile" value="ControlAndSensor.kicad_sch"/>
+      <sheetpath names="/Logic / ambient light/" tstamps="/80c1f917-a0fd-5c73-9f82-08b8ac7ddbdb/"/>
+      <tstamps>4c06240d-5626-5e8f-8535-ec39702cc811</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R20">
+      <value>4.7k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>${KIPRJMOD}/../../datasheets/RC0603FR-074K7L.pdf</datasheet>
+      <fields>
+        <field name="Assembly">DNP - bottom board owns I2C pull-ups</field>
+        <field name="MPN">RC0603FR-074K7L</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet">${KIPRJMOD}/../../datasheets/RC0603FR-074K7L.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Numitron" part="R" description=""/>
+      <property name="Assembly" value="DNP - bottom board owns I2C pull-ups"/>
+      <property name="MPN" value="RC0603FR-074K7L"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="Sheetname" value="Logic / ambient light"/>
+      <property name="Sheetfile" value="ControlAndSensor.kicad_sch"/>
+      <property name="dnp"/>
+      <sheetpath names="/Logic / ambient light/" tstamps="/80c1f917-a0fd-5c73-9f82-08b8ac7ddbdb/"/>
+      <tstamps>0105ac1e-5e95-542e-8be4-9927cd16276d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R21">
+      <value>4.7k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>${KIPRJMOD}/../../datasheets/RC0603FR-074K7L.pdf</datasheet>
+      <fields>
+        <field name="Assembly">DNP - bottom board owns I2C pull-ups</field>
+        <field name="MPN">RC0603FR-074K7L</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet">${KIPRJMOD}/../../datasheets/RC0603FR-074K7L.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Numitron" part="R" description=""/>
+      <property name="Assembly" value="DNP - bottom board owns I2C pull-ups"/>
+      <property name="MPN" value="RC0603FR-074K7L"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="Sheetname" value="Logic / ambient light"/>
+      <property name="Sheetfile" value="ControlAndSensor.kicad_sch"/>
+      <property name="dnp"/>
+      <sheetpath names="/Logic / ambient light/" tstamps="/80c1f917-a0fd-5c73-9f82-08b8ac7ddbdb/"/>
+      <tstamps>eef60e8e-a96d-581f-8d99-256458b0091d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U2">
+      <value>SN74AHCT125DR</value>
+      <footprint>Package_SO:SOIC-14_3.9x8.7mm_P1.27mm</footprint>
+      <datasheet>${KIPRJMOD}/../../datasheets/sn74ahct125.pdf</datasheet>
+      <description>Four independent non-inverting TTL-input buffers, 5 V supply</description>
+      <fields>
+        <field name="MPN">SN74AHCT125DR</field>
+        <field name="Manufacturer">Texas Instruments</field>
+        <field name="Footprint">Package_SO:SOIC-14_3.9x8.7mm_P1.27mm</field>
+        <field name="Datasheet">${KIPRJMOD}/../../datasheets/sn74ahct125.pdf</field>
+        <field name="Description">Four independent non-inverting TTL-input buffers, 5 V supply</field>
+      </fields>
+      <libsource lib="Numitron" part="74AHCT125" description="Four independent non-inverting TTL-input buffers, 5 V supply"/>
+      <property name="MPN" value="SN74AHCT125DR"/>
+      <property name="Manufacturer" value="Texas Instruments"/>
+      <property name="Sheetname" value="Logic / ambient light"/>
+      <property name="Sheetfile" value="ControlAndSensor.kicad_sch"/>
+      <sheetpath names="/Logic / ambient light/" tstamps="/80c1f917-a0fd-5c73-9f82-08b8ac7ddbdb/"/>
+      <tstamps>92749a16-290e-506a-b651-2cf8a5f852ec</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+            <pin num="5"/>
+            <pin num="4"/>
+            <pin num="9"/>
+            <pin num="10"/>
+            <pin num="12"/>
+            <pin num="13"/>
+            <pin num="14"/>
+            <pin num="7"/>
+            <pin num="3"/>
+            <pin num="6"/>
+            <pin num="8"/>
+            <pin num="11"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U3">
+      <value>BH1750FVI-TR</value>
+      <datasheet>${KIPRJMOD}/../../datasheets/bh1750fvi.pdf</datasheet>
+      <description>Ambient light sensor; 0x23 with ADDR low; WSOF6I exposed center must NOT be soldered</description>
+      <fields>
+        <field name="MPN">BH1750FVI-TR</field>
+        <field name="Manufacturer">ROHM</field>
+        <field name="FootprintStatus">HOLD: verify WSOF6I land pattern; no center-pad solder</field>
+        <field name="Footprint"/>
+        <field name="Datasheet">${KIPRJMOD}/../../datasheets/bh1750fvi.pdf</field>
+        <field name="Description">Ambient light sensor; 0x23 with ADDR low; WSOF6I exposed center must NOT be soldered</field>
+      </fields>
+      <libsource lib="Numitron" part="BH1750FVI" description="Ambient light sensor; 0x23 with ADDR low; WSOF6I exposed center must NOT be soldered"/>
+      <property name="MPN" value="BH1750FVI-TR"/>
+      <property name="Manufacturer" value="ROHM"/>
+      <property name="FootprintStatus" value="HOLD: verify WSOF6I land pattern; no center-pad solder"/>
+      <property name="Sheetname" value="Logic / ambient light"/>
+      <property name="Sheetfile" value="ControlAndSensor.kicad_sch"/>
+      <sheetpath names="/Logic / ambient light/" tstamps="/80c1f917-a0fd-5c73-9f82-08b8ac7ddbdb/"/>
+      <tstamps>26dbdaac-03d2-5bd5-9d67-3e8d444544cc</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="5"/>
+            <pin num="2"/>
+            <pin num="1"/>
+            <pin num="3"/>
+            <pin num="6"/>
+            <pin num="4"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U4">
+      <value>TLV809EA29DBZR</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <datasheet>${KIPRJMOD}/../../datasheets/tlv809e.pdf</datasheet>
+      <description>2.93 V supervisor, 200 ms nominal release; normal DBZ pinout (NOT R/V variant)</description>
+      <fields>
+        <field name="MPN">TLV809EA29DBZR</field>
+        <field name="Manufacturer">Texas Instruments</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23</field>
+        <field name="Datasheet">${KIPRJMOD}/../../datasheets/tlv809e.pdf</field>
+        <field name="Description">2.93 V supervisor, 200 ms nominal release; normal DBZ pinout (NOT R/V variant)</field>
+      </fields>
+      <libsource lib="Numitron" part="TLV809EA29DBZ" description="2.93 V supervisor, 200 ms nominal release; normal DBZ pinout (NOT R/V variant)"/>
+      <property name="MPN" value="TLV809EA29DBZR"/>
+      <property name="Manufacturer" value="Texas Instruments"/>
+      <property name="Sheetname" value="Logic / ambient light"/>
+      <property name="Sheetfile" value="ControlAndSensor.kicad_sch"/>
+      <sheetpath names="/Logic / ambient light/" tstamps="/80c1f917-a0fd-5c73-9f82-08b8ac7ddbdb/"/>
+      <tstamps>168984ae-57fe-5b3e-a459-c22f10c0ac45</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="3"/>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C8">
+      <value>100n 50V X7R</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>${KIPRJMOD}/../../datasheets/avx-x7r.pdf</datasheet>
+      <fields>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet">${KIPRJMOD}/../../datasheets/avx-x7r.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Numitron" part="C" description=""/>
+      <property name="Sheetname" value="Four tube drivers"/>
+      <property name="Sheetfile" value="TubeDrivers.kicad_sch"/>
+      <sheetpath names="/Four tube drivers/" tstamps="/a40d193f-bb79-5e27-98ae-d2899fe260e2/"/>
+      <tstamps>9bf451f8-7bfa-52e1-afbf-a456abc7eaef</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C9">
+      <value>1u 25V X7R</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <datasheet>${KIPRJMOD}/../../datasheets/avx-x7r.pdf</datasheet>
+      <fields>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet">${KIPRJMOD}/../../datasheets/avx-x7r.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Numitron" part="C" description=""/>
+      <property name="Sheetname" value="Four tube drivers"/>
+      <property name="Sheetfile" value="TubeDrivers.kicad_sch"/>
+      <sheetpath names="/Four tube drivers/" tstamps="/a40d193f-bb79-5e27-98ae-d2899fe260e2/"/>
+      <tstamps>44d86f40-9051-5c03-8f39-716d5e36bba1</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C10">
+      <value>100n 50V X7R</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>${KIPRJMOD}/../../datasheets/avx-x7r.pdf</datasheet>
+      <fields>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet">${KIPRJMOD}/../../datasheets/avx-x7r.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Numitron" part="C" description=""/>
+      <property name="Sheetname" value="Four tube drivers"/>
+      <property name="Sheetfile" value="TubeDrivers.kicad_sch"/>
+      <sheetpath names="/Four tube drivers/" tstamps="/a40d193f-bb79-5e27-98ae-d2899fe260e2/"/>
+      <tstamps>b8f23c69-521a-5e34-8a42-ed6d14487342</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C11">
+      <value>1u 25V X7R</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <datasheet>${KIPRJMOD}/../../datasheets/avx-x7r.pdf</datasheet>
+      <fields>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet">${KIPRJMOD}/../../datasheets/avx-x7r.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Numitron" part="C" description=""/>
+      <property name="Sheetname" value="Four tube drivers"/>
+      <property name="Sheetfile" value="TubeDrivers.kicad_sch"/>
+      <sheetpath names="/Four tube drivers/" tstamps="/a40d193f-bb79-5e27-98ae-d2899fe260e2/"/>
+      <tstamps>29d3defb-509b-57ae-95e3-e82ab0d467b3</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C12">
+      <value>100n 50V X7R</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>${KIPRJMOD}/../../datasheets/avx-x7r.pdf</datasheet>
+      <fields>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet">${KIPRJMOD}/../../datasheets/avx-x7r.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Numitron" part="C" description=""/>
+      <property name="Sheetname" value="Four tube drivers"/>
+      <property name="Sheetfile" value="TubeDrivers.kicad_sch"/>
+      <sheetpath names="/Four tube drivers/" tstamps="/a40d193f-bb79-5e27-98ae-d2899fe260e2/"/>
+      <tstamps>37d67d06-eb62-5fd3-a596-bdf4bf7b5955</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C13">
+      <value>1u 25V X7R</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <datasheet>${KIPRJMOD}/../../datasheets/avx-x7r.pdf</datasheet>
+      <fields>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet">${KIPRJMOD}/../../datasheets/avx-x7r.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Numitron" part="C" description=""/>
+      <property name="Sheetname" value="Four tube drivers"/>
+      <property name="Sheetfile" value="TubeDrivers.kicad_sch"/>
+      <sheetpath names="/Four tube drivers/" tstamps="/a40d193f-bb79-5e27-98ae-d2899fe260e2/"/>
+      <tstamps>94a4aa3b-5757-58ea-af58-9a504aa6b002</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C14">
+      <value>100n 50V X7R</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>${KIPRJMOD}/../../datasheets/avx-x7r.pdf</datasheet>
+      <fields>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet">${KIPRJMOD}/../../datasheets/avx-x7r.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Numitron" part="C" description=""/>
+      <property name="Sheetname" value="Four tube drivers"/>
+      <property name="Sheetfile" value="TubeDrivers.kicad_sch"/>
+      <sheetpath names="/Four tube drivers/" tstamps="/a40d193f-bb79-5e27-98ae-d2899fe260e2/"/>
+      <tstamps>3bd2c9e1-1885-5b98-8650-73eca1bec3a8</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C15">
+      <value>1u 25V X7R</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <datasheet>${KIPRJMOD}/../../datasheets/avx-x7r.pdf</datasheet>
+      <fields>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet">${KIPRJMOD}/../../datasheets/avx-x7r.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Numitron" part="C" description=""/>
+      <property name="Sheetname" value="Four tube drivers"/>
+      <property name="Sheetfile" value="TubeDrivers.kicad_sch"/>
+      <sheetpath names="/Four tube drivers/" tstamps="/a40d193f-bb79-5e27-98ae-d2899fe260e2/"/>
+      <tstamps>ef6bf48f-0972-57f3-bb85-da8f063488cf</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP5">
+      <value>SER_OUT 5V</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.5mm</footprint>
+      <description>Bare PCB test pad</description>
+      <fields>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description">Bare PCB test pad</field>
+      </fields>
+      <libsource lib="Numitron" part="TestPoint" description="Bare PCB test pad"/>
+      <property name="Sheetname" value="Four tube drivers"/>
+      <property name="Sheetfile" value="TubeDrivers.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <sheetpath names="/Four tube drivers/" tstamps="/a40d193f-bb79-5e27-98ae-d2899fe260e2/"/>
+      <tstamps>a7222c98-9aff-5e3c-b4e9-54f387af2a38</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U5">
+      <value>TPIC6B595DWR</value>
+      <footprint>Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm</footprint>
+      <datasheet>${KIPRJMOD}/../../datasheets/tpic6b595.pdf</datasheet>
+      <description>SRCK is pin 13: verified against pin diagram and application, Rev D table contains typo</description>
+      <fields>
+        <field name="MPN">TPIC6B595DWR</field>
+        <field name="Manufacturer">Texas Instruments</field>
+        <field name="Footprint">Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm</field>
+        <field name="Datasheet">${KIPRJMOD}/../../datasheets/tpic6b595.pdf</field>
+        <field name="Description">SRCK is pin 13: verified against pin diagram and application, Rev D table contains typo</field>
+      </fields>
+      <libsource lib="Numitron" part="TPIC6B595DW" description="SRCK is pin 13: verified against pin diagram and application, Rev D table contains typo"/>
+      <property name="MPN" value="TPIC6B595DWR"/>
+      <property name="Manufacturer" value="Texas Instruments"/>
+      <property name="Sheetname" value="Four tube drivers"/>
+      <property name="Sheetfile" value="TubeDrivers.kicad_sch"/>
+      <sheetpath names="/Four tube drivers/" tstamps="/a40d193f-bb79-5e27-98ae-d2899fe260e2/"/>
+      <tstamps>e8c36198-8ed9-5357-960b-1ae7b913b322</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="3"/>
+            <pin num="13"/>
+            <pin num="12"/>
+            <pin num="9"/>
+            <pin num="8"/>
+            <pin num="1"/>
+            <pin num="20"/>
+            <pin num="10"/>
+            <pin num="2"/>
+            <pin num="11"/>
+            <pin num="19"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="14"/>
+            <pin num="15"/>
+            <pin num="16"/>
+            <pin num="17"/>
+            <pin num="18"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U6">
+      <value>TPIC6B595DWR</value>
+      <footprint>Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm</footprint>
+      <datasheet>${KIPRJMOD}/../../datasheets/tpic6b595.pdf</datasheet>
+      <description>SRCK is pin 13: verified against pin diagram and application, Rev D table contains typo</description>
+      <fields>
+        <field name="MPN">TPIC6B595DWR</field>
+        <field name="Manufacturer">Texas Instruments</field>
+        <field name="Footprint">Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm</field>
+        <field name="Datasheet">${KIPRJMOD}/../../datasheets/tpic6b595.pdf</field>
+        <field name="Description">SRCK is pin 13: verified against pin diagram and application, Rev D table contains typo</field>
+      </fields>
+      <libsource lib="Numitron" part="TPIC6B595DW" description="SRCK is pin 13: verified against pin diagram and application, Rev D table contains typo"/>
+      <property name="MPN" value="TPIC6B595DWR"/>
+      <property name="Manufacturer" value="Texas Instruments"/>
+      <property name="Sheetname" value="Four tube drivers"/>
+      <property name="Sheetfile" value="TubeDrivers.kicad_sch"/>
+      <sheetpath names="/Four tube drivers/" tstamps="/a40d193f-bb79-5e27-98ae-d2899fe260e2/"/>
+      <tstamps>d2aed44b-0c04-55c1-8175-413fa4b0e421</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="3"/>
+            <pin num="13"/>
+            <pin num="12"/>
+            <pin num="9"/>
+            <pin num="8"/>
+            <pin num="1"/>
+            <pin num="20"/>
+            <pin num="10"/>
+            <pin num="2"/>
+            <pin num="11"/>
+            <pin num="19"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="14"/>
+            <pin num="15"/>
+            <pin num="16"/>
+            <pin num="17"/>
+            <pin num="18"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U7">
+      <value>TPIC6B595DWR</value>
+      <footprint>Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm</footprint>
+      <datasheet>${KIPRJMOD}/../../datasheets/tpic6b595.pdf</datasheet>
+      <description>SRCK is pin 13: verified against pin diagram and application, Rev D table contains typo</description>
+      <fields>
+        <field name="MPN">TPIC6B595DWR</field>
+        <field name="Manufacturer">Texas Instruments</field>
+        <field name="Footprint">Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm</field>
+        <field name="Datasheet">${KIPRJMOD}/../../datasheets/tpic6b595.pdf</field>
+        <field name="Description">SRCK is pin 13: verified against pin diagram and application, Rev D table contains typo</field>
+      </fields>
+      <libsource lib="Numitron" part="TPIC6B595DW" description="SRCK is pin 13: verified against pin diagram and application, Rev D table contains typo"/>
+      <property name="MPN" value="TPIC6B595DWR"/>
+      <property name="Manufacturer" value="Texas Instruments"/>
+      <property name="Sheetname" value="Four tube drivers"/>
+      <property name="Sheetfile" value="TubeDrivers.kicad_sch"/>
+      <sheetpath names="/Four tube drivers/" tstamps="/a40d193f-bb79-5e27-98ae-d2899fe260e2/"/>
+      <tstamps>ec935bd8-ee62-5d7c-bd8c-28e7b57c53e4</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="3"/>
+            <pin num="13"/>
+            <pin num="12"/>
+            <pin num="9"/>
+            <pin num="8"/>
+            <pin num="1"/>
+            <pin num="20"/>
+            <pin num="10"/>
+            <pin num="2"/>
+            <pin num="11"/>
+            <pin num="19"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="14"/>
+            <pin num="15"/>
+            <pin num="16"/>
+            <pin num="17"/>
+            <pin num="18"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U8">
+      <value>TPIC6B595DWR</value>
+      <footprint>Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm</footprint>
+      <datasheet>${KIPRJMOD}/../../datasheets/tpic6b595.pdf</datasheet>
+      <description>SRCK is pin 13: verified against pin diagram and application, Rev D table contains typo</description>
+      <fields>
+        <field name="MPN">TPIC6B595DWR</field>
+        <field name="Manufacturer">Texas Instruments</field>
+        <field name="Footprint">Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm</field>
+        <field name="Datasheet">${KIPRJMOD}/../../datasheets/tpic6b595.pdf</field>
+        <field name="Description">SRCK is pin 13: verified against pin diagram and application, Rev D table contains typo</field>
+      </fields>
+      <libsource lib="Numitron" part="TPIC6B595DW" description="SRCK is pin 13: verified against pin diagram and application, Rev D table contains typo"/>
+      <property name="MPN" value="TPIC6B595DWR"/>
+      <property name="Manufacturer" value="Texas Instruments"/>
+      <property name="Sheetname" value="Four tube drivers"/>
+      <property name="Sheetfile" value="TubeDrivers.kicad_sch"/>
+      <sheetpath names="/Four tube drivers/" tstamps="/a40d193f-bb79-5e27-98ae-d2899fe260e2/"/>
+      <tstamps>fb6c26cb-e667-59af-a6e3-6ae9a96c4998</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="3"/>
+            <pin num="13"/>
+            <pin num="12"/>
+            <pin num="9"/>
+            <pin num="8"/>
+            <pin num="1"/>
+            <pin num="20"/>
+            <pin num="10"/>
+            <pin num="2"/>
+            <pin num="11"/>
+            <pin num="19"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="14"/>
+            <pin num="15"/>
+            <pin num="16"/>
+            <pin num="17"/>
+            <pin num="18"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="V1">
+      <value>DR2000 / GZC9-A</value>
+      <datasheet>${KIPRJMOD}/../../datasheets/dr2000.pdf</datasheet>
+      <description>GZC9-A socket; owner reports DR2000-marked tubes with prefix decimal. Pin 1 DP provisional: RCA table assigns DP to DR2010, NC to DR2000. Verify on actual tubes.</description>
+      <fields>
+        <field name="MPN">DR2000</field>
+        <field name="Socket">GZC9-A</field>
+        <field name="Manufacturer">RCA / socket seller TBD</field>
+        <field name="FootprintStatus">HOLD: socket-tail measurements</field>
+        <field name="TubeVariant">Owner confirms DR2000 marking and prefix DP; verify pin 1 before use</field>
+        <field name="Footprint"/>
+        <field name="Datasheet">${KIPRJMOD}/../../datasheets/dr2000.pdf</field>
+        <field name="Description">GZC9-A socket; owner reports DR2000-marked tubes with prefix decimal. Pin 1 DP provisional: RCA table assigns DP to DR2010, NC to DR2000. Verify on actual tubes.</field>
+      </fields>
+      <libsource lib="Numitron" part="DR2000_FamilySocket" description="GZC9-A socket; owner reports DR2000-marked tubes with prefix decimal. Pin 1 DP provisional: RCA table assigns DP to DR2010, NC to DR2000. Verify on actual tubes."/>
+      <property name="MPN" value="DR2000"/>
+      <property name="Socket" value="GZC9-A"/>
+      <property name="Manufacturer" value="RCA / socket seller TBD"/>
+      <property name="FootprintStatus" value="HOLD: socket-tail measurements"/>
+      <property name="TubeVariant" value="Owner confirms DR2000 marking and prefix DP; verify pin 1 before use"/>
+      <property name="Sheetname" value="Four tube drivers"/>
+      <property name="Sheetfile" value="TubeDrivers.kicad_sch"/>
+      <sheetpath names="/Four tube drivers/" tstamps="/a40d193f-bb79-5e27-98ae-d2899fe260e2/"/>
+      <tstamps>6b651b0a-4f29-53b8-9386-4c7be997f9c1</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="7"/>
+            <pin num="8"/>
+            <pin num="5"/>
+            <pin num="4"/>
+            <pin num="3"/>
+            <pin num="9"/>
+            <pin num="6"/>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="V2">
+      <value>DR2000 / GZC9-A</value>
+      <datasheet>${KIPRJMOD}/../../datasheets/dr2000.pdf</datasheet>
+      <description>GZC9-A socket; owner reports DR2000-marked tubes with prefix decimal. Pin 1 DP provisional: RCA table assigns DP to DR2010, NC to DR2000. Verify on actual tubes.</description>
+      <fields>
+        <field name="MPN">DR2000</field>
+        <field name="Socket">GZC9-A</field>
+        <field name="Manufacturer">RCA / socket seller TBD</field>
+        <field name="FootprintStatus">HOLD: socket-tail measurements</field>
+        <field name="TubeVariant">Owner confirms DR2000 marking and prefix DP; verify pin 1 before use</field>
+        <field name="Footprint"/>
+        <field name="Datasheet">${KIPRJMOD}/../../datasheets/dr2000.pdf</field>
+        <field name="Description">GZC9-A socket; owner reports DR2000-marked tubes with prefix decimal. Pin 1 DP provisional: RCA table assigns DP to DR2010, NC to DR2000. Verify on actual tubes.</field>
+      </fields>
+      <libsource lib="Numitron" part="DR2000_FamilySocket" description="GZC9-A socket; owner reports DR2000-marked tubes with prefix decimal. Pin 1 DP provisional: RCA table assigns DP to DR2010, NC to DR2000. Verify on actual tubes."/>
+      <property name="MPN" value="DR2000"/>
+      <property name="Socket" value="GZC9-A"/>
+      <property name="Manufacturer" value="RCA / socket seller TBD"/>
+      <property name="FootprintStatus" value="HOLD: socket-tail measurements"/>
+      <property name="TubeVariant" value="Owner confirms DR2000 marking and prefix DP; verify pin 1 before use"/>
+      <property name="Sheetname" value="Four tube drivers"/>
+      <property name="Sheetfile" value="TubeDrivers.kicad_sch"/>
+      <sheetpath names="/Four tube drivers/" tstamps="/a40d193f-bb79-5e27-98ae-d2899fe260e2/"/>
+      <tstamps>f5bcb8b1-8ed1-56d8-bb11-ca61f6b47ba3</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="7"/>
+            <pin num="8"/>
+            <pin num="5"/>
+            <pin num="4"/>
+            <pin num="3"/>
+            <pin num="9"/>
+            <pin num="6"/>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="V3">
+      <value>DR2000 / GZC9-A</value>
+      <datasheet>${KIPRJMOD}/../../datasheets/dr2000.pdf</datasheet>
+      <description>GZC9-A socket; owner reports DR2000-marked tubes with prefix decimal. Pin 1 DP provisional: RCA table assigns DP to DR2010, NC to DR2000. Verify on actual tubes.</description>
+      <fields>
+        <field name="MPN">DR2000</field>
+        <field name="Socket">GZC9-A</field>
+        <field name="Manufacturer">RCA / socket seller TBD</field>
+        <field name="FootprintStatus">HOLD: socket-tail measurements</field>
+        <field name="TubeVariant">Owner confirms DR2000 marking and prefix DP; verify pin 1 before use</field>
+        <field name="Footprint"/>
+        <field name="Datasheet">${KIPRJMOD}/../../datasheets/dr2000.pdf</field>
+        <field name="Description">GZC9-A socket; owner reports DR2000-marked tubes with prefix decimal. Pin 1 DP provisional: RCA table assigns DP to DR2010, NC to DR2000. Verify on actual tubes.</field>
+      </fields>
+      <libsource lib="Numitron" part="DR2000_FamilySocket" description="GZC9-A socket; owner reports DR2000-marked tubes with prefix decimal. Pin 1 DP provisional: RCA table assigns DP to DR2010, NC to DR2000. Verify on actual tubes."/>
+      <property name="MPN" value="DR2000"/>
+      <property name="Socket" value="GZC9-A"/>
+      <property name="Manufacturer" value="RCA / socket seller TBD"/>
+      <property name="FootprintStatus" value="HOLD: socket-tail measurements"/>
+      <property name="TubeVariant" value="Owner confirms DR2000 marking and prefix DP; verify pin 1 before use"/>
+      <property name="Sheetname" value="Four tube drivers"/>
+      <property name="Sheetfile" value="TubeDrivers.kicad_sch"/>
+      <sheetpath names="/Four tube drivers/" tstamps="/a40d193f-bb79-5e27-98ae-d2899fe260e2/"/>
+      <tstamps>dd8659aa-d1f0-5f10-9151-9e1c4e9e5186</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="7"/>
+            <pin num="8"/>
+            <pin num="5"/>
+            <pin num="4"/>
+            <pin num="3"/>
+            <pin num="9"/>
+            <pin num="6"/>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="V4">
+      <value>DR2000 / GZC9-A</value>
+      <datasheet>${KIPRJMOD}/../../datasheets/dr2000.pdf</datasheet>
+      <description>GZC9-A socket; owner reports DR2000-marked tubes with prefix decimal. Pin 1 DP provisional: RCA table assigns DP to DR2010, NC to DR2000. Verify on actual tubes.</description>
+      <fields>
+        <field name="MPN">DR2000</field>
+        <field name="Socket">GZC9-A</field>
+        <field name="Manufacturer">RCA / socket seller TBD</field>
+        <field name="FootprintStatus">HOLD: socket-tail measurements</field>
+        <field name="TubeVariant">Owner confirms DR2000 marking and prefix DP; verify pin 1 before use</field>
+        <field name="Footprint"/>
+        <field name="Datasheet">${KIPRJMOD}/../../datasheets/dr2000.pdf</field>
+        <field name="Description">GZC9-A socket; owner reports DR2000-marked tubes with prefix decimal. Pin 1 DP provisional: RCA table assigns DP to DR2010, NC to DR2000. Verify on actual tubes.</field>
+      </fields>
+      <libsource lib="Numitron" part="DR2000_FamilySocket" description="GZC9-A socket; owner reports DR2000-marked tubes with prefix decimal. Pin 1 DP provisional: RCA table assigns DP to DR2010, NC to DR2000. Verify on actual tubes."/>
+      <property name="MPN" value="DR2000"/>
+      <property name="Socket" value="GZC9-A"/>
+      <property name="Manufacturer" value="RCA / socket seller TBD"/>
+      <property name="FootprintStatus" value="HOLD: socket-tail measurements"/>
+      <property name="TubeVariant" value="Owner confirms DR2000 marking and prefix DP; verify pin 1 before use"/>
+      <property name="Sheetname" value="Four tube drivers"/>
+      <property name="Sheetfile" value="TubeDrivers.kicad_sch"/>
+      <sheetpath names="/Four tube drivers/" tstamps="/a40d193f-bb79-5e27-98ae-d2899fe260e2/"/>
+      <tstamps>c1dac0fb-339d-5507-9652-241eec947fe5</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="7"/>
+            <pin num="8"/>
+            <pin num="5"/>
+            <pin num="4"/>
+            <pin num="3"/>
+            <pin num="9"/>
+            <pin num="6"/>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Numitron" part="74AHCT125">
+      <description>Four independent non-inverting TTL-input buffers, 5 V supply</description>
+      <docs>${KIPRJMOD}/../../datasheets/sn74ahct125.pdf</docs>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">74AHCT125</field>
+        <field name="Footprint">Package_SO:SOIC-14_3.9x8.7mm_P1.27mm</field>
+        <field name="Datasheet">${KIPRJMOD}/../../datasheets/sn74ahct125.pdf</field>
+        <field name="Description">Four independent non-inverting TTL-input buffers, 5 V supply</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~{1OE}" type="input"/>
+        <pin num="2" name="1A" type="input"/>
+        <pin num="3" name="1Y" type="tri_state"/>
+        <pin num="4" name="~{2OE}" type="input"/>
+        <pin num="5" name="2A" type="input"/>
+        <pin num="6" name="2Y" type="tri_state"/>
+        <pin num="7" name="GND" type="power_in"/>
+        <pin num="8" name="3Y" type="tri_state"/>
+        <pin num="9" name="3A" type="input"/>
+        <pin num="10" name="~{3OE}" type="input"/>
+        <pin num="11" name="4Y" type="tri_state"/>
+        <pin num="12" name="4A" type="input"/>
+        <pin num="13" name="~{4OE}" type="input"/>
+        <pin num="14" name="VCC" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Numitron" part="AP7361C_Y5">
+      <description>Adjustable LDO; SOT89-5 pinout, tab = pin 2 GND</description>
+      <docs>${KIPRJMOD}/../../datasheets/AP7361C.pdf</docs>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">AP7361C_Y5</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-89-5</field>
+        <field name="Datasheet">${KIPRJMOD}/../../datasheets/AP7361C.pdf</field>
+        <field name="Description">Adjustable LDO; SOT89-5 pinout, tab = pin 2 GND</field>
+      </fields>
+      <pins>
+        <pin num="1" name="EN" type="input"/>
+        <pin num="2" name="GND" type="power_in"/>
+        <pin num="3" name="ADJ" type="input"/>
+        <pin num="4" name="IN" type="power_in"/>
+        <pin num="5" name="OUT" type="power_out"/>
+      </pins>
+    </libpart>
+    <libpart lib="Numitron" part="BH1750FVI">
+      <description>Ambient light sensor; 0x23 with ADDR low; WSOF6I exposed center must NOT be soldered</description>
+      <docs>${KIPRJMOD}/../../datasheets/bh1750fvi.pdf</docs>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">BH1750FVI</field>
+        <field name="Footprint"/>
+        <field name="Datasheet">${KIPRJMOD}/../../datasheets/bh1750fvi.pdf</field>
+        <field name="Description">Ambient light sensor; 0x23 with ADDR low; WSOF6I exposed center must NOT be soldered</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VCC" type="power_in"/>
+        <pin num="2" name="ADDR" type="input"/>
+        <pin num="3" name="GND" type="power_in"/>
+        <pin num="4" name="SDA" type="bidirectional"/>
+        <pin num="5" name="DVI" type="input"/>
+        <pin num="6" name="SCL" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="Numitron" part="C">
+      <docs>${KIPRJMOD}/../../datasheets/avx-x7r.pdf</docs>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet">${KIPRJMOD}/../../datasheets/avx-x7r.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Numitron" part="DR2000_FamilySocket">
+      <description>GZC9-A socket; owner reports DR2000-marked tubes with prefix decimal. Pin 1 DP provisional: RCA table assigns DP to DR2010, NC to DR2000. Verify on actual tubes.</description>
+      <docs>${KIPRJMOD}/../../datasheets/dr2000.pdf</docs>
+      <fields>
+        <field name="Reference">V</field>
+        <field name="Value">DR2000_FamilySocket</field>
+        <field name="Footprint"/>
+        <field name="Datasheet">${KIPRJMOD}/../../datasheets/dr2000.pdf</field>
+        <field name="Description">GZC9-A socket; owner reports DR2000-marked tubes with prefix decimal. Pin 1 DP provisional: RCA table assigns DP to DR2010, NC to DR2000. Verify on actual tubes.</field>
+      </fields>
+      <pins>
+        <pin num="1" name="DP*" type="passive"/>
+        <pin num="2" name="COM" type="passive"/>
+        <pin num="3" name="E" type="passive"/>
+        <pin num="4" name="D" type="passive"/>
+        <pin num="5" name="C" type="passive"/>
+        <pin num="6" name="G" type="passive"/>
+        <pin num="7" name="A" type="passive"/>
+        <pin num="8" name="B" type="passive"/>
+        <pin num="9" name="F" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Numitron" part="IDC_2x08">
+      <description>Wurth 61201621621; 2.54 mm PCB pin grid for 1.27 mm pitch ribbon</description>
+      <docs>${KIPRJMOD}/../../datasheets/idc-header.pdf</docs>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">IDC_2x08</field>
+        <field name="Footprint">Connector_IDC:IDC-Header_2x08_P2.54mm_Vertical</field>
+        <field name="Datasheet">${KIPRJMOD}/../../datasheets/idc-header.pdf</field>
+        <field name="Description">Wurth 61201621621; 2.54 mm PCB pin grid for 1.27 mm pitch ribbon</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+        <pin num="4" name="4" type="passive"/>
+        <pin num="5" name="5" type="passive"/>
+        <pin num="6" name="6" type="passive"/>
+        <pin num="7" name="7" type="passive"/>
+        <pin num="8" name="8" type="passive"/>
+        <pin num="9" name="9" type="passive"/>
+        <pin num="10" name="10" type="passive"/>
+        <pin num="11" name="11" type="passive"/>
+        <pin num="12" name="12" type="passive"/>
+        <pin num="13" name="13" type="passive"/>
+        <pin num="14" name="14" type="passive"/>
+        <pin num="15" name="15" type="passive"/>
+        <pin num="16" name="16" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Numitron" part="MMBT3904">
+      <description>NPN, B=1 E=2 C=3</description>
+      <docs>${KIPRJMOD}/../../datasheets/mmbt3904.pdf</docs>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">MMBT3904</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23</field>
+        <field name="Datasheet">${KIPRJMOD}/../../datasheets/mmbt3904.pdf</field>
+        <field name="Description">NPN, B=1 E=2 C=3</field>
+      </fields>
+      <pins>
+        <pin num="1" name="B" type="input"/>
+        <pin num="2" name="E" type="passive"/>
+        <pin num="3" name="C" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Numitron" part="R">
+      <docs>${KIPRJMOD}/../../datasheets/RC0603FR-0710KL.pdf</docs>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet">${KIPRJMOD}/../../datasheets/RC0603FR-0710KL.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Numitron" part="TLV809EA29DBZ">
+      <description>2.93 V supervisor, 200 ms nominal release; normal DBZ pinout (NOT R/V variant)</description>
+      <docs>${KIPRJMOD}/../../datasheets/tlv809e.pdf</docs>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">TLV809EA29DBZ</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23</field>
+        <field name="Datasheet">${KIPRJMOD}/../../datasheets/tlv809e.pdf</field>
+        <field name="Description">2.93 V supervisor, 200 ms nominal release; normal DBZ pinout (NOT R/V variant)</field>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="power_in"/>
+        <pin num="2" name="~{RESET}" type="output"/>
+        <pin num="3" name="VDD" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Numitron" part="TPIC6B595DW">
+      <description>SRCK is pin 13: verified against pin diagram and application, Rev D table contains typo</description>
+      <docs>${KIPRJMOD}/../../datasheets/tpic6b595.pdf</docs>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">TPIC6B595DW</field>
+        <field name="Footprint">Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm</field>
+        <field name="Datasheet">${KIPRJMOD}/../../datasheets/tpic6b595.pdf</field>
+        <field name="Description">SRCK is pin 13: verified against pin diagram and application, Rev D table contains typo</field>
+      </fields>
+      <pins>
+        <pin num="1" name="NC" type="no_connect"/>
+        <pin num="2" name="VCC" type="power_in"/>
+        <pin num="3" name="SER_IN" type="input"/>
+        <pin num="4" name="DRAIN0" type="open_collector"/>
+        <pin num="5" name="DRAIN1" type="open_collector"/>
+        <pin num="6" name="DRAIN2" type="open_collector"/>
+        <pin num="7" name="DRAIN3" type="open_collector"/>
+        <pin num="8" name="~{SRCLR}" type="input"/>
+        <pin num="9" name="~{G}" type="input"/>
+        <pin num="10" name="GND" type="power_in"/>
+        <pin num="11" name="GND" type="power_in"/>
+        <pin num="12" name="RCK" type="input"/>
+        <pin num="13" name="SRCK" type="input"/>
+        <pin num="14" name="DRAIN4" type="open_collector"/>
+        <pin num="15" name="DRAIN5" type="open_collector"/>
+        <pin num="16" name="DRAIN6" type="open_collector"/>
+        <pin num="17" name="DRAIN7" type="open_collector"/>
+        <pin num="18" name="SER_OUT" type="output"/>
+        <pin num="19" name="GND" type="power_in"/>
+        <pin num="20" name="NC" type="no_connect"/>
+      </pins>
+    </libpart>
+    <libpart lib="Numitron" part="TestPoint">
+      <description>Bare PCB test pad</description>
+      <fields>
+        <field name="Reference">TP</field>
+        <field name="Value">TestPoint</field>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description">Bare PCB test pad</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Numitron">
+      <uri>${KIPRJMOD}/libraries/Numitron.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="+3V3" class="Default">
+      <node ref="C5" pin="1" pintype="passive"/>
+      <node ref="C7" pin="1" pintype="passive"/>
+      <node ref="J1" pin="9" pinfunction="9_9" pintype="passive"/>
+      <node ref="R14" pin="1" pintype="passive"/>
+      <node ref="R20" pin="1" pintype="passive"/>
+      <node ref="R21" pin="1" pintype="passive"/>
+      <node ref="TP2" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U3" pin="1" pinfunction="VCC_1" pintype="power_in"/>
+      <node ref="U4" pin="3" pinfunction="VDD_3" pintype="power_in"/>
+    </net>
+    <net code="2" name="+5V" class="Default">
+      <node ref="C1" pin="1" pintype="passive"/>
+      <node ref="C10" pin="1" pintype="passive"/>
+      <node ref="C12" pin="1" pintype="passive"/>
+      <node ref="C14" pin="1" pintype="passive"/>
+      <node ref="C4" pin="1" pintype="passive"/>
+      <node ref="C8" pin="1" pintype="passive"/>
+      <node ref="J1" pin="14" pinfunction="14_14" pintype="passive"/>
+      <node ref="J1" pin="16" pinfunction="16_16" pintype="passive"/>
+      <node ref="R10" pin="1" pintype="passive"/>
+      <node ref="R15" pin="1" pintype="passive"/>
+      <node ref="TP1" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U1" pin="1" pinfunction="EN_1" pintype="input"/>
+      <node ref="U1" pin="4" pinfunction="IN_4" pintype="power_in"/>
+      <node ref="U2" pin="14" pinfunction="VCC_14" pintype="power_in"/>
+      <node ref="U5" pin="2" pinfunction="VCC_2" pintype="power_in"/>
+      <node ref="U5" pin="8" pinfunction="~{SRCLR}_8" pintype="input"/>
+      <node ref="U6" pin="2" pinfunction="VCC_2" pintype="power_in"/>
+      <node ref="U6" pin="8" pinfunction="~{SRCLR}_8" pintype="input"/>
+      <node ref="U7" pin="2" pinfunction="VCC_2" pintype="power_in"/>
+      <node ref="U7" pin="8" pinfunction="~{SRCLR}_8" pintype="input"/>
+      <node ref="U8" pin="2" pinfunction="VCC_2" pintype="power_in"/>
+      <node ref="U8" pin="8" pinfunction="~{SRCLR}_8" pintype="input"/>
+    </net>
+    <net code="3" name="/Four tube drivers/CHAIN_12" class="Default">
+      <node ref="U5" pin="18" pinfunction="SER_OUT_18" pintype="output"/>
+      <node ref="U6" pin="3" pinfunction="SER_IN_3" pintype="input"/>
+    </net>
+    <net code="4" name="/Four tube drivers/CHAIN_23" class="Default">
+      <node ref="U6" pin="18" pinfunction="SER_OUT_18" pintype="output"/>
+      <node ref="U7" pin="3" pinfunction="SER_IN_3" pintype="input"/>
+    </net>
+    <net code="5" name="/Four tube drivers/CHAIN_34" class="Default">
+      <node ref="U7" pin="18" pinfunction="SER_OUT_18" pintype="output"/>
+      <node ref="U8" pin="3" pinfunction="SER_IN_3" pintype="input"/>
+    </net>
+    <net code="6" name="/Four tube drivers/H1_A" class="Default">
+      <node ref="U6" pin="4" pinfunction="DRAIN0_4" pintype="open_collector"/>
+      <node ref="V2" pin="7" pinfunction="A_7" pintype="passive"/>
+    </net>
+    <net code="7" name="/Four tube drivers/H1_B" class="Default">
+      <node ref="U6" pin="5" pinfunction="DRAIN1_5" pintype="open_collector"/>
+      <node ref="V2" pin="8" pinfunction="B_8" pintype="passive"/>
+    </net>
+    <net code="8" name="/Four tube drivers/H1_C" class="Default">
+      <node ref="U6" pin="6" pinfunction="DRAIN2_6" pintype="open_collector"/>
+      <node ref="V2" pin="5" pinfunction="C_5" pintype="passive"/>
+    </net>
+    <net code="9" name="/Four tube drivers/H1_D" class="Default">
+      <node ref="U6" pin="7" pinfunction="DRAIN3_7" pintype="open_collector"/>
+      <node ref="V2" pin="4" pinfunction="D_4" pintype="passive"/>
+    </net>
+    <net code="10" name="/Four tube drivers/H1_DP" class="Default">
+      <node ref="U6" pin="17" pinfunction="DRAIN7_17" pintype="open_collector"/>
+      <node ref="V2" pin="1" pinfunction="DP*_1" pintype="passive"/>
+    </net>
+    <net code="11" name="/Four tube drivers/H1_E" class="Default">
+      <node ref="U6" pin="14" pinfunction="DRAIN4_14" pintype="open_collector"/>
+      <node ref="V2" pin="3" pinfunction="E_3" pintype="passive"/>
+    </net>
+    <net code="12" name="/Four tube drivers/H1_F" class="Default">
+      <node ref="U6" pin="15" pinfunction="DRAIN5_15" pintype="open_collector"/>
+      <node ref="V2" pin="9" pinfunction="F_9" pintype="passive"/>
+    </net>
+    <net code="13" name="/Four tube drivers/H1_G" class="Default">
+      <node ref="U6" pin="16" pinfunction="DRAIN6_16" pintype="open_collector"/>
+      <node ref="V2" pin="6" pinfunction="G_6" pintype="passive"/>
+    </net>
+    <net code="14" name="/Four tube drivers/H10_A" class="Default">
+      <node ref="U5" pin="4" pinfunction="DRAIN0_4" pintype="open_collector"/>
+      <node ref="V1" pin="7" pinfunction="A_7" pintype="passive"/>
+    </net>
+    <net code="15" name="/Four tube drivers/H10_B" class="Default">
+      <node ref="U5" pin="5" pinfunction="DRAIN1_5" pintype="open_collector"/>
+      <node ref="V1" pin="8" pinfunction="B_8" pintype="passive"/>
+    </net>
+    <net code="16" name="/Four tube drivers/H10_C" class="Default">
+      <node ref="U5" pin="6" pinfunction="DRAIN2_6" pintype="open_collector"/>
+      <node ref="V1" pin="5" pinfunction="C_5" pintype="passive"/>
+    </net>
+    <net code="17" name="/Four tube drivers/H10_D" class="Default">
+      <node ref="U5" pin="7" pinfunction="DRAIN3_7" pintype="open_collector"/>
+      <node ref="V1" pin="4" pinfunction="D_4" pintype="passive"/>
+    </net>
+    <net code="18" name="/Four tube drivers/H10_DP" class="Default">
+      <node ref="U5" pin="17" pinfunction="DRAIN7_17" pintype="open_collector"/>
+      <node ref="V1" pin="1" pinfunction="DP*_1" pintype="passive"/>
+    </net>
+    <net code="19" name="/Four tube drivers/H10_E" class="Default">
+      <node ref="U5" pin="14" pinfunction="DRAIN4_14" pintype="open_collector"/>
+      <node ref="V1" pin="3" pinfunction="E_3" pintype="passive"/>
+    </net>
+    <net code="20" name="/Four tube drivers/H10_F" class="Default">
+      <node ref="U5" pin="15" pinfunction="DRAIN5_15" pintype="open_collector"/>
+      <node ref="V1" pin="9" pinfunction="F_9" pintype="passive"/>
+    </net>
+    <net code="21" name="/Four tube drivers/H10_G" class="Default">
+      <node ref="U5" pin="16" pinfunction="DRAIN6_16" pintype="open_collector"/>
+      <node ref="V1" pin="6" pinfunction="G_6" pintype="passive"/>
+    </net>
+    <net code="22" name="/Four tube drivers/M1_A" class="Default">
+      <node ref="U8" pin="4" pinfunction="DRAIN0_4" pintype="open_collector"/>
+      <node ref="V4" pin="7" pinfunction="A_7" pintype="passive"/>
+    </net>
+    <net code="23" name="/Four tube drivers/M1_B" class="Default">
+      <node ref="U8" pin="5" pinfunction="DRAIN1_5" pintype="open_collector"/>
+      <node ref="V4" pin="8" pinfunction="B_8" pintype="passive"/>
+    </net>
+    <net code="24" name="/Four tube drivers/M1_C" class="Default">
+      <node ref="U8" pin="6" pinfunction="DRAIN2_6" pintype="open_collector"/>
+      <node ref="V4" pin="5" pinfunction="C_5" pintype="passive"/>
+    </net>
+    <net code="25" name="/Four tube drivers/M1_D" class="Default">
+      <node ref="U8" pin="7" pinfunction="DRAIN3_7" pintype="open_collector"/>
+      <node ref="V4" pin="4" pinfunction="D_4" pintype="passive"/>
+    </net>
+    <net code="26" name="/Four tube drivers/M1_DP" class="Default">
+      <node ref="U8" pin="17" pinfunction="DRAIN7_17" pintype="open_collector"/>
+      <node ref="V4" pin="1" pinfunction="DP*_1" pintype="passive"/>
+    </net>
+    <net code="27" name="/Four tube drivers/M1_E" class="Default">
+      <node ref="U8" pin="14" pinfunction="DRAIN4_14" pintype="open_collector"/>
+      <node ref="V4" pin="3" pinfunction="E_3" pintype="passive"/>
+    </net>
+    <net code="28" name="/Four tube drivers/M1_F" class="Default">
+      <node ref="U8" pin="15" pinfunction="DRAIN5_15" pintype="open_collector"/>
+      <node ref="V4" pin="9" pinfunction="F_9" pintype="passive"/>
+    </net>
+    <net code="29" name="/Four tube drivers/M1_G" class="Default">
+      <node ref="U8" pin="16" pinfunction="DRAIN6_16" pintype="open_collector"/>
+      <node ref="V4" pin="6" pinfunction="G_6" pintype="passive"/>
+    </net>
+    <net code="30" name="/Four tube drivers/M10_A" class="Default">
+      <node ref="U7" pin="4" pinfunction="DRAIN0_4" pintype="open_collector"/>
+      <node ref="V3" pin="7" pinfunction="A_7" pintype="passive"/>
+    </net>
+    <net code="31" name="/Four tube drivers/M10_B" class="Default">
+      <node ref="U7" pin="5" pinfunction="DRAIN1_5" pintype="open_collector"/>
+      <node ref="V3" pin="8" pinfunction="B_8" pintype="passive"/>
+    </net>
+    <net code="32" name="/Four tube drivers/M10_C" class="Default">
+      <node ref="U7" pin="6" pinfunction="DRAIN2_6" pintype="open_collector"/>
+      <node ref="V3" pin="5" pinfunction="C_5" pintype="passive"/>
+    </net>
+    <net code="33" name="/Four tube drivers/M10_D" class="Default">
+      <node ref="U7" pin="7" pinfunction="DRAIN3_7" pintype="open_collector"/>
+      <node ref="V3" pin="4" pinfunction="D_4" pintype="passive"/>
+    </net>
+    <net code="34" name="/Four tube drivers/M10_DP" class="Default">
+      <node ref="U7" pin="17" pinfunction="DRAIN7_17" pintype="open_collector"/>
+      <node ref="V3" pin="1" pinfunction="DP*_1" pintype="passive"/>
+    </net>
+    <net code="35" name="/Four tube drivers/M10_E" class="Default">
+      <node ref="U7" pin="14" pinfunction="DRAIN4_14" pintype="open_collector"/>
+      <node ref="V3" pin="3" pinfunction="E_3" pintype="passive"/>
+    </net>
+    <net code="36" name="/Four tube drivers/M10_F" class="Default">
+      <node ref="U7" pin="15" pinfunction="DRAIN5_15" pintype="open_collector"/>
+      <node ref="V3" pin="9" pinfunction="F_9" pintype="passive"/>
+    </net>
+    <net code="37" name="/Four tube drivers/M10_G" class="Default">
+      <node ref="U7" pin="16" pinfunction="DRAIN6_16" pintype="open_collector"/>
+      <node ref="V3" pin="6" pinfunction="G_6" pintype="passive"/>
+    </net>
+    <net code="38" name="/LDO_FB" class="Default">
+      <node ref="R1" pin="2" pintype="passive"/>
+      <node ref="R2" pin="1" pintype="passive"/>
+      <node ref="U1" pin="3" pinfunction="ADJ_3" pintype="input"/>
+    </net>
+    <net code="39" name="/Logic / ambient light/ALS_ADDR" class="Default">
+      <node ref="R19" pin="1" pintype="passive"/>
+      <node ref="U3" pin="2" pinfunction="ADDR_2" pintype="input"/>
+    </net>
+    <net code="40" name="/Logic / ambient light/ALS_DVI" class="Default">
+      <node ref="C6" pin="1" pintype="passive"/>
+      <node ref="R18" pin="2" pintype="passive"/>
+      <node ref="U3" pin="5" pinfunction="DVI_5" pintype="input"/>
+    </net>
+    <net code="41" name="/Logic / ambient light/BUF_OE_N" class="Default">
+      <node ref="Q1" pin="3" pinfunction="C_3" pintype="passive"/>
+      <node ref="R15" pin="2" pintype="passive"/>
+      <node ref="U2" pin="1" pinfunction="~{1OE}_1" pintype="input"/>
+      <node ref="U2" pin="10" pinfunction="~{3OE}_10" pintype="input"/>
+      <node ref="U2" pin="13" pinfunction="~{4OE}_13" pintype="input"/>
+      <node ref="U2" pin="4" pinfunction="~{2OE}_4" pintype="input"/>
+    </net>
+    <net code="42" name="BLANK_3V3" class="Default">
+      <node ref="J1" pin="8" pinfunction="8_8" pintype="passive"/>
+      <node ref="R14" pin="2" pintype="passive"/>
+      <node ref="U2" pin="12" pinfunction="4A_12" pintype="input"/>
+    </net>
+    <net code="43" name="BLANK_5V" class="Default">
+      <node ref="R10" pin="2" pintype="passive"/>
+      <node ref="R6" pin="2" pintype="passive"/>
+      <node ref="U5" pin="9" pinfunction="~{G}_9" pintype="input"/>
+      <node ref="U6" pin="9" pinfunction="~{G}_9" pintype="input"/>
+      <node ref="U7" pin="9" pinfunction="~{G}_9" pintype="input"/>
+      <node ref="U8" pin="9" pinfunction="~{G}_9" pintype="input"/>
+    </net>
+    <net code="44" name="DISPLAY_ARM" class="Default">
+      <node ref="J1" pin="13" pinfunction="13_13" pintype="passive"/>
+      <node ref="R16" pin="1" pintype="passive"/>
+      <node ref="R17" pin="1" pintype="passive"/>
+    </net>
+    <net code="45" name="GND" class="Default">
+      <node ref="C1" pin="2" pintype="passive"/>
+      <node ref="C10" pin="2" pintype="passive"/>
+      <node ref="C11" pin="2" pintype="passive"/>
+      <node ref="C12" pin="2" pintype="passive"/>
+      <node ref="C13" pin="2" pintype="passive"/>
+      <node ref="C14" pin="2" pintype="passive"/>
+      <node ref="C15" pin="2" pintype="passive"/>
+      <node ref="C2" pin="2" pintype="passive"/>
+      <node ref="C3" pin="2" pintype="passive"/>
+      <node ref="C4" pin="2" pintype="passive"/>
+      <node ref="C5" pin="2" pintype="passive"/>
+      <node ref="C6" pin="2" pintype="passive"/>
+      <node ref="C7" pin="2" pintype="passive"/>
+      <node ref="C8" pin="2" pintype="passive"/>
+      <node ref="C9" pin="2" pintype="passive"/>
+      <node ref="J1" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="J1" pin="11" pinfunction="11_11" pintype="passive"/>
+      <node ref="J1" pin="15" pinfunction="15_15" pintype="passive"/>
+      <node ref="J1" pin="3" pinfunction="3_3" pintype="passive"/>
+      <node ref="J1" pin="5" pinfunction="5_5" pintype="passive"/>
+      <node ref="J1" pin="7" pinfunction="7_7" pintype="passive"/>
+      <node ref="Q1" pin="2" pinfunction="E_2" pintype="passive"/>
+      <node ref="R11" pin="2" pintype="passive"/>
+      <node ref="R12" pin="2" pintype="passive"/>
+      <node ref="R13" pin="2" pintype="passive"/>
+      <node ref="R17" pin="2" pintype="passive"/>
+      <node ref="R19" pin="2" pintype="passive"/>
+      <node ref="R2" pin="2" pintype="passive"/>
+      <node ref="R7" pin="2" pintype="passive"/>
+      <node ref="R8" pin="2" pintype="passive"/>
+      <node ref="R9" pin="2" pintype="passive"/>
+      <node ref="TP4" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U1" pin="2" pinfunction="GND_2" pintype="power_in"/>
+      <node ref="U2" pin="7" pinfunction="GND_7" pintype="power_in"/>
+      <node ref="U3" pin="3" pinfunction="GND_3" pintype="power_in"/>
+      <node ref="U4" pin="1" pinfunction="GND_1" pintype="power_in"/>
+      <node ref="U5" pin="10" pinfunction="GND_10" pintype="power_in"/>
+      <node ref="U5" pin="11" pinfunction="GND_11" pintype="power_in"/>
+      <node ref="U5" pin="19" pinfunction="GND_19" pintype="power_in"/>
+      <node ref="U6" pin="10" pinfunction="GND_10" pintype="power_in"/>
+      <node ref="U6" pin="11" pinfunction="GND_11" pintype="power_in"/>
+      <node ref="U6" pin="19" pinfunction="GND_19" pintype="power_in"/>
+      <node ref="U7" pin="10" pinfunction="GND_10" pintype="power_in"/>
+      <node ref="U7" pin="11" pinfunction="GND_11" pintype="power_in"/>
+      <node ref="U7" pin="19" pinfunction="GND_19" pintype="power_in"/>
+      <node ref="U8" pin="10" pinfunction="GND_10" pintype="power_in"/>
+      <node ref="U8" pin="11" pinfunction="GND_11" pintype="power_in"/>
+      <node ref="U8" pin="19" pinfunction="GND_19" pintype="power_in"/>
+    </net>
+    <net code="46" name="Net-(Q1-B)" class="Default">
+      <node ref="Q1" pin="1" pinfunction="B_1" pintype="input"/>
+      <node ref="R16" pin="2" pintype="passive"/>
+    </net>
+    <net code="47" name="Net-(U2-1Y)" class="Default">
+      <node ref="R3" pin="1" pintype="passive"/>
+      <node ref="U2" pin="3" pinfunction="1Y_3" pintype="tri_state"/>
+    </net>
+    <net code="48" name="Net-(U2-2Y)" class="Default">
+      <node ref="R4" pin="1" pintype="passive"/>
+      <node ref="U2" pin="6" pinfunction="2Y_6" pintype="tri_state"/>
+    </net>
+    <net code="49" name="Net-(U2-3Y)" class="Default">
+      <node ref="R5" pin="1" pintype="passive"/>
+      <node ref="U2" pin="8" pinfunction="3Y_8" pintype="tri_state"/>
+    </net>
+    <net code="50" name="Net-(U2-4Y)" class="Default">
+      <node ref="R6" pin="1" pintype="passive"/>
+      <node ref="U2" pin="11" pinfunction="4Y_11" pintype="tri_state"/>
+    </net>
+    <net code="51" name="Net-(U4-~{RESET})" class="Default">
+      <node ref="R18" pin="1" pintype="passive"/>
+      <node ref="U4" pin="2" pinfunction="~{RESET}_2" pintype="output"/>
+    </net>
+    <net code="52" name="Net-(U8-SER_OUT)" class="Default">
+      <node ref="TP5" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U8" pin="18" pinfunction="SER_OUT_18" pintype="output"/>
+    </net>
+    <net code="53" name="RCK_3V3" class="Default">
+      <node ref="J1" pin="6" pinfunction="6_6" pintype="passive"/>
+      <node ref="R13" pin="1" pintype="passive"/>
+      <node ref="U2" pin="9" pinfunction="3A_9" pintype="input"/>
+    </net>
+    <net code="54" name="RCK_5V" class="Default">
+      <node ref="R5" pin="2" pintype="passive"/>
+      <node ref="R9" pin="1" pintype="passive"/>
+      <node ref="U5" pin="12" pinfunction="RCK_12" pintype="input"/>
+      <node ref="U6" pin="12" pinfunction="RCK_12" pintype="input"/>
+      <node ref="U7" pin="12" pinfunction="RCK_12" pintype="input"/>
+      <node ref="U8" pin="12" pinfunction="RCK_12" pintype="input"/>
+    </net>
+    <net code="55" name="SCL" class="Default">
+      <node ref="J1" pin="12" pinfunction="12_12" pintype="passive"/>
+      <node ref="R21" pin="2" pintype="passive"/>
+      <node ref="U3" pin="6" pinfunction="SCL_6" pintype="input"/>
+    </net>
+    <net code="56" name="SDA" class="Default">
+      <node ref="J1" pin="10" pinfunction="10_10" pintype="passive"/>
+      <node ref="R20" pin="2" pintype="passive"/>
+      <node ref="U3" pin="4" pinfunction="SDA_4" pintype="bidirectional"/>
+    </net>
+    <net code="57" name="SER_3V3" class="Default">
+      <node ref="J1" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="R11" pin="1" pintype="passive"/>
+      <node ref="U2" pin="2" pinfunction="1A_2" pintype="input"/>
+    </net>
+    <net code="58" name="SER_5V" class="Default">
+      <node ref="R3" pin="2" pintype="passive"/>
+      <node ref="R7" pin="1" pintype="passive"/>
+      <node ref="U5" pin="3" pinfunction="SER_IN_3" pintype="input"/>
+    </net>
+    <net code="59" name="SRCK_3V3" class="Default">
+      <node ref="J1" pin="4" pinfunction="4_4" pintype="passive"/>
+      <node ref="R12" pin="1" pintype="passive"/>
+      <node ref="U2" pin="5" pinfunction="2A_5" pintype="input"/>
+    </net>
+    <net code="60" name="SRCK_5V" class="Default">
+      <node ref="R4" pin="2" pintype="passive"/>
+      <node ref="R8" pin="1" pintype="passive"/>
+      <node ref="U5" pin="13" pinfunction="SRCK_13" pintype="input"/>
+      <node ref="U6" pin="13" pinfunction="SRCK_13" pintype="input"/>
+      <node ref="U7" pin="13" pinfunction="SRCK_13" pintype="input"/>
+      <node ref="U8" pin="13" pinfunction="SRCK_13" pintype="input"/>
+    </net>
+    <net code="61" name="V_TUBE" class="Default">
+      <node ref="C11" pin="1" pintype="passive"/>
+      <node ref="C13" pin="1" pintype="passive"/>
+      <node ref="C15" pin="1" pintype="passive"/>
+      <node ref="C2" pin="1" pintype="passive"/>
+      <node ref="C3" pin="1" pintype="passive"/>
+      <node ref="C9" pin="1" pintype="passive"/>
+      <node ref="R1" pin="1" pintype="passive"/>
+      <node ref="TP3" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U1" pin="5" pinfunction="OUT_5" pintype="power_out"/>
+      <node ref="V1" pin="2" pinfunction="COM_2" pintype="passive"/>
+      <node ref="V2" pin="2" pinfunction="COM_2" pintype="passive"/>
+      <node ref="V3" pin="2" pinfunction="COM_2" pintype="passive"/>
+      <node ref="V4" pin="2" pinfunction="COM_2" pintype="passive"/>
+    </net>
+    <net code="62" name="unconnected-(U5-NC-Pad1)" class="Default">
+      <node ref="U5" pin="1" pinfunction="NC_1" pintype="no_connect"/>
+    </net>
+    <net code="63" name="unconnected-(U5-NC-Pad20)" class="Default">
+      <node ref="U5" pin="20" pinfunction="NC_20" pintype="no_connect"/>
+    </net>
+    <net code="64" name="unconnected-(U6-NC-Pad1)" class="Default">
+      <node ref="U6" pin="1" pinfunction="NC_1" pintype="no_connect"/>
+    </net>
+    <net code="65" name="unconnected-(U6-NC-Pad20)" class="Default">
+      <node ref="U6" pin="20" pinfunction="NC_20" pintype="no_connect"/>
+    </net>
+    <net code="66" name="unconnected-(U7-NC-Pad1)" class="Default">
+      <node ref="U7" pin="1" pinfunction="NC_1" pintype="no_connect"/>
+    </net>
+    <net code="67" name="unconnected-(U7-NC-Pad20)" class="Default">
+      <node ref="U7" pin="20" pinfunction="NC_20" pintype="no_connect"/>
+    </net>
+    <net code="68" name="unconnected-(U8-NC-Pad1)" class="Default">
+      <node ref="U8" pin="1" pinfunction="NC_1" pintype="no_connect"/>
+    </net>
+    <net code="69" name="unconnected-(U8-NC-Pad20)" class="Default">
+      <node ref="U8" pin="20" pinfunction="NC_20" pintype="no_connect"/>
+    </net>
+  </nets>
+</export>

@@ -1,0 +1,627 @@
+[
+  {
+    "ref": "J1",
+    "type": "IDC_2x08",
+    "value": "61201621621",
+    "footprint": "Connector_IDC:IDC-Header_2x08_P2.54mm_Vertical",
+    "fields": {
+      "Manufacturer": "Wurth Elektronik",
+      "MPN": "61201621621"
+    },
+    "dnp": false,
+    "datasheet": "${KIPRJMOD}/../../datasheets/idc-header.pdf"
+  },
+  {
+    "ref": "U1",
+    "type": "AP7361C_Y5",
+    "value": "AP7361C-Y5-13",
+    "footprint": "Package_TO_SOT_SMD:SOT-89-5",
+    "fields": {
+      "Manufacturer": "Diodes Incorporated",
+      "MPN": "AP7361C-Y5-13",
+      "LCSC": "C507885"
+    },
+    "dnp": false,
+    "datasheet": "${KIPRJMOD}/../../datasheets/AP7361C.pdf"
+  },
+  {
+    "ref": "R1",
+    "type": "R",
+    "value": "46.4k 1%",
+    "footprint": "Resistor_SMD:R_0603_1608Metric",
+    "fields": {
+      "MPN": "RC0603FR-0746K4L",
+      "Manufacturer": "Yageo"
+    },
+    "dnp": false,
+    "datasheet": "${KIPRJMOD}/../../datasheets/RC0603FR-0746K4L.pdf"
+  },
+  {
+    "ref": "R2",
+    "type": "R",
+    "value": "10k 1%",
+    "footprint": "Resistor_SMD:R_0603_1608Metric",
+    "fields": {
+      "MPN": "RC0603FR-0710KL",
+      "Manufacturer": "Yageo"
+    },
+    "dnp": false,
+    "datasheet": "${KIPRJMOD}/../../datasheets/RC0603FR-0710KL.pdf"
+  },
+  {
+    "ref": "C1",
+    "type": "C",
+    "value": "10u 25V X7R",
+    "footprint": "Capacitor_SMD:C_1206_3216Metric",
+    "fields": {
+      "Manufacturer": "KYOCERA AVX",
+      "Selection": "X7R family; exact order code / DC bias pending"
+    },
+    "dnp": false,
+    "datasheet": "${KIPRJMOD}/../../datasheets/avx-x7r.pdf"
+  },
+  {
+    "ref": "C2",
+    "type": "C",
+    "value": "10u 25V X7R",
+    "footprint": "Capacitor_SMD:C_1206_3216Metric",
+    "fields": {
+      "Manufacturer": "KYOCERA AVX",
+      "Selection": "X7R family; exact order code / DC bias pending"
+    },
+    "dnp": false,
+    "datasheet": "${KIPRJMOD}/../../datasheets/avx-x7r.pdf"
+  },
+  {
+    "ref": "C3",
+    "type": "C",
+    "value": "10u 25V X7R",
+    "footprint": "Capacitor_SMD:C_1206_3216Metric",
+    "fields": {
+      "Manufacturer": "KYOCERA AVX",
+      "Selection": "X7R family; exact order code / DC bias pending"
+    },
+    "dnp": false,
+    "datasheet": "${KIPRJMOD}/../../datasheets/avx-x7r.pdf"
+  },
+  {
+    "ref": "TP1",
+    "type": "TestPoint",
+    "value": "+5V",
+    "footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+    "fields": {},
+    "dnp": false,
+    "datasheet": ""
+  },
+  {
+    "ref": "TP2",
+    "type": "TestPoint",
+    "value": "+3V3",
+    "footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+    "fields": {},
+    "dnp": false,
+    "datasheet": ""
+  },
+  {
+    "ref": "TP3",
+    "type": "TestPoint",
+    "value": "V_TUBE",
+    "footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+    "fields": {},
+    "dnp": false,
+    "datasheet": ""
+  },
+  {
+    "ref": "TP4",
+    "type": "TestPoint",
+    "value": "GND",
+    "footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+    "fields": {},
+    "dnp": false,
+    "datasheet": ""
+  },
+  {
+    "ref": "U2",
+    "type": "74AHCT125",
+    "value": "SN74AHCT125DR",
+    "footprint": "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm",
+    "fields": {
+      "MPN": "SN74AHCT125DR",
+      "Manufacturer": "Texas Instruments"
+    },
+    "dnp": false,
+    "datasheet": "${KIPRJMOD}/../../datasheets/sn74ahct125.pdf"
+  },
+  {
+    "ref": "R3",
+    "type": "R",
+    "value": "33R",
+    "footprint": "Resistor_SMD:R_0603_1608Metric",
+    "fields": {
+      "MPN": "RC0603FR-0733RL",
+      "Manufacturer": "Yageo"
+    },
+    "dnp": false,
+    "datasheet": "${KIPRJMOD}/../../datasheets/RC0603FR-0733RL.pdf"
+  },
+  {
+    "ref": "R4",
+    "type": "R",
+    "value": "33R",
+    "footprint": "Resistor_SMD:R_0603_1608Metric",
+    "fields": {
+      "MPN": "RC0603FR-0733RL",
+      "Manufacturer": "Yageo"
+    },
+    "dnp": false,
+    "datasheet": "${KIPRJMOD}/../../datasheets/RC0603FR-0733RL.pdf"
+  },
+  {
+    "ref": "R5",
+    "type": "R",
+    "value": "33R",
+    "footprint": "Resistor_SMD:R_0603_1608Metric",
+    "fields": {
+      "MPN": "RC0603FR-0733RL",
+      "Manufacturer": "Yageo"
+    },
+    "dnp": false,
+    "datasheet": "${KIPRJMOD}/../../datasheets/RC0603FR-0733RL.pdf"
+  },
+  {
+    "ref": "R6",
+    "type": "R",
+    "value": "33R",
+    "footprint": "Resistor_SMD:R_0603_1608Metric",
+    "fields": {
+      "MPN": "RC0603FR-0733RL",
+      "Manufacturer": "Yageo"
+    },
+    "dnp": false,
+    "datasheet": "${KIPRJMOD}/../../datasheets/RC0603FR-0733RL.pdf"
+  },
+  {
+    "ref": "C4",
+    "type": "C",
+    "value": "100n 50V X7R",
+    "footprint": "Capacitor_SMD:C_0603_1608Metric",
+    "fields": {},
+    "dnp": false,
+    "datasheet": "${KIPRJMOD}/../../datasheets/avx-x7r.pdf"
+  },
+  {
+    "ref": "Q1",
+    "type": "MMBT3904",
+    "value": "MMBT3904-7-F",
+    "footprint": "Package_TO_SOT_SMD:SOT-23",
+    "fields": {
+      "MPN": "MMBT3904-7-F",
+      "Manufacturer": "Diodes Incorporated"
+    },
+    "dnp": false,
+    "datasheet": "${KIPRJMOD}/../../datasheets/mmbt3904.pdf"
+  },
+  {
+    "ref": "R15",
+    "type": "R",
+    "value": "1k",
+    "footprint": "Resistor_SMD:R_0603_1608Metric",
+    "fields": {
+      "MPN": "RC0603FR-071KL",
+      "Manufacturer": "Yageo"
+    },
+    "dnp": false,
+    "datasheet": "${KIPRJMOD}/../../datasheets/RC0603FR-071KL.pdf"
+  },
+  {
+    "ref": "R16",
+    "type": "R",
+    "value": "2.2k",
+    "footprint": "Resistor_SMD:R_0603_1608Metric",
+    "fields": {
+      "MPN": "RC0603FR-072K2L",
+      "Manufacturer": "Yageo"
+    },
+    "dnp": false,
+    "datasheet": "${KIPRJMOD}/../../datasheets/RC0603FR-072K2L.pdf"
+  },
+  {
+    "ref": "R17",
+    "type": "R",
+    "value": "4.7k",
+    "footprint": "Resistor_SMD:R_0603_1608Metric",
+    "fields": {
+      "MPN": "RC0603FR-074K7L",
+      "Manufacturer": "Yageo"
+    },
+    "dnp": false,
+    "datasheet": "${KIPRJMOD}/../../datasheets/RC0603FR-074K7L.pdf"
+  },
+  {
+    "ref": "R7",
+    "type": "R",
+    "value": "100k",
+    "footprint": "Resistor_SMD:R_0603_1608Metric",
+    "fields": {
+      "MPN": "RC0603FR-07100KL",
+      "Manufacturer": "Yageo"
+    },
+    "dnp": false,
+    "datasheet": "${KIPRJMOD}/../../datasheets/RC0603FR-07100KL.pdf"
+  },
+  {
+    "ref": "R8",
+    "type": "R",
+    "value": "100k",
+    "footprint": "Resistor_SMD:R_0603_1608Metric",
+    "fields": {
+      "MPN": "RC0603FR-07100KL",
+      "Manufacturer": "Yageo"
+    },
+    "dnp": false,
+    "datasheet": "${KIPRJMOD}/../../datasheets/RC0603FR-07100KL.pdf"
+  },
+  {
+    "ref": "R9",
+    "type": "R",
+    "value": "100k",
+    "footprint": "Resistor_SMD:R_0603_1608Metric",
+    "fields": {
+      "MPN": "RC0603FR-07100KL",
+      "Manufacturer": "Yageo"
+    },
+    "dnp": false,
+    "datasheet": "${KIPRJMOD}/../../datasheets/RC0603FR-07100KL.pdf"
+  },
+  {
+    "ref": "R10",
+    "type": "R",
+    "value": "2.2k",
+    "footprint": "Resistor_SMD:R_0603_1608Metric",
+    "fields": {
+      "MPN": "RC0603FR-072K2L",
+      "Manufacturer": "Yageo"
+    },
+    "dnp": false,
+    "datasheet": "${KIPRJMOD}/../../datasheets/RC0603FR-072K2L.pdf"
+  },
+  {
+    "ref": "R11",
+    "type": "R",
+    "value": "4.7k",
+    "footprint": "Resistor_SMD:R_0603_1608Metric",
+    "fields": {
+      "MPN": "RC0603FR-074K7L",
+      "Manufacturer": "Yageo"
+    },
+    "dnp": false,
+    "datasheet": "${KIPRJMOD}/../../datasheets/RC0603FR-074K7L.pdf"
+  },
+  {
+    "ref": "R12",
+    "type": "R",
+    "value": "4.7k",
+    "footprint": "Resistor_SMD:R_0603_1608Metric",
+    "fields": {
+      "MPN": "RC0603FR-074K7L",
+      "Manufacturer": "Yageo"
+    },
+    "dnp": false,
+    "datasheet": "${KIPRJMOD}/../../datasheets/RC0603FR-074K7L.pdf"
+  },
+  {
+    "ref": "R13",
+    "type": "R",
+    "value": "4.7k",
+    "footprint": "Resistor_SMD:R_0603_1608Metric",
+    "fields": {
+      "MPN": "RC0603FR-074K7L",
+      "Manufacturer": "Yageo"
+    },
+    "dnp": false,
+    "datasheet": "${KIPRJMOD}/../../datasheets/RC0603FR-074K7L.pdf"
+  },
+  {
+    "ref": "R14",
+    "type": "R",
+    "value": "4.7k",
+    "footprint": "Resistor_SMD:R_0603_1608Metric",
+    "fields": {
+      "MPN": "RC0603FR-074K7L",
+      "Manufacturer": "Yageo"
+    },
+    "dnp": false,
+    "datasheet": "${KIPRJMOD}/../../datasheets/RC0603FR-074K7L.pdf"
+  },
+  {
+    "ref": "U3",
+    "type": "BH1750FVI",
+    "value": "BH1750FVI-TR",
+    "footprint": "",
+    "fields": {
+      "MPN": "BH1750FVI-TR",
+      "Manufacturer": "ROHM",
+      "FootprintStatus": "HOLD: verify WSOF6I land pattern; no center-pad solder"
+    },
+    "dnp": false,
+    "datasheet": "${KIPRJMOD}/../../datasheets/bh1750fvi.pdf"
+  },
+  {
+    "ref": "U4",
+    "type": "TLV809EA29DBZ",
+    "value": "TLV809EA29DBZR",
+    "footprint": "Package_TO_SOT_SMD:SOT-23",
+    "fields": {
+      "MPN": "TLV809EA29DBZR",
+      "Manufacturer": "Texas Instruments"
+    },
+    "dnp": false,
+    "datasheet": "${KIPRJMOD}/../../datasheets/tlv809e.pdf"
+  },
+  {
+    "ref": "R18",
+    "type": "R",
+    "value": "1k",
+    "footprint": "Resistor_SMD:R_0603_1608Metric",
+    "fields": {
+      "MPN": "RC0603FR-071KL",
+      "Manufacturer": "Yageo"
+    },
+    "dnp": false,
+    "datasheet": "${KIPRJMOD}/../../datasheets/RC0603FR-071KL.pdf"
+  },
+  {
+    "ref": "C6",
+    "type": "C",
+    "value": "100n 50V X7R",
+    "footprint": "Capacitor_SMD:C_0603_1608Metric",
+    "fields": {},
+    "dnp": false,
+    "datasheet": "${KIPRJMOD}/../../datasheets/avx-x7r.pdf"
+  },
+  {
+    "ref": "R19",
+    "type": "R",
+    "value": "10k",
+    "footprint": "Resistor_SMD:R_0603_1608Metric",
+    "fields": {
+      "MPN": "RC0603FR-0710KL",
+      "Manufacturer": "Yageo"
+    },
+    "dnp": false,
+    "datasheet": "${KIPRJMOD}/../../datasheets/RC0603FR-0710KL.pdf"
+  },
+  {
+    "ref": "C5",
+    "type": "C",
+    "value": "100n 50V X7R",
+    "footprint": "Capacitor_SMD:C_0603_1608Metric",
+    "fields": {},
+    "dnp": false,
+    "datasheet": "${KIPRJMOD}/../../datasheets/avx-x7r.pdf"
+  },
+  {
+    "ref": "C7",
+    "type": "C",
+    "value": "100n 50V X7R",
+    "footprint": "Capacitor_SMD:C_0603_1608Metric",
+    "fields": {},
+    "dnp": false,
+    "datasheet": "${KIPRJMOD}/../../datasheets/avx-x7r.pdf"
+  },
+  {
+    "ref": "R20",
+    "type": "R",
+    "value": "4.7k",
+    "footprint": "Resistor_SMD:R_0603_1608Metric",
+    "fields": {
+      "Assembly": "DNP - bottom board owns I2C pull-ups",
+      "MPN": "RC0603FR-074K7L",
+      "Manufacturer": "Yageo"
+    },
+    "dnp": true,
+    "datasheet": "${KIPRJMOD}/../../datasheets/RC0603FR-074K7L.pdf"
+  },
+  {
+    "ref": "R21",
+    "type": "R",
+    "value": "4.7k",
+    "footprint": "Resistor_SMD:R_0603_1608Metric",
+    "fields": {
+      "Assembly": "DNP - bottom board owns I2C pull-ups",
+      "MPN": "RC0603FR-074K7L",
+      "Manufacturer": "Yageo"
+    },
+    "dnp": true,
+    "datasheet": "${KIPRJMOD}/../../datasheets/RC0603FR-074K7L.pdf"
+  },
+  {
+    "ref": "U5",
+    "type": "TPIC6B595DW",
+    "value": "TPIC6B595DWR",
+    "footprint": "Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm",
+    "fields": {
+      "MPN": "TPIC6B595DWR",
+      "Manufacturer": "Texas Instruments"
+    },
+    "dnp": false,
+    "datasheet": "${KIPRJMOD}/../../datasheets/tpic6b595.pdf"
+  },
+  {
+    "ref": "V1",
+    "type": "DR2000_FamilySocket",
+    "value": "DR2000 / GZC9-A",
+    "footprint": "",
+    "fields": {
+      "MPN": "DR2000",
+      "Socket": "GZC9-A",
+      "Manufacturer": "RCA / socket seller TBD",
+      "FootprintStatus": "HOLD: socket-tail measurements",
+      "TubeVariant": "Owner confirms DR2000 marking and prefix DP; verify pin 1 before use"
+    },
+    "dnp": false,
+    "datasheet": "${KIPRJMOD}/../../datasheets/dr2000.pdf"
+  },
+  {
+    "ref": "C8",
+    "type": "C",
+    "value": "100n 50V X7R",
+    "footprint": "Capacitor_SMD:C_0603_1608Metric",
+    "fields": {},
+    "dnp": false,
+    "datasheet": "${KIPRJMOD}/../../datasheets/avx-x7r.pdf"
+  },
+  {
+    "ref": "C9",
+    "type": "C",
+    "value": "1u 25V X7R",
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "fields": {},
+    "dnp": false,
+    "datasheet": "${KIPRJMOD}/../../datasheets/avx-x7r.pdf"
+  },
+  {
+    "ref": "U6",
+    "type": "TPIC6B595DW",
+    "value": "TPIC6B595DWR",
+    "footprint": "Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm",
+    "fields": {
+      "MPN": "TPIC6B595DWR",
+      "Manufacturer": "Texas Instruments"
+    },
+    "dnp": false,
+    "datasheet": "${KIPRJMOD}/../../datasheets/tpic6b595.pdf"
+  },
+  {
+    "ref": "V2",
+    "type": "DR2000_FamilySocket",
+    "value": "DR2000 / GZC9-A",
+    "footprint": "",
+    "fields": {
+      "MPN": "DR2000",
+      "Socket": "GZC9-A",
+      "Manufacturer": "RCA / socket seller TBD",
+      "FootprintStatus": "HOLD: socket-tail measurements",
+      "TubeVariant": "Owner confirms DR2000 marking and prefix DP; verify pin 1 before use"
+    },
+    "dnp": false,
+    "datasheet": "${KIPRJMOD}/../../datasheets/dr2000.pdf"
+  },
+  {
+    "ref": "C10",
+    "type": "C",
+    "value": "100n 50V X7R",
+    "footprint": "Capacitor_SMD:C_0603_1608Metric",
+    "fields": {},
+    "dnp": false,
+    "datasheet": "${KIPRJMOD}/../../datasheets/avx-x7r.pdf"
+  },
+  {
+    "ref": "C11",
+    "type": "C",
+    "value": "1u 25V X7R",
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "fields": {},
+    "dnp": false,
+    "datasheet": "${KIPRJMOD}/../../datasheets/avx-x7r.pdf"
+  },
+  {
+    "ref": "U7",
+    "type": "TPIC6B595DW",
+    "value": "TPIC6B595DWR",
+    "footprint": "Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm",
+    "fields": {
+      "MPN": "TPIC6B595DWR",
+      "Manufacturer": "Texas Instruments"
+    },
+    "dnp": false,
+    "datasheet": "${KIPRJMOD}/../../datasheets/tpic6b595.pdf"
+  },
+  {
+    "ref": "V3",
+    "type": "DR2000_FamilySocket",
+    "value": "DR2000 / GZC9-A",
+    "footprint": "",
+    "fields": {
+      "MPN": "DR2000",
+      "Socket": "GZC9-A",
+      "Manufacturer": "RCA / socket seller TBD",
+      "FootprintStatus": "HOLD: socket-tail measurements",
+      "TubeVariant": "Owner confirms DR2000 marking and prefix DP; verify pin 1 before use"
+    },
+    "dnp": false,
+    "datasheet": "${KIPRJMOD}/../../datasheets/dr2000.pdf"
+  },
+  {
+    "ref": "C12",
+    "type": "C",
+    "value": "100n 50V X7R",
+    "footprint": "Capacitor_SMD:C_0603_1608Metric",
+    "fields": {},
+    "dnp": false,
+    "datasheet": "${KIPRJMOD}/../../datasheets/avx-x7r.pdf"
+  },
+  {
+    "ref": "C13",
+    "type": "C",
+    "value": "1u 25V X7R",
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "fields": {},
+    "dnp": false,
+    "datasheet": "${KIPRJMOD}/../../datasheets/avx-x7r.pdf"
+  },
+  {
+    "ref": "U8",
+    "type": "TPIC6B595DW",
+    "value": "TPIC6B595DWR",
+    "footprint": "Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm",
+    "fields": {
+      "MPN": "TPIC6B595DWR",
+      "Manufacturer": "Texas Instruments"
+    },
+    "dnp": false,
+    "datasheet": "${KIPRJMOD}/../../datasheets/tpic6b595.pdf"
+  },
+  {
+    "ref": "V4",
+    "type": "DR2000_FamilySocket",
+    "value": "DR2000 / GZC9-A",
+    "footprint": "",
+    "fields": {
+      "MPN": "DR2000",
+      "Socket": "GZC9-A",
+      "Manufacturer": "RCA / socket seller TBD",
+      "FootprintStatus": "HOLD: socket-tail measurements",
+      "TubeVariant": "Owner confirms DR2000 marking and prefix DP; verify pin 1 before use"
+    },
+    "dnp": false,
+    "datasheet": "${KIPRJMOD}/../../datasheets/dr2000.pdf"
+  },
+  {
+    "ref": "TP5",
+    "type": "TestPoint",
+    "value": "SER_OUT 5V",
+    "footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+    "fields": {},
+    "dnp": false,
+    "datasheet": ""
+  },
+  {
+    "ref": "C14",
+    "type": "C",
+    "value": "100n 50V X7R",
+    "footprint": "Capacitor_SMD:C_0603_1608Metric",
+    "fields": {},
+    "dnp": false,
+    "datasheet": "${KIPRJMOD}/../../datasheets/avx-x7r.pdf"
+  },
+  {
+    "ref": "C15",
+    "type": "C",
+    "value": "1u 25V X7R",
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "fields": {},
+    "dnp": false,
+    "datasheet": "${KIPRJMOD}/../../datasheets/avx-x7r.pdf"
+  }
+]

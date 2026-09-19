@@ -1,0 +1,13 @@
+.DS_Store
+*.kicad_prl
+*.lck
+~*.lck
+*-backups/
+_autosave-*
+fp-info-cache
+.direnv/
+result
+result-*
+tmp/
+__pycache__/
+*.pyc

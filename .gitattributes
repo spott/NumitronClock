@@ -1,0 +1,7 @@
+# Preserve downloaded originals byte for byte, including PDF line endings.
+datasheets/*.pdf binary
+
+# KiCad owns the formatting of generated review previews.
+review/*.svg -whitespace linguist-generated=true
+review/*.net.xml linguist-generated=true
+review/components.json linguist-generated=true
