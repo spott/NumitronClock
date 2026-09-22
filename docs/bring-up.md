@@ -2,7 +2,7 @@
 
 ## Before PCB layout
 
-- Measure the **ordered GZC9-A** samples: every PCB-tail center, tail cross-section, required finished hole, pad/annular ring, body diameter, underside protrusion, installed tube height and pin-1 orientation. A 12 mm tube-contact circle does not establish the PCB-tail circle. Archive the seller's drawing if available and compare it with the samples.
+- The **GZC9-A drawing is archived**; see [socket dimensions and remaining checks](socket.md). Confirm the PCB-entry terminal centres, the metal thickness missing from the 2 ±0.1 mm width callout, seating depth and pin-number mapping on an ordered sample. Use those to set holes/slots and annular rings. The Ø12 contact circle and side-view terminal span are distinct dimensions.
 - Verify the actual decimal connection between socket common pin 2 and candidate pin 1 with a current-limited test, then record the mapping. The owner has confirmed the presence of the decimal; its pin number still needs confirmation.
 - Assign a verified BH1750 WSOF6I footprint without a soldered center pad. Confirm the exact MLCC order codes and biased capacitance, plus header and semiconductor lands.
 - Fit the tube/glass envelopes to the 110 x 30 mm target. RCA gives a DR2000-series maximum glass diameter of 0.785 in (about 19.94 mm); do not set tube pitch from the smaller socket body alone. Choose a deliberate HH/MM gap and mounting holes after measuring the assemblies.

@@ -1,11 +1,12 @@
 # Archived component datasheets
 
-19 original PDF documents, retrieved 2026-09-18 and committed with the design. Copyright and ownership remain with their respective publishers. Source URLs and SHA-256 hashes are in [sources.json](sources.json); [SHA256SUMS](SHA256SUMS) provides a compact integrity list.
+19 original PDF documents, retrieved 2026-09-18, and 1 owner-provided JPEG drawing, received 2026-09-21. The original files are committed with the design. Copyright and ownership remain with their respective publishers. Source URLs, receipt dates and SHA-256 hashes are in [sources.json](sources.json); [SHA256SUMS](SHA256SUMS) provides a compact integrity list.
 
-| Local document | Applies to | Pages | Original source |
+| Local document | Applies to | Pages / format | Source or associated listing |
 |---|---|---:|---|
 | [3m-3365-ribbon.pdf](3m-3365-ribbon.pdf) | 3M 3365 series; 3365/16 ribbon cable | 5 | [Source](https://multimedia.3m.com/mws/media/22052O/3mtm-round-conductor-flat-cable-050in-3365-series-ts0080.pdf) |
 | [AP7361C.pdf](AP7361C.pdf) | Diodes AP7361C; U1 | 22 | [Source](https://www.diodes.com/assets/Datasheets/AP7361C.pdf) |
+| [GZC9-A_socket-dimensions.jpg](GZC9-A_socket-dimensions.jpg) | GZC9-A socket dimension drawing; supplied by owner, manufacturer unidentified | JPEG | [Source](https://www.amazon.com/dp/B0BGBJ7L41) |
 | [RC0603FR-07100KL.pdf](RC0603FR-07100KL.pdf) | Yageo RC0603FR-07100KL; individual resistor specification | 1 | [Source](https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-07100KL) |
 | [RC0603FR-0710KL.pdf](RC0603FR-0710KL.pdf) | Yageo RC0603FR-0710KL; individual resistor specification | 1 | [Source](https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-0710KL) |
 | [RC0603FR-071KL.pdf](RC0603FR-071KL.pdf) | Yageo RC0603FR-071KL; individual resistor specification | 1 | [Source](https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-071KL) |
@@ -28,7 +29,7 @@
 
 - **Tube identity:** the owner confirms DR2000-marked tubes with visible prefix decimals. RCA's archived table assigns pin 1 to a decimal on DR2010 and NC on DR2000. Preserve the owner's observation; verify the actual pin-1 connection before enabling the separator.
 - **TPIC6B595:** Rev. D's pin-function table lists SRCK as pin 15. The package drawing and application circuit show **pin 13**; pin 15 is DRAIN5. The schematic uses pin 13.
-- **GZC9-A socket:** ordered listing [B0BGBJ7L41](https://www.amazon.com/dp/B0BGBJ7L41), supplied by the owner as [this short link](https://a.co/d/02oJ9ki1). The link resolved, but the listing/drawing could not be retrieved. No manufacturer PDF or verified drill drawing is available in this archive. Measurements from the ordered samples are still required; the tube's pin circle is not a substitute for socket-tail geometry.
+- **GZC9-A socket:** the owner supplied the [listing dimension drawing](GZC9-A_socket-dimensions.jpg) on 2026-09-21. It is preserved byte for byte; it has no manufacturer name, pin numbers or full PCB drilling detail. [Socket notes](../docs/socket.md) transcribe the dimensions and distinguish the 12 mm contact circle from the splayed terminals. Tail cross-section, the PCB entry pattern and pin-number mapping still require confirmation on a sample.
 - **Capacitors:** the family PDF is included. Exact C1-C15 order codes and biased capacitance are not yet frozen.
 
-Run `nix develop --command python3 scripts/index_datasheets.py` to verify PDF parsing and refresh hashes after deliberately adding or replacing a source. Do not replace a source silently; review its changed pin tables/specifications and commit the new document together with the design consequences.
+Run `nix develop --command python3 scripts/index_datasheets.py` to validate PDF parsing and JPEG file markers, and refresh hashes after deliberately adding or replacing a source. Visually inspect new drawings as well. Do not replace a source silently; review its changed pin tables/specifications and commit the new document together with the design consequences.

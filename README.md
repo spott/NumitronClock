@@ -12,11 +12,12 @@ Open **[NumitronTop.kicad_pro](hardware/top-board/NumitronTop.kicad_pro)** in Ki
 - [Connector and firmware contract](docs/interface.md)
 - [Electrical design notes](docs/design.md)
 - [Preliminary BOM](docs/bom.md)
+- [Socket drawing and dimensions](docs/socket.md)
 - [Bring-up and layout hold points](docs/bring-up.md)
 - [Archived component datasheets](datasheets/README.md)
 - [ERC result](review/erc.rpt) and [exported-netlist audit](review/connectivity.txt)
 
-This is the **schematic milestone**, not a PCB fabrication release. No routed PCB or Gerbers are included. The socket footprint needs measurements; the BH1750 land pattern, mechanical placement, thermal behavior, and time-source decision remain layout hold points.
+This is the **schematic milestone**, not a PCB fabrication release. No routed PCB or Gerbers are included. The owner-provided socket drawing is archived; its terminal cross-section, PCB entry pattern and numbering still need confirmation for the footprint. The BH1750 land pattern, mechanical placement, thermal behavior, and time-source decision remain layout hold points.
 
 The owner confirms the actual tubes are **marked DR2000 and have prefix decimal points**. The archived RCA table assigns that feature to DR2010 instead. The design preserves the requested HH.MM display and routes the eighth channel to pin 1; verify that decimal connection on the actual tubes before enabling it.
 
@@ -29,7 +30,7 @@ nix develop
 bash scripts/review.sh
 ```
 
-The review command runs KiCad ERC, exports and audits the saved schematic's netlist, exports SVG sheets, and renders inspection PNGs under ignored `tmp/render/`. It does not regenerate or overwrite the schematic. All PDF sources are archived in Git with their URLs and hashes.
+The review command runs KiCad ERC, exports and audits the saved schematic's netlist, exports SVG sheets, and renders inspection PNGs under ignored `tmp/render/`. It does not regenerate or overwrite the schematic. Source PDFs and the socket drawing are archived in Git with their provenance and hashes.
 
 `scripts/build_schematic.py --write` records the initial schematic capture and is deliberately opt-in: it **overwrites the native KiCad files**. After editing in KiCad, preserve those edits; reconcile the generator before using it again.
 

@@ -30,7 +30,7 @@ for (value,mpn,fp,dnp,ds),refs in sorted(groups.items(),key=lambda item:sortref(
     lines.append(f"| {', '.join(refs)} | {len(refs)} | {value} | {order} | {fp} | {assembly} | [PDF](../datasheets/{file}) |")
 lines += ["","## Mechanical and cable items","",
           "| Item | Quantity | Selection / status |","|---|---:|---|",
-          "| Tube sockets | 4 | Ordered GZC9-A, [Amazon B0BGBJ7L41](https://www.amazon.com/dp/B0BGBJ7L41). Vendor drawing unavailable; measure the actual PCB tails before footprint capture. Socket footprint belongs to V1-V4's tube/socket assembly. |",
+          "| Tube sockets | 4 | Ordered GZC9-A, [Amazon B0BGBJ7L41](https://www.amazon.com/dp/B0BGBJ7L41). [Dimension drawing](../datasheets/GZC9-A_socket-dimensions.jpg) received from owner 2026-09-21; [remaining terminal and numbering checks](socket.md) precede footprint assignment. Socket footprint belongs to V1-V4's tube/socket assembly. |",
           "| Cable female connectors | 2 | Wurth 61201623021, [datasheet](../datasheets/idc-socket.pdf). One at each cable end. |",
           "| Strain-relief caps | 2 | Included in the selected Wurth socket's with-strain-relief specification; confirm supplied pieces and assembled clearance. |",
           "| Ribbon cable | ~150 mm initially | 3M 3365/16, 28 AWG, 1.27 mm pitch, [datasheet](../datasheets/3m-3365-ribbon.pdf). Final length follows the debugging/enclosure clearance check. |",

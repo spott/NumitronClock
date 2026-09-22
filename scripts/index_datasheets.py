@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate archived PDFs and refresh their provenance index. Never downloads."""
+"""Validate archived component documents and refresh provenance. Never downloads."""
 from pathlib import Path
 import hashlib
 import json
@@ -24,7 +24,17 @@ sources={
 for code in ["46K4","10K","33R","100K","4K7","2K2","1K"]:
     part="RC0603FR-07"+code+"L"
     sources[part+".pdf"]=("Yageo "+part+"; individual resistor specification", "https://www.yageogroup.com/component-documentation/download/specsheet/"+part)
-assert {p.name for p in directory.glob("*.pdf")}==set(sources), "PDF/source manifest mismatch"
+image_sources={
+    "GZC9-A_socket-dimensions.jpg": {
+        "description": "GZC9-A socket dimension drawing; supplied by owner, manufacturer unidentified",
+        "source_url": "https://www.amazon.com/dp/B0BGBJ7L41",
+        "source_kind": "user-provided attachment associated with the ordered listing",
+        "original_filename": "61KVbbJ96SL._AC_SL1300_.jpg",
+        "received": "2026-09-21",
+        "media_type": "image/jpeg",
+    },
+}
+assert {p.name for p in directory.iterdir() if p.suffix.lower() in {".pdf",".jpg"}}==set(sources)|set(image_sources), "Document/source manifest mismatch"
 records=[]
 for filename,(description,url) in sorted(sources.items()):
     path=directory/filename
@@ -33,16 +43,21 @@ for filename,(description,url) in sorted(sources.items()):
     reader=PdfReader(path,strict=True)
     assert len(reader.pages)>0
     records.append({"file":filename,"description":description,"source_url":url,"retrieved":"2026-09-18","pages":len(reader.pages),"bytes":len(data),"sha256":hashlib.sha256(data).hexdigest()})
+for filename,metadata in image_sources.items():
+    data=(directory/filename).read_bytes()
+    assert data.startswith(b"\xff\xd8\xff") and data.endswith(b"\xff\xd9"), f"Not a complete JPEG: {filename}"
+    records.append({"file":filename,**metadata,"bytes":len(data),"sha256":hashlib.sha256(data).hexdigest()})
+records.sort(key=lambda r:r["file"])
 (directory/"sources.json").write_text(json.dumps(records,indent=2)+"\n")
 (directory/"SHA256SUMS").write_text("".join(f'{r["sha256"]}  {r["file"]}\n' for r in records))
-lines=["# Archived component datasheets","",f"{len(records)} original PDF documents, retrieved 2026-09-18 and committed with the design. Copyright and ownership remain with their respective publishers. Source URLs and SHA-256 hashes are in [sources.json](sources.json); [SHA256SUMS](SHA256SUMS) provides a compact integrity list.","",
-       "| Local document | Applies to | Pages | Original source |","|---|---|---:|---|"]
-for r in records: lines.append(f'| [{r["file"]}]({r["file"]}) | {r["description"]} | {r["pages"]} | [Source]({r["source_url"]}) |')
+lines=["# Archived component datasheets","",f"{len(sources)} original PDF documents, retrieved 2026-09-18, and {len(image_sources)} owner-provided JPEG drawing, received 2026-09-21. The original files are committed with the design. Copyright and ownership remain with their respective publishers. Source URLs, receipt dates and SHA-256 hashes are in [sources.json](sources.json); [SHA256SUMS](SHA256SUMS) provides a compact integrity list.","",
+       "| Local document | Applies to | Pages / format | Source or associated listing |","|---|---|---:|---|"]
+for r in records: lines.append(f'| [{r["file"]}]({r["file"]}) | {r["description"]} | {r.get("pages","JPEG")} | [Source]({r["source_url"]}) |')
 lines += ["","## Known discrepancies and missing mechanical data","",
           "- **Tube identity:** the owner confirms DR2000-marked tubes with visible prefix decimals. RCA's archived table assigns pin 1 to a decimal on DR2010 and NC on DR2000. Preserve the owner's observation; verify the actual pin-1 connection before enabling the separator.",
           "- **TPIC6B595:** Rev. D's pin-function table lists SRCK as pin 15. The package drawing and application circuit show **pin 13**; pin 15 is DRAIN5. The schematic uses pin 13.",
-          "- **GZC9-A socket:** ordered listing [B0BGBJ7L41](https://www.amazon.com/dp/B0BGBJ7L41), supplied by the owner as [this short link](https://a.co/d/02oJ9ki1). The link resolved, but the listing/drawing could not be retrieved. No manufacturer PDF or verified drill drawing is available in this archive. Measurements from the ordered samples are still required; the tube's pin circle is not a substitute for socket-tail geometry.",
+          "- **GZC9-A socket:** the owner supplied the [listing dimension drawing](GZC9-A_socket-dimensions.jpg) on 2026-09-21. It is preserved byte for byte; it has no manufacturer name, pin numbers or full PCB drilling detail. [Socket notes](../docs/socket.md) transcribe the dimensions and distinguish the 12 mm contact circle from the splayed terminals. Tail cross-section, the PCB entry pattern and pin-number mapping still require confirmation on a sample.",
           "- **Capacitors:** the family PDF is included. Exact C1-C15 order codes and biased capacitance are not yet frozen.","",
-          "Run `nix develop --command python3 scripts/index_datasheets.py` to verify PDF parsing and refresh hashes after deliberately adding or replacing a source. Do not replace a source silently; review its changed pin tables/specifications and commit the new document together with the design consequences.",""]
+          "Run `nix develop --command python3 scripts/index_datasheets.py` to validate PDF parsing and JPEG file markers, and refresh hashes after deliberately adding or replacing a source. Visually inspect new drawings as well. Do not replace a source silently; review its changed pin tables/specifications and commit the new document together with the design consequences.",""]
 (directory/"README.md").write_text("\n".join(lines))
-print(f"Validated and indexed {len(records)} PDFs ({sum(r['pages'] for r in records)} pages).")
+print(f"Indexed {len(sources)} PDFs ({sum(r.get('pages',0) for r in records)} pages) and {len(image_sources)} JPEG drawing(s).")
