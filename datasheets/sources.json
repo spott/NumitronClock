@@ -146,6 +146,15 @@
     "sha256": "483284b10e2a58c8ddafea3c1c3f77388edf9efd394ca30f9559e605f644f2dc"
   },
   {
+    "file": "rohm-wsof6-package.pdf",
+    "description": "ROHM WSOF6 mounting reference; WSOF6I correspondence remains to be checked for U3",
+    "source_url": "https://fscdn.rohm.com/en/techdata_basic/ic/package/Jisso_WSOF6-1-2_Rev005s_TR%28MSL3%29.pdf",
+    "retrieved": "2026-09-26",
+    "pages": 11,
+    "bytes": 737308,
+    "sha256": "ad2aa218a499388d66fd5b040bad15cd7a4605c7a82713ee00d027425facc884"
+  },
+  {
     "file": "rp2350-datasheet.pdf",
     "description": "Raspberry Pi RP2350; bottom-board interface reference, including A2 erratum E9",
     "source_url": "https://datasheets.raspberrypi.com/rp2350/rp2350-datasheet.pdf",

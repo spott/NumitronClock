@@ -12,6 +12,7 @@ sources={
     "tpic6b595.pdf": ("TI TPIC6B595; U5-U8", "https://www.ti.com/lit/ds/symlink/tpic6b595.pdf"),
     "sn74ahct125.pdf": ("TI SN74AHCT125; U2", "https://www.ti.com/lit/ds/symlink/sn74ahct125.pdf"),
     "bh1750fvi.pdf": ("ROHM BH1750FVI; U3 (manufacturer PDF hosted by DigiKey)", "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/6165/bh1750fvi-e.pdf"),
+    "rohm-wsof6-package.pdf": ("ROHM WSOF6 mounting reference; WSOF6I correspondence remains to be checked for U3", "https://fscdn.rohm.com/en/techdata_basic/ic/package/Jisso_WSOF6-1-2_Rev005s_TR%28MSL3%29.pdf"),
     "tlv809e.pdf": ("TI TLV809E family; U4", "https://www.ti.com/lit/ds/symlink/tlv809e.pdf"),
     "mmbt3904.pdf": ("Diodes MMBT3904; Q1", "https://www.diodes.com/datasheet/download/MMBT3904.pdf"),
     "dr2000.pdf": ("RCA Numitron family; V1-V4 (original RCA document hosted by The Valve Museum)", "https://www.r-type.org/pdfs/dr2000.pdf"),
@@ -36,13 +37,14 @@ image_sources={
 }
 assert {p.name for p in directory.iterdir() if p.suffix.lower() in {".pdf",".jpg"}}==set(sources)|set(image_sources), "Document/source manifest mismatch"
 records=[]
+retrieved_dates={"rohm-wsof6-package.pdf":"2026-09-26"}
 for filename,(description,url) in sorted(sources.items()):
     path=directory/filename
     data=path.read_bytes()
     assert data.startswith(b"%PDF"), f"Non-PDF response: {filename}"
     reader=PdfReader(path,strict=True)
     assert len(reader.pages)>0
-    records.append({"file":filename,"description":description,"source_url":url,"retrieved":"2026-09-18","pages":len(reader.pages),"bytes":len(data),"sha256":hashlib.sha256(data).hexdigest()})
+    records.append({"file":filename,"description":description,"source_url":url,"retrieved":retrieved_dates.get(filename,"2026-09-18"),"pages":len(reader.pages),"bytes":len(data),"sha256":hashlib.sha256(data).hexdigest()})
 for filename,metadata in image_sources.items():
     data=(directory/filename).read_bytes()
     assert data.startswith(b"\xff\xd8\xff") and data.endswith(b"\xff\xd9"), f"Not a complete JPEG: {filename}"
@@ -50,7 +52,7 @@ for filename,metadata in image_sources.items():
 records.sort(key=lambda r:r["file"])
 (directory/"sources.json").write_text(json.dumps(records,indent=2)+"\n")
 (directory/"SHA256SUMS").write_text("".join(f'{r["sha256"]}  {r["file"]}\n' for r in records))
-lines=["# Archived component datasheets","",f"{len(sources)} original PDF documents, retrieved 2026-09-18, and {len(image_sources)} owner-provided JPEG drawing, received 2026-09-21. The original files are committed with the design. Copyright and ownership remain with their respective publishers. Source URLs, receipt dates and SHA-256 hashes are in [sources.json](sources.json); [SHA256SUMS](SHA256SUMS) provides a compact integrity list.","",
+lines=["# Archived component datasheets","",f"{len(sources)} original PDF documents and {len(image_sources)} owner-provided JPEG drawing. The original files are committed with the design. Copyright and ownership remain with their respective publishers. Source URLs, individual receipt dates and SHA-256 hashes are in [sources.json](sources.json); [SHA256SUMS](SHA256SUMS) provides a compact integrity list.","",
        "| Local document | Applies to | Pages / format | Source or associated listing |","|---|---|---:|---|"]
 for r in records: lines.append(f'| [{r["file"]}]({r["file"]}) | {r["description"]} | {r.get("pages","JPEG")} | [Source]({r["source_url"]}) |')
 lines += ["","## Known discrepancies and missing mechanical data","",

@@ -14,11 +14,12 @@ Open **[NumitronTop.kicad_pro](hardware/top-board/NumitronTop.kicad_pro)** in Ki
 - [Preliminary BOM](docs/bom.md)
 - [Socket drawing and dimensions](docs/socket.md)
 - [Provisional socket footprint](review/GZC9-A_B9A_Provisional.svg)
+- [Socket placement image](review/NumitronTop-placement.png) and [scope / dimensions](docs/placement.md)
 - [Bring-up and layout hold points](docs/bring-up.md)
 - [Archived component datasheets](datasheets/README.md)
 - [ERC result](review/erc.rpt) and [exported-netlist audit](review/connectivity.txt)
 
-The schematic is captured and the four tubes now have a **provisional socket footprint** for top-board placement/layout. On 2026-09-25 the owner authorized using the drawing and estimating terminal thickness: the working footprint uses an 18 mm pin circle, 0.5 mm assumed thickness, 2.5 mm plated holes and 3.8 mm copper pads. Physical fit is checked before ordering boards; it does not block placement. No routed PCB or Gerbers are included yet. BH1750 land-pattern work, mechanical placement and thermal design remain top-board work. **WWVB versus GPS belongs to the bottom board and does not block this board.**
+The schematic is captured and the four tubes now have a **provisional socket footprint** for top-board placement/layout. On 2026-09-25 the owner authorized using the drawing and estimating terminal thickness: the working footprint uses an 18 mm pin circle, 0.5 mm assumed thickness, 2.5 mm plated holes and 3.8 mm copper pads. Physical fit is checked before ordering boards; it does not block placement. The native **NumitronTop.kicad_pcb is currently a socket-only placement study** on a 110 × 30 mm outline: V1–V4 are placed; the remaining 51 schematic components, mounting holes, thermal copper and all routing are pending. It is not a complete PCB layout or fabrication release. BH1750 land-pattern work and underside mechanical fit remain top-board work. **WWVB versus GPS belongs to the bottom board and does not block this board.**
 
 The owner confirms the actual tubes are **marked DR2000 and have prefix decimal points**. The archived RCA table assigns that feature to DR2010 instead. The design preserves the requested HH.MM display and routes the eighth channel to pin 1; verify that decimal connection on the actual tubes before enabling it.
 
@@ -36,5 +37,7 @@ The review command runs KiCad ERC, audits the saved schematic's netlist and prov
 `scripts/build_schematic.py --write` records the initial schematic capture and is deliberately opt-in: it **overwrites the native KiCad files**. After editing in KiCad, preserve those edits; reconcile the generator before using it again.
 
 `hardware/top-board/socket-footprint.json` records the socket assumptions. `scripts/build_socket_footprint.py --write` captures them into the project-local `Numitron.pretty` library; reconcile manual footprint edits before regenerating. The schematic assigns `Numitron:GZC9-A_B9A_Provisional` to V1-V4.
+
+`nix develop --command bash scripts/review_placement.sh` renders the saved socket placement and checks its dimensions and pad-to-net assignments. It also retains a complete KiCad DRC/parity report, which intentionally exposes the study's missing components and unrouted nets. `scripts/build_placement.py --write` is a one-time capture using KiCad's bundled Python; it **overwrites the native PCB**, so reconcile any subsequent CAD edits before running it again. `hardware/top-board/placement.json` records the initial positions; the saved native PCB is authoritative after CAD edits.
 
 The repository covers the future whole clock, but this revision contains only the top board. The bottom board will supply protected 5 V, regulated 3.3 V, the control interface and I2C pull-ups. Its MCU, USB-C input, RTC, time receiver, user controls and power telemetry are outside this milestone.

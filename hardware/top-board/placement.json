@@ -1,0 +1,11 @@
+{
+  "status": "Socket placement study only; remaining components and routing pending",
+  "board_origin_mm": [50, 50],
+  "board_size_mm": [110, 30],
+  "sockets": [
+    {"reference": "V1", "role": "H10", "center_mm": [17, 15]},
+    {"reference": "V2", "role": "H1", "center_mm": [41.5, 15]},
+    {"reference": "V3", "role": "M10", "center_mm": [68.5, 15]},
+    {"reference": "V4", "role": "M1", "center_mm": [93, 15]}
+  ]
+}

@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="750" viewBox="0 0 1500 750">
+<rect width="1500" height="750" fill="#f3f5f1"/>
+<style>text{font-family:Arial,Helvetica,sans-serif} .dim{fill:#50655d;font-size:20px} .note{fill:#50655d;font-size:20px}</style>
+<text x="90" y="63" font-size="32" fill="#193e33" text-anchor="start" font-weight="700">NUMITRON / TOP BOARD</text>
+<text x="90" y="102" font-size="24" fill="#193e33" text-anchor="start" font-weight="400">Socket placement study · top view</text>
+<rect x="1090" y="40" width="320" height="40" rx="20" fill="#e7cd90"/>
+<text x="1250" y="67" font-size="19" fill="#5b4317" text-anchor="middle" font-weight="700">DRAFT · UNROUTED</text>
+<text x="1410" y="104" font-size="17" fill="#50655d" text-anchor="end" font-weight="400">26 SEP 2026</text>
+<line x1="145" y1="175" x2="1355.0" y2="175" stroke="#82968c" stroke-width="1.5" stroke-dasharray=""/>
+<line x1="145" y1="168" x2="145" y2="182" stroke="#82968c" stroke-width="1.5" stroke-dasharray=""/>
+<line x1="1355.0" y1="168" x2="1355.0" y2="182" stroke="#82968c" stroke-width="1.5" stroke-dasharray=""/>
+<text x="750.0" y="165" font-size="20" fill="#50655d" text-anchor="middle" font-weight="400">110 mm</text>
+<line x1="145" y1="185" x2="145" y2="211" stroke="#82968c" stroke-width="1.5" stroke-dasharray=""/>
+<line x1="1355.0" y1="185" x2="1355.0" y2="211" stroke="#82968c" stroke-width="1.5" stroke-dasharray=""/>
+<line x1="103" y1="220" x2="103" y2="550.0" stroke="#82968c" stroke-width="1.5" stroke-dasharray=""/>
+<line x1="96" y1="220" x2="110" y2="220" stroke="#82968c" stroke-width="1.5" stroke-dasharray=""/>
+<line x1="96" y1="550.0" x2="110" y2="550.0" stroke="#82968c" stroke-width="1.5" stroke-dasharray=""/>
+<text x="83" y="385.0" text-anchor="middle" transform="rotate(-90 83 385.0)" class="dim">30 mm</text>
+<rect x="145" y="220" width="1210.0" height="330.0" fill="#16483d" stroke="#10372e" stroke-width="2"/>
+<text x="160" y="247" font-size="13" fill="#c9dcd2" text-anchor="start" font-weight="400">REAR</text>
+<text x="160" y="535.0" font-size="13" fill="#c9dcd2" text-anchor="start" font-weight="400">FRONT</text>
+<circle cx="332.0" cy="385.0" r="109.67" stroke="#a8d2c3" fill="none" stroke-width="1.7" stroke-dasharray="6 5"/>
+<circle cx="332.0" cy="385.0" r="99.0" stroke="#e6ede2" fill="#25574a" stroke-width="2.0" stroke-dasharray=""/>
+<rect x="369.2907369999999" y="444.19268300000005" width="41.8" height="41.8" fill="#dfbd67"/>
+<circle cx="390.1907369999999" cy="465.092683" r="13.75" stroke="#0f362b" fill="#f3f5f1" stroke-width="1" stroke-dasharray=""/>
+<text x="365.1907369999999" y="441.092683" font-size="17" fill="#e6ede2" text-anchor="middle" font-weight="400">1</text>
+<circle cx="426.1545990000001" cy="415.592683" r="20.9" stroke="#dfbd67" fill="#dfbd67" stroke-width="0" stroke-dasharray=""/>
+<circle cx="426.1545990000001" cy="415.592683" r="13.75" stroke="#0f362b" fill="#f3f5f1" stroke-width="1" stroke-dasharray=""/>
+<circle cx="426.1545990000001" cy="354.407317" r="20.9" stroke="#dfbd67" fill="#dfbd67" stroke-width="0" stroke-dasharray=""/>
+<circle cx="426.1545990000001" cy="354.407317" r="13.75" stroke="#0f362b" fill="#f3f5f1" stroke-width="1" stroke-dasharray=""/>
+<circle cx="390.1907369999999" cy="304.907317" r="20.9" stroke="#dfbd67" fill="#dfbd67" stroke-width="0" stroke-dasharray=""/>
+<circle cx="390.1907369999999" cy="304.907317" r="13.75" stroke="#0f362b" fill="#f3f5f1" stroke-width="1" stroke-dasharray=""/>
+<circle cx="332.0" cy="286.0" r="20.9" stroke="#dfbd67" fill="#dfbd67" stroke-width="0" stroke-dasharray=""/>
+<circle cx="332.0" cy="286.0" r="13.75" stroke="#0f362b" fill="#f3f5f1" stroke-width="1" stroke-dasharray=""/>
+<circle cx="273.809263" cy="304.907317" r="20.9" stroke="#dfbd67" fill="#dfbd67" stroke-width="0" stroke-dasharray=""/>
+<circle cx="273.809263" cy="304.907317" r="13.75" stroke="#0f362b" fill="#f3f5f1" stroke-width="1" stroke-dasharray=""/>
+<circle cx="237.845401" cy="354.407317" r="20.9" stroke="#dfbd67" fill="#dfbd67" stroke-width="0" stroke-dasharray=""/>
+<circle cx="237.845401" cy="354.407317" r="13.75" stroke="#0f362b" fill="#f3f5f1" stroke-width="1" stroke-dasharray=""/>
+<circle cx="237.845401" cy="415.592683" r="20.9" stroke="#dfbd67" fill="#dfbd67" stroke-width="0" stroke-dasharray=""/>
+<circle cx="237.845401" cy="415.592683" r="13.75" stroke="#0f362b" fill="#f3f5f1" stroke-width="1" stroke-dasharray=""/>
+<circle cx="273.809263" cy="465.092683" r="20.9" stroke="#dfbd67" fill="#dfbd67" stroke-width="0" stroke-dasharray=""/>
+<circle cx="273.809263" cy="465.092683" r="13.75" stroke="#0f362b" fill="#f3f5f1" stroke-width="1" stroke-dasharray=""/>
+<text x="332.0" y="382.0" font-size="29" fill="#ffffff" text-anchor="middle" font-weight="700">H10</text>
+<text x="332.0" y="414.0" font-size="19" fill="#cee3d7" text-anchor="middle" font-weight="400">V1</text>
+<circle cx="601.5" cy="385.0" r="109.67" stroke="#a8d2c3" fill="none" stroke-width="1.7" stroke-dasharray="6 5"/>
+<circle cx="601.5" cy="385.0" r="99.0" stroke="#e6ede2" fill="#25574a" stroke-width="2.0" stroke-dasharray=""/>
+<rect x="638.7907369999999" y="444.19268300000005" width="41.8" height="41.8" fill="#dfbd67"/>
+<circle cx="659.6907369999999" cy="465.092683" r="13.75" stroke="#0f362b" fill="#f3f5f1" stroke-width="1" stroke-dasharray=""/>
+<text x="634.6907369999999" y="441.092683" font-size="17" fill="#e6ede2" text-anchor="middle" font-weight="400">1</text>
+<circle cx="695.6545990000001" cy="415.592683" r="20.9" stroke="#dfbd67" fill="#dfbd67" stroke-width="0" stroke-dasharray=""/>
+<circle cx="695.6545990000001" cy="415.592683" r="13.75" stroke="#0f362b" fill="#f3f5f1" stroke-width="1" stroke-dasharray=""/>
+<circle cx="695.6545990000001" cy="354.407317" r="20.9" stroke="#dfbd67" fill="#dfbd67" stroke-width="0" stroke-dasharray=""/>
+<circle cx="695.6545990000001" cy="354.407317" r="13.75" stroke="#0f362b" fill="#f3f5f1" stroke-width="1" stroke-dasharray=""/>
+<circle cx="659.6907369999999" cy="304.907317" r="20.9" stroke="#dfbd67" fill="#dfbd67" stroke-width="0" stroke-dasharray=""/>
+<circle cx="659.6907369999999" cy="304.907317" r="13.75" stroke="#0f362b" fill="#f3f5f1" stroke-width="1" stroke-dasharray=""/>
+<circle cx="601.5" cy="286.0" r="20.9" stroke="#dfbd67" fill="#dfbd67" stroke-width="0" stroke-dasharray=""/>
+<circle cx="601.5" cy="286.0" r="13.75" stroke="#0f362b" fill="#f3f5f1" stroke-width="1" stroke-dasharray=""/>
+<circle cx="543.3092630000001" cy="304.907317" r="20.9" stroke="#dfbd67" fill="#dfbd67" stroke-width="0" stroke-dasharray=""/>
+<circle cx="543.3092630000001" cy="304.907317" r="13.75" stroke="#0f362b" fill="#f3f5f1" stroke-width="1" stroke-dasharray=""/>
+<circle cx="507.3454009999999" cy="354.407317" r="20.9" stroke="#dfbd67" fill="#dfbd67" stroke-width="0" stroke-dasharray=""/>
+<circle cx="507.3454009999999" cy="354.407317" r="13.75" stroke="#0f362b" fill="#f3f5f1" stroke-width="1" stroke-dasharray=""/>
+<circle cx="507.3454009999999" cy="415.592683" r="20.9" stroke="#dfbd67" fill="#dfbd67" stroke-width="0" stroke-dasharray=""/>
+<circle cx="507.3454009999999" cy="415.592683" r="13.75" stroke="#0f362b" fill="#f3f5f1" stroke-width="1" stroke-dasharray=""/>
+<circle cx="543.3092630000001" cy="465.092683" r="20.9" stroke="#dfbd67" fill="#dfbd67" stroke-width="0" stroke-dasharray=""/>
+<circle cx="543.3092630000001" cy="465.092683" r="13.75" stroke="#0f362b" fill="#f3f5f1" stroke-width="1" stroke-dasharray=""/>
+<text x="601.5" y="382.0" font-size="29" fill="#ffffff" text-anchor="middle" font-weight="700">H1</text>
+<text x="601.5" y="414.0" font-size="19" fill="#cee3d7" text-anchor="middle" font-weight="400">V2</text>
+<circle cx="898.5" cy="385.0" r="109.67" stroke="#a8d2c3" fill="none" stroke-width="1.7" stroke-dasharray="6 5"/>
+<circle cx="898.5" cy="385.0" r="99.0" stroke="#e6ede2" fill="#25574a" stroke-width="2.0" stroke-dasharray=""/>
+<rect x="935.7907369999999" y="444.19268300000005" width="41.8" height="41.8" fill="#dfbd67"/>
+<circle cx="956.6907369999999" cy="465.092683" r="13.75" stroke="#0f362b" fill="#f3f5f1" stroke-width="1" stroke-dasharray=""/>
+<text x="931.6907369999999" y="441.092683" font-size="17" fill="#e6ede2" text-anchor="middle" font-weight="400">1</text>
+<circle cx="992.6545990000001" cy="415.592683" r="20.9" stroke="#dfbd67" fill="#dfbd67" stroke-width="0" stroke-dasharray=""/>
+<circle cx="992.6545990000001" cy="415.592683" r="13.75" stroke="#0f362b" fill="#f3f5f1" stroke-width="1" stroke-dasharray=""/>
+<circle cx="992.6545990000001" cy="354.407317" r="20.9" stroke="#dfbd67" fill="#dfbd67" stroke-width="0" stroke-dasharray=""/>
+<circle cx="992.6545990000001" cy="354.407317" r="13.75" stroke="#0f362b" fill="#f3f5f1" stroke-width="1" stroke-dasharray=""/>
+<circle cx="956.6907369999999" cy="304.907317" r="20.9" stroke="#dfbd67" fill="#dfbd67" stroke-width="0" stroke-dasharray=""/>
+<circle cx="956.6907369999999" cy="304.907317" r="13.75" stroke="#0f362b" fill="#f3f5f1" stroke-width="1" stroke-dasharray=""/>
+<circle cx="898.5" cy="286.0" r="20.9" stroke="#dfbd67" fill="#dfbd67" stroke-width="0" stroke-dasharray=""/>
+<circle cx="898.5" cy="286.0" r="13.75" stroke="#0f362b" fill="#f3f5f1" stroke-width="1" stroke-dasharray=""/>
+<circle cx="840.3092630000001" cy="304.907317" r="20.9" stroke="#dfbd67" fill="#dfbd67" stroke-width="0" stroke-dasharray=""/>
+<circle cx="840.3092630000001" cy="304.907317" r="13.75" stroke="#0f362b" fill="#f3f5f1" stroke-width="1" stroke-dasharray=""/>
+<circle cx="804.3454009999999" cy="354.407317" r="20.9" stroke="#dfbd67" fill="#dfbd67" stroke-width="0" stroke-dasharray=""/>
+<circle cx="804.3454009999999" cy="354.407317" r="13.75" stroke="#0f362b" fill="#f3f5f1" stroke-width="1" stroke-dasharray=""/>
+<circle cx="804.3454009999999" cy="415.592683" r="20.9" stroke="#dfbd67" fill="#dfbd67" stroke-width="0" stroke-dasharray=""/>
+<circle cx="804.3454009999999" cy="415.592683" r="13.75" stroke="#0f362b" fill="#f3f5f1" stroke-width="1" stroke-dasharray=""/>
+<circle cx="840.3092630000001" cy="465.092683" r="20.9" stroke="#dfbd67" fill="#dfbd67" stroke-width="0" stroke-dasharray=""/>
+<circle cx="840.3092630000001" cy="465.092683" r="13.75" stroke="#0f362b" fill="#f3f5f1" stroke-width="1" stroke-dasharray=""/>
+<text x="898.5" y="382.0" font-size="29" fill="#ffffff" text-anchor="middle" font-weight="700">M10</text>
+<text x="898.5" y="414.0" font-size="19" fill="#cee3d7" text-anchor="middle" font-weight="400">V3</text>
+<circle cx="1168.0" cy="385.0" r="109.67" stroke="#a8d2c3" fill="none" stroke-width="1.7" stroke-dasharray="6 5"/>
+<circle cx="1168.0" cy="385.0" r="99.0" stroke="#e6ede2" fill="#25574a" stroke-width="2.0" stroke-dasharray=""/>
+<rect x="1205.2907369999998" y="444.19268300000005" width="41.8" height="41.8" fill="#dfbd67"/>
+<circle cx="1226.190737" cy="465.092683" r="13.75" stroke="#0f362b" fill="#f3f5f1" stroke-width="1" stroke-dasharray=""/>
+<text x="1201.190737" y="441.092683" font-size="17" fill="#e6ede2" text-anchor="middle" font-weight="400">1</text>
+<circle cx="1262.154599" cy="415.592683" r="20.9" stroke="#dfbd67" fill="#dfbd67" stroke-width="0" stroke-dasharray=""/>
+<circle cx="1262.154599" cy="415.592683" r="13.75" stroke="#0f362b" fill="#f3f5f1" stroke-width="1" stroke-dasharray=""/>
+<circle cx="1262.154599" cy="354.407317" r="20.9" stroke="#dfbd67" fill="#dfbd67" stroke-width="0" stroke-dasharray=""/>
+<circle cx="1262.154599" cy="354.407317" r="13.75" stroke="#0f362b" fill="#f3f5f1" stroke-width="1" stroke-dasharray=""/>
+<circle cx="1226.190737" cy="304.907317" r="20.9" stroke="#dfbd67" fill="#dfbd67" stroke-width="0" stroke-dasharray=""/>
+<circle cx="1226.190737" cy="304.907317" r="13.75" stroke="#0f362b" fill="#f3f5f1" stroke-width="1" stroke-dasharray=""/>
+<circle cx="1168.0" cy="286.0" r="20.9" stroke="#dfbd67" fill="#dfbd67" stroke-width="0" stroke-dasharray=""/>
+<circle cx="1168.0" cy="286.0" r="13.75" stroke="#0f362b" fill="#f3f5f1" stroke-width="1" stroke-dasharray=""/>
+<circle cx="1109.809263" cy="304.907317" r="20.9" stroke="#dfbd67" fill="#dfbd67" stroke-width="0" stroke-dasharray=""/>
+<circle cx="1109.809263" cy="304.907317" r="13.75" stroke="#0f362b" fill="#f3f5f1" stroke-width="1" stroke-dasharray=""/>
+<circle cx="1073.845401" cy="354.407317" r="20.9" stroke="#dfbd67" fill="#dfbd67" stroke-width="0" stroke-dasharray=""/>
+<circle cx="1073.845401" cy="354.407317" r="13.75" stroke="#0f362b" fill="#f3f5f1" stroke-width="1" stroke-dasharray=""/>
+<circle cx="1073.845401" cy="415.592683" r="20.9" stroke="#dfbd67" fill="#dfbd67" stroke-width="0" stroke-dasharray=""/>
+<circle cx="1073.845401" cy="415.592683" r="13.75" stroke="#0f362b" fill="#f3f5f1" stroke-width="1" stroke-dasharray=""/>
+<circle cx="1109.809263" cy="465.092683" r="20.9" stroke="#dfbd67" fill="#dfbd67" stroke-width="0" stroke-dasharray=""/>
+<circle cx="1109.809263" cy="465.092683" r="13.75" stroke="#0f362b" fill="#f3f5f1" stroke-width="1" stroke-dasharray=""/>
+<text x="1168.0" y="382.0" font-size="29" fill="#ffffff" text-anchor="middle" font-weight="700">M1</text>
+<text x="1168.0" y="414.0" font-size="19" fill="#cee3d7" text-anchor="middle" font-weight="400">V4</text>
+<line x1="332.0" y1="605" x2="601.5" y2="605" stroke="#82968c" stroke-width="1.5" stroke-dasharray=""/>
+<line x1="332.0" y1="598" x2="332.0" y2="612" stroke="#82968c" stroke-width="1.5" stroke-dasharray=""/>
+<line x1="601.5" y1="598" x2="601.5" y2="612" stroke="#82968c" stroke-width="1.5" stroke-dasharray=""/>
+<text x="466.75" y="595" font-size="20" fill="#50655d" text-anchor="middle" font-weight="400">24.5 mm centres</text>
+<line x1="601.5" y1="605" x2="898.5" y2="605" stroke="#82968c" stroke-width="1.5" stroke-dasharray=""/>
+<line x1="601.5" y1="598" x2="601.5" y2="612" stroke="#82968c" stroke-width="1.5" stroke-dasharray=""/>
+<line x1="898.5" y1="598" x2="898.5" y2="612" stroke="#82968c" stroke-width="1.5" stroke-dasharray=""/>
+<text x="750.0" y="595" font-size="20" fill="#50655d" text-anchor="middle" font-weight="400">27 mm centres</text>
+<line x1="898.5" y1="605" x2="1168.0" y2="605" stroke="#82968c" stroke-width="1.5" stroke-dasharray=""/>
+<line x1="898.5" y1="598" x2="898.5" y2="612" stroke="#82968c" stroke-width="1.5" stroke-dasharray=""/>
+<line x1="1168.0" y1="598" x2="1168.0" y2="612" stroke="#82968c" stroke-width="1.5" stroke-dasharray=""/>
+<text x="1033.25" y="595" font-size="20" fill="#50655d" text-anchor="middle" font-weight="400">24.5 mm centres</text>
+<circle cx="159" cy="654" r="7" stroke="#dfbd67" fill="#dfbd67" stroke-width="0" stroke-dasharray=""/>
+<text x="176" y="662" font-size="18" fill="#193e33" text-anchor="start" font-weight="400">Provisional pads / holes</text>
+<line x1="475" y1="654" x2="511" y2="654" stroke="#548d78" stroke-width="2" stroke-dasharray="6 5"/>
+<text x="523" y="662" font-size="18" fill="#193e33" text-anchor="start" font-weight="400">Maximum tube-glass envelope</text>
+<circle cx="930" cy="654" r="9" stroke="#25574a" fill="none" stroke-width="2" stroke-dasharray=""/>
+<text x="950" y="662" font-size="18" fill="#193e33" text-anchor="start" font-weight="400">18 mm socket body</text>
+<text x="145" y="710" font-size="20" fill="#193e33" text-anchor="start" font-weight="400">V1–V4 placed. Driver, connector, sensor, power and mounting placement remain to be completed.</text>
+</svg>
