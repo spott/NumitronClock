@@ -451,12 +451,12 @@
     "ref": "V1",
     "type": "DR2000_FamilySocket",
     "value": "DR2000 / GZC9-A",
-    "footprint": "",
+    "footprint": "Numitron:GZC9-A_B9A_Provisional",
     "fields": {
       "MPN": "DR2000",
       "Socket": "GZC9-A",
       "Manufacturer": "RCA / socket seller TBD",
-      "FootprintStatus": "HOLD: socket-tail measurements",
+      "FootprintStatus": "PROVISIONAL: 18 mm PCD, 0.5 mm terminal thickness, 2.5 mm holes; fit check before order",
       "TubeVariant": "Owner confirms DR2000 marking and prefix DP; verify pin 1 before use"
     },
     "dnp": false,
@@ -496,12 +496,12 @@
     "ref": "V2",
     "type": "DR2000_FamilySocket",
     "value": "DR2000 / GZC9-A",
-    "footprint": "",
+    "footprint": "Numitron:GZC9-A_B9A_Provisional",
     "fields": {
       "MPN": "DR2000",
       "Socket": "GZC9-A",
       "Manufacturer": "RCA / socket seller TBD",
-      "FootprintStatus": "HOLD: socket-tail measurements",
+      "FootprintStatus": "PROVISIONAL: 18 mm PCD, 0.5 mm terminal thickness, 2.5 mm holes; fit check before order",
       "TubeVariant": "Owner confirms DR2000 marking and prefix DP; verify pin 1 before use"
     },
     "dnp": false,
@@ -541,12 +541,12 @@
     "ref": "V3",
     "type": "DR2000_FamilySocket",
     "value": "DR2000 / GZC9-A",
-    "footprint": "",
+    "footprint": "Numitron:GZC9-A_B9A_Provisional",
     "fields": {
       "MPN": "DR2000",
       "Socket": "GZC9-A",
       "Manufacturer": "RCA / socket seller TBD",
-      "FootprintStatus": "HOLD: socket-tail measurements",
+      "FootprintStatus": "PROVISIONAL: 18 mm PCD, 0.5 mm terminal thickness, 2.5 mm holes; fit check before order",
       "TubeVariant": "Owner confirms DR2000 marking and prefix DP; verify pin 1 before use"
     },
     "dnp": false,
@@ -586,12 +586,12 @@
     "ref": "V4",
     "type": "DR2000_FamilySocket",
     "value": "DR2000 / GZC9-A",
-    "footprint": "",
+    "footprint": "Numitron:GZC9-A_B9A_Provisional",
     "fields": {
       "MPN": "DR2000",
       "Socket": "GZC9-A",
       "Manufacturer": "RCA / socket seller TBD",
-      "FootprintStatus": "HOLD: socket-tail measurements",
+      "FootprintStatus": "PROVISIONAL: 18 mm PCD, 0.5 mm terminal thickness, 2.5 mm holes; fit check before order",
       "TubeVariant": "Owner confirms DR2000 marking and prefix DP; verify pin 1 before use"
     },
     "dnp": false,

@@ -238,7 +238,7 @@ def build_drivers(child_id):
     # A recognizable seven-segment diagram, with the optional decimal explicitly labeled at the pin.
     for a,b in [((1.27,17.78),(7.62,17.78)),((8.89,16.51),(8.89,10.16)),((8.89,7.62),(8.89,1.27)),
                 ((1.27,0),(7.62,0)),((0,1.27),(0,7.62)),((0,10.16),(0,16.51)),((1.27,8.89),(7.62,8.89))]: graphic+=line(a,b,.508)
-    symbol("DR2000_FamilySocket",pins,graphic,"V",datasheet="${KIPRJMOD}/../../datasheets/dr2000.pdf",
+    symbol("DR2000_FamilySocket",pins,graphic,"V",footprint="Numitron:GZC9-A_B9A_Provisional",datasheet="${KIPRJMOD}/../../datasheets/dr2000.pdf",
            desc="GZC9-A socket; owner reports DR2000-marked tubes with prefix decimal. Pin 1 DP provisional: RCA table assigns DP to DR2010, NC to DR2000. Verify on actual tubes.")
     s=Sheet("TubeDrivers","Top board: tube drivers",3,child_id=child_id)
     s.text("FOUR STATIC DIGITS / NO MULTIPLEXING",17.78,15.24,2.54)
@@ -246,7 +246,7 @@ def build_drivers(child_id):
     for i,(x,y,digit) in enumerate([(78.74,76.2,"H10"),(281.94,76.2,"H1"),(78.74,187.96,"M10"),(281.94,187.96,"M1")]):
         s.text(digit+" / "+["HOURS TENS","HOURS UNITS","MINUTES TENS","MINUTES UNITS"][i],x-55.88,y-41.91,1.524)
         drv=s.add("TPIC6B595DW",f"U{i+5}",x,y,"TPIC6B595DWR",fields={"MPN":"TPIC6B595DWR","Manufacturer":"Texas Instruments"})
-        tube=s.add("DR2000_FamilySocket",f"V{i+1}",x+71.12,y,"DR2000 / GZC9-A",fields={"MPN":"DR2000","Socket":"GZC9-A","Manufacturer":"RCA / socket seller TBD","FootprintStatus":"HOLD: socket-tail measurements","TubeVariant":"Owner confirms DR2000 marking and prefix DP; verify pin 1 before use"})
+        tube=s.add("DR2000_FamilySocket",f"V{i+1}",x+71.12,y,"DR2000 / GZC9-A",fields={"MPN":"DR2000","Socket":"GZC9-A","Manufacturer":"RCA / socket seller TBD","FootprintStatus":"PROVISIONAL: 18 mm PCD, 0.5 mm terminal thickness, 2.5 mm holes; fit check before order","TubeVariant":"Owner confirms DR2000 marking and prefix DP; verify pin 1 before use"})
         s.rail(drv["2"],"+5V"); s.rail(tube["2"],"V_TUBE")
         for pn in [10,11,19]:
             p=drv[str(pn)]; s.wire(p,(p[0],y+30.48))
@@ -303,8 +303,8 @@ def main():
             f=root.add("PWR_FLAG",f"#FLG0{i:02d}",x+22.86,153.67)
             root.rail(f["1"],net,"down")
     root.text("Bottom board supplies regulated 3.3 V and protected 5 V.\nBudget up to 0.77 A nominal filament load plus logic.\nVerify cold-filament surge, USB current authorization,\nribbon loss, LDO dropout and enclosure temperature.\nNo battery, charging, USB-C or telemetry circuitry here.",17.78,171.45)
-    root.text("MECHANICAL HOLD POINTS",266.7,145.415,1.524)
-    root.text("Target: 110 x 30 mm, 2 layers.\nTube grouping: [HH] gap [MM].\nBoard separation: 25-30 mm.\nGZC9-A socket PCB-tail dimensions unmeasured.\nTube/socket and BH1750 footprints intentionally\nunassigned until the relevant land patterns are verified.\nNo PCB routing or manufacturing outputs in this revision.",266.7,153.035)
+    root.text("MECHANICAL / FOOTPRINT STATUS",266.7,145.415,1.524)
+    root.text("Target: 110 x 30 mm, 2 layers; [HH] gap [MM].\nBoard separation: 25-30 mm.\nGZC9-A footprint assigned provisionally:\n18 mm PCD; assume 0.5 mm terminal thickness;\n2.5 mm plated holes. Fit check before ordering.\nBH1750 land pattern still to be assigned.\nRadio choice is independent of this top board.",266.7,153.035)
     control_id=root.child("ControlAndSensor","Logic / ambient light",35.56,223.52,2)
     driver_id=root.child("TubeDrivers","Four tube drivers",165.1,223.52,3)
     root.text("Global nets join the sheets.\nSER_5V -> U5 -> U6 -> U7 -> U8.\nBLANK_5V high = all filaments off.",266.7,223.52)

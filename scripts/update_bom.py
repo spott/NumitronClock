@@ -30,7 +30,7 @@ for (value,mpn,fp,dnp,ds),refs in sorted(groups.items(),key=lambda item:sortref(
     lines.append(f"| {', '.join(refs)} | {len(refs)} | {value} | {order} | {fp} | {assembly} | [PDF](../datasheets/{file}) |")
 lines += ["","## Mechanical and cable items","",
           "| Item | Quantity | Selection / status |","|---|---:|---|",
-          "| Tube sockets | 4 | Ordered GZC9-A, [Amazon B0BGBJ7L41](https://www.amazon.com/dp/B0BGBJ7L41). [Dimension drawing](../datasheets/GZC9-A_socket-dimensions.jpg) received from owner 2026-09-21; [remaining terminal and numbering checks](socket.md) precede footprint assignment. Socket footprint belongs to V1-V4's tube/socket assembly. |",
+          "| Tube sockets | 4 | Ordered GZC9-A, [Amazon B0BGBJ7L41](https://www.amazon.com/dp/B0BGBJ7L41). [Drawing](../datasheets/GZC9-A_socket-dimensions.jpg) archived; [provisional footprint assumptions](socket.md) authorized 2026-09-25. Assigned to V1-V4 for layout; check physical fit before ordering. |",
           "| Cable female connectors | 2 | Wurth 61201623021, [datasheet](../datasheets/idc-socket.pdf). One at each cable end. |",
           "| Strain-relief caps | 2 | Included in the selected Wurth socket's with-strain-relief specification; confirm supplied pieces and assembled clearance. |",
           "| Ribbon cable | ~150 mm initially | 3M 3365/16, 28 AWG, 1.27 mm pitch, [datasheet](../datasheets/3m-3365-ribbon.pdf). Final length follows the debugging/enclosure clearance check. |",
@@ -39,7 +39,8 @@ lines += ["","## Mechanical and cable items","",
           "## Assembly notes","",
           "- R20/R21 are omitted when the bottom board supplies the I2C pull-ups. All selected resistors are Yageo RC0603, 1%, 0.1 W; individual part specifications are archived.",
           "- Capacitor footprint sizes, voltage ratings and dielectric are specified, but exact order codes remain pending. Select from the archived KYOCERA AVX X7R family, and verify effective capacitance at bias before freezing the BOM. C2+C3 must retain at least 2.2 uF total.",
-          "- U3 and V1-V4 deliberately have no assigned footprint. The sensor requires the correct WSOF6I lands with no soldered center pad; socket drill geometry must come from the ordered samples.",
+          "- V1-V4 use Numitron:GZC9-A_B9A_Provisional: assumed 0.5 mm terminal thickness, 18 mm pad circle, 2.5 mm plated holes and 3.8 mm copper pads. The owner authorized using these estimates for layout; verify fit before ordering.",
+          "- U3's WSOF6I land pattern remains to be assigned, with no soldered center pad.",
           "- U1's C507885 identifier comes from the Obsidian plan. Stock, price, assembly-house availability and substitutions have not been qualified.",
           "- Use normal-pinout TLV809EA29DBZR, not an R/V pinout variant. Use AHCT logic, not HC. The four TPIC parts use the wide SOIC-20 package.",""]
 (root/"docs/bom.md").write_text("\n".join(lines))

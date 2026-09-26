@@ -13,11 +13,12 @@ Open **[NumitronTop.kicad_pro](hardware/top-board/NumitronTop.kicad_pro)** in Ki
 - [Electrical design notes](docs/design.md)
 - [Preliminary BOM](docs/bom.md)
 - [Socket drawing and dimensions](docs/socket.md)
+- [Provisional socket footprint](review/GZC9-A_B9A_Provisional.svg)
 - [Bring-up and layout hold points](docs/bring-up.md)
 - [Archived component datasheets](datasheets/README.md)
 - [ERC result](review/erc.rpt) and [exported-netlist audit](review/connectivity.txt)
 
-This is the **schematic milestone**, not a PCB fabrication release. No routed PCB or Gerbers are included. The owner-provided socket drawing is archived; its terminal cross-section, PCB entry pattern and numbering still need confirmation for the footprint. The BH1750 land pattern, mechanical placement, thermal behavior, and time-source decision remain layout hold points.
+The schematic is captured and the four tubes now have a **provisional socket footprint** for top-board placement/layout. On 2026-09-25 the owner authorized using the drawing and estimating terminal thickness: the working footprint uses an 18 mm pin circle, 0.5 mm assumed thickness, 2.5 mm plated holes and 3.8 mm copper pads. Physical fit is checked before ordering boards; it does not block placement. No routed PCB or Gerbers are included yet. BH1750 land-pattern work, mechanical placement and thermal design remain top-board work. **WWVB versus GPS belongs to the bottom board and does not block this board.**
 
 The owner confirms the actual tubes are **marked DR2000 and have prefix decimal points**. The archived RCA table assigns that feature to DR2010 instead. The design preserves the requested HH.MM display and routes the eighth channel to pin 1; verify that decimal connection on the actual tubes before enabling it.
 
@@ -30,8 +31,10 @@ nix develop
 bash scripts/review.sh
 ```
 
-The review command runs KiCad ERC, exports and audits the saved schematic's netlist, exports SVG sheets, and renders inspection PNGs under ignored `tmp/render/`. It does not regenerate or overwrite the schematic. Source PDFs and the socket drawing are archived in Git with their provenance and hashes.
+The review command runs KiCad ERC, audits the saved schematic's netlist and provisional socket footprint, exports schematic and footprint SVGs, and renders inspection PNGs under ignored `tmp/render/`. It does not regenerate or overwrite the schematic or footprint. Source PDFs and the socket drawing are archived in Git with their provenance and hashes.
 
 `scripts/build_schematic.py --write` records the initial schematic capture and is deliberately opt-in: it **overwrites the native KiCad files**. After editing in KiCad, preserve those edits; reconcile the generator before using it again.
+
+`hardware/top-board/socket-footprint.json` records the socket assumptions. `scripts/build_socket_footprint.py --write` captures them into the project-local `Numitron.pretty` library; reconcile manual footprint edits before regenerating. The schematic assigns `Numitron:GZC9-A_B9A_Provisional` to V1-V4.
 
 The repository covers the future whole clock, but this revision contains only the top board. The bottom board will supply protected 5 V, regulated 3.3 V, the control interface and I2C pull-ups. Its MCU, USB-C input, RTC, time receiver, user controls and power telemetry are outside this milestone.

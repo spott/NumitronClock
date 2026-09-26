@@ -1,13 +1,19 @@
 # Bring-up and layout hold points
 
-## Before PCB layout
+## During top-board layout
 
-- The **GZC9-A drawing is archived**; see [socket dimensions and remaining checks](socket.md). Confirm the PCB-entry terminal centres, the metal thickness missing from the 2 ±0.1 mm width callout, seating depth and pin-number mapping on an ordered sample. Use those to set holes/slots and annular rings. The Ø12 contact circle and side-view terminal span are distinct dimensions.
-- Verify the actual decimal connection between socket common pin 2 and candidate pin 1 with a current-limited test, then record the mapping. The owner has confirmed the presence of the decimal; its pin number still needs confirmation.
+- Use the assigned **provisional GZC9-A footprint**, as authorized by the owner on 2026-09-25. It assumes 0.5 mm terminal thickness and an 18 mm pad circle, with 2.5 mm round plated holes. See [socket dimensions and assumptions](socket.md). These sample measurements are deferred until the ordering check below.
+- Route the planned decimal channel to candidate pin 1. The owner has confirmed the presence of the decimal; its pin number remains a hardware check before ordering.
 - Assign a verified BH1750 WSOF6I footprint without a soldered center pad. Confirm the exact MLCC order codes and biased capacitance, plus header and semiconductor lands.
 - Fit the tube/glass envelopes to the 110 x 30 mm target. RCA gives a DR2000-series maximum glass diameter of 0.785 in (about 19.94 mm); do not set tube pitch from the smaller socket body alone. Choose a deliberate HH/MM gap and mounting holes after measuring the assemblies.
 - Check underside driver/header clearances, 28 AWG ribbon bend and strain-relief access, and the 25-30 mm board gap. Keep the sensor aperture exposed to room light.
-- Resolve the plan's time-source decision before board layout, and agree the bottom-board interface and available supply current. Battery sizing remains V2 work.
+- Preserve the documented 16-pin connector and supply contract. **WWVB versus GPS is bottom-board work and does not block top-board layout.** Battery sizing remains V2 work.
+
+## Before ordering boards
+
+- Compare the socket to a 1:1 footprint printout or fit coupon: PCB-entry terminal centres, full cross-section, seating depth and contact-to-pad numbering. Change the provisional footprint if needed.
+- Verify the actual decimal connection between socket common pin 2 and candidate pin 1 with a current-limited test, then record the mapping.
+- Complete footprint, assembly-clearance and manufacturing-rule checks. LDO copper area and current paths are designed during layout; actual temperature, startup and brownout measurements follow on the assembled prototype.
 
 ## Bench sequence
 

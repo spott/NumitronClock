@@ -1,0 +1,6 @@
+PASS: saved provisional socket footprint matches the documented assumptions.
+9 unique numbered through-hole pads; top-view numbering and 36/72 degree pattern checked.
+Pad circle 18.00 mm; round holes 2.50 mm; copper pads 3.80 mm; nominal annular ring 0.65 mm.
+Minimum copper clearance 1.039 mm; minimum courtyard margin 0.338 mm.
+Assumed terminal diagonal 2.159 mm; nominal diametral hole clearance 0.341 mm.
+Assigned to V1-V4 in the native schematic netlist. Physical fit remains unverified.

@@ -21,16 +21,35 @@ Dimensions below are interpreted in millimetres, consistent with the project pla
 
 The nominal projection follows from 15 − 9 = 6 mm. Taking the two stated tolerances independently gives 5–7 mm; this is a conservative envelope calculation, not a separately specified seating dimension. Keep the space below the socket clear of components until its seating and PCB thickness are resolved.
 
-## Footprint consequences
+## Provisional footprint for layout
+
+On **2026-09-25 the owner authorized proceeding from this drawing with an estimated pin thickness**. `Numitron:GZC9-A_B9A_Provisional` is now assigned to V1–V4. Physical checks below are deferred until before PCB ordering and do not prevent top-board placement or routing.
+
+| Working parameter | Value | Basis |
+|---|---|---|
+| Terminal thickness | **0.5 mm** | Engineering estimate requested by the owner; not given in the drawing. |
+| Terminal width | 2.0 ±0.1 mm | Drawing callout. |
+| PCB pad circle | **Ø18 mm** | Working interpretation of the side-view 18 mm terminal span; not a verified pitch-circle dimension. |
+| Pin positions | Nine positions at **36° steps**, with a **72° indexing gap** | Assumed B9A/Noval pattern, consistent with the illustrated face view. |
+| Finished plated holes | **Ø2.5 mm**, round | Allows the assumed flat terminal to pass through without requiring routed slots. |
+| Copper pads | **3.8 × 3.8 mm**; pin 1 square, others round | 0.65 mm nominal annular ring at the narrowest point. |
+| Front courtyard | **Ø24 mm** | Covers the body, glass envelope and the square pin-1 pad with at least 0.25 mm clearance. |
+| Numbering in top/component view | Gap down; pin 1 lower right; numbers increase counterclockwise; pin 9 lower left | Provisional orientation, to be checked against the physical socket. |
+
+At the drawing's maximum 2.1 mm terminal width and the assumed 0.5 mm thickness, the rectangular cross-section has a **2.159 mm diagonal**. A 2.5 mm circular hole leaves about **0.341 mm diametral clearance** before hole tolerances and terminal-position error. This is a fit estimate, not evidence that a socket has been measured.
+
+The editable assumptions are in [socket-footprint.json](../hardware/top-board/socket-footprint.json). [The native footprint](../hardware/top-board/libraries/Numitron.pretty/GZC9-A_B9A_Provisional.kicad_mod) is editable in KiCad; [its rendered preview](../review/GZC9-A_B9A_Provisional.svg) shows the assigned pads. The Ø12 contact circle is retained as a drawing-layer reference only. No centre hole is added: the source does not establish that the PCB needs one.
 
 The drawing now supports the socket body envelope and axial clearance planning. The approximately 19.94 mm maximum tube glass diameter from the RCA document remains larger than the maximum socket body, so tube spacing must also accommodate the glass.
 
-The face view depicts nine contacts with a larger indexing gap. It supplies no pin numbers, angular dimensions, view-direction label, or bottom-view PCB hole coordinates. The side view shows splayed terminals. Do not turn the Ø12 contact circle into the PCB drilling circle, or silently reinterpret the 18 mm side-view span as a fully specified pitch circle.
+The face view supplies no pin numbers, angular dimensions, view-direction label, or bottom-view PCB hole coordinates. The side view shows splayed terminals. The assumptions above make these gaps explicit while allowing design work to proceed. The Ø12 contact circle is not being used as the PCB drilling circle.
 
-Before assigning a production footprint, confirm on an ordered sample:
+## Before ordering boards
+
+Check an ordered sample against the working footprint:
 
 - The narrow terminal cross-section: the drawing gives 2 ±0.1 mm in one direction; measure the perpendicular thickness to size the finished hole or slot.
 - The terminal centres where they enter the PCB, including their relation to the indexing gap. Confirm the interpretation of the side-view 18 mm span and the seating depth.
 - Any molded pin-1 mark or numbering, then the contact-to-tail mapping and viewing direction. Use that mapping to orient the numbered KiCad pads.
 
-These are the remaining socket checks; the drawing replaces the earlier request for basic body dimensions. The schematic's V1–V4 footprints remain unassigned pending these checks. The tube's prefix-decimal pin verification is a separate electrical check.
+Revise the footprint if the sample differs; a physical fit check and continuity check close these assumptions before ordering. The tube's prefix-decimal pin verification is a separate electrical check and is also deferred during provisional layout.

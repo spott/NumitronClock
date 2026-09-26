@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/Users/spott/Documents/Electronics/Projects/NumitronClock/hardware/top-board/NumitronTop.kicad_sch</source>
-    <date>2026-09-18T22:44:22</date>
+    <date>2026-09-25T23:29:15</date>
     <tool>Eeschema 10.0.5</tool>
     <textvar name="DESIGN_STATUS">SCHEMATIC REVIEW - NOT FOR FABRICATION</textvar>
     <sheet number="1" name="/" tstamps="/">
@@ -1498,15 +1498,16 @@
     </comp>
     <comp ref="V1">
       <value>DR2000 / GZC9-A</value>
+      <footprint>Numitron:GZC9-A_B9A_Provisional</footprint>
       <datasheet>${KIPRJMOD}/../../datasheets/dr2000.pdf</datasheet>
       <description>GZC9-A socket; owner reports DR2000-marked tubes with prefix decimal. Pin 1 DP provisional: RCA table assigns DP to DR2010, NC to DR2000. Verify on actual tubes.</description>
       <fields>
         <field name="MPN">DR2000</field>
         <field name="Socket">GZC9-A</field>
         <field name="Manufacturer">RCA / socket seller TBD</field>
-        <field name="FootprintStatus">HOLD: socket-tail measurements</field>
+        <field name="FootprintStatus">PROVISIONAL: 18 mm PCD, 0.5 mm terminal thickness, 2.5 mm holes; fit check before order</field>
         <field name="TubeVariant">Owner confirms DR2000 marking and prefix DP; verify pin 1 before use</field>
-        <field name="Footprint"/>
+        <field name="Footprint">Numitron:GZC9-A_B9A_Provisional</field>
         <field name="Datasheet">${KIPRJMOD}/../../datasheets/dr2000.pdf</field>
         <field name="Description">GZC9-A socket; owner reports DR2000-marked tubes with prefix decimal. Pin 1 DP provisional: RCA table assigns DP to DR2010, NC to DR2000. Verify on actual tubes.</field>
       </fields>
@@ -1514,7 +1515,7 @@
       <property name="MPN" value="DR2000"/>
       <property name="Socket" value="GZC9-A"/>
       <property name="Manufacturer" value="RCA / socket seller TBD"/>
-      <property name="FootprintStatus" value="HOLD: socket-tail measurements"/>
+      <property name="FootprintStatus" value="PROVISIONAL: 18 mm PCD, 0.5 mm terminal thickness, 2.5 mm holes; fit check before order"/>
       <property name="TubeVariant" value="Owner confirms DR2000 marking and prefix DP; verify pin 1 before use"/>
       <property name="Sheetname" value="Four tube drivers"/>
       <property name="Sheetfile" value="TubeDrivers.kicad_sch"/>
@@ -1538,15 +1539,16 @@
     </comp>
     <comp ref="V2">
       <value>DR2000 / GZC9-A</value>
+      <footprint>Numitron:GZC9-A_B9A_Provisional</footprint>
       <datasheet>${KIPRJMOD}/../../datasheets/dr2000.pdf</datasheet>
       <description>GZC9-A socket; owner reports DR2000-marked tubes with prefix decimal. Pin 1 DP provisional: RCA table assigns DP to DR2010, NC to DR2000. Verify on actual tubes.</description>
       <fields>
         <field name="MPN">DR2000</field>
         <field name="Socket">GZC9-A</field>
         <field name="Manufacturer">RCA / socket seller TBD</field>
-        <field name="FootprintStatus">HOLD: socket-tail measurements</field>
+        <field name="FootprintStatus">PROVISIONAL: 18 mm PCD, 0.5 mm terminal thickness, 2.5 mm holes; fit check before order</field>
         <field name="TubeVariant">Owner confirms DR2000 marking and prefix DP; verify pin 1 before use</field>
-        <field name="Footprint"/>
+        <field name="Footprint">Numitron:GZC9-A_B9A_Provisional</field>
         <field name="Datasheet">${KIPRJMOD}/../../datasheets/dr2000.pdf</field>
         <field name="Description">GZC9-A socket; owner reports DR2000-marked tubes with prefix decimal. Pin 1 DP provisional: RCA table assigns DP to DR2010, NC to DR2000. Verify on actual tubes.</field>
       </fields>
@@ -1554,7 +1556,7 @@
       <property name="MPN" value="DR2000"/>
       <property name="Socket" value="GZC9-A"/>
       <property name="Manufacturer" value="RCA / socket seller TBD"/>
-      <property name="FootprintStatus" value="HOLD: socket-tail measurements"/>
+      <property name="FootprintStatus" value="PROVISIONAL: 18 mm PCD, 0.5 mm terminal thickness, 2.5 mm holes; fit check before order"/>
       <property name="TubeVariant" value="Owner confirms DR2000 marking and prefix DP; verify pin 1 before use"/>
       <property name="Sheetname" value="Four tube drivers"/>
       <property name="Sheetfile" value="TubeDrivers.kicad_sch"/>
@@ -1578,15 +1580,16 @@
     </comp>
     <comp ref="V3">
       <value>DR2000 / GZC9-A</value>
+      <footprint>Numitron:GZC9-A_B9A_Provisional</footprint>
       <datasheet>${KIPRJMOD}/../../datasheets/dr2000.pdf</datasheet>
       <description>GZC9-A socket; owner reports DR2000-marked tubes with prefix decimal. Pin 1 DP provisional: RCA table assigns DP to DR2010, NC to DR2000. Verify on actual tubes.</description>
       <fields>
         <field name="MPN">DR2000</field>
         <field name="Socket">GZC9-A</field>
         <field name="Manufacturer">RCA / socket seller TBD</field>
-        <field name="FootprintStatus">HOLD: socket-tail measurements</field>
+        <field name="FootprintStatus">PROVISIONAL: 18 mm PCD, 0.5 mm terminal thickness, 2.5 mm holes; fit check before order</field>
         <field name="TubeVariant">Owner confirms DR2000 marking and prefix DP; verify pin 1 before use</field>
-        <field name="Footprint"/>
+        <field name="Footprint">Numitron:GZC9-A_B9A_Provisional</field>
         <field name="Datasheet">${KIPRJMOD}/../../datasheets/dr2000.pdf</field>
         <field name="Description">GZC9-A socket; owner reports DR2000-marked tubes with prefix decimal. Pin 1 DP provisional: RCA table assigns DP to DR2010, NC to DR2000. Verify on actual tubes.</field>
       </fields>
@@ -1594,7 +1597,7 @@
       <property name="MPN" value="DR2000"/>
       <property name="Socket" value="GZC9-A"/>
       <property name="Manufacturer" value="RCA / socket seller TBD"/>
-      <property name="FootprintStatus" value="HOLD: socket-tail measurements"/>
+      <property name="FootprintStatus" value="PROVISIONAL: 18 mm PCD, 0.5 mm terminal thickness, 2.5 mm holes; fit check before order"/>
       <property name="TubeVariant" value="Owner confirms DR2000 marking and prefix DP; verify pin 1 before use"/>
       <property name="Sheetname" value="Four tube drivers"/>
       <property name="Sheetfile" value="TubeDrivers.kicad_sch"/>
@@ -1618,15 +1621,16 @@
     </comp>
     <comp ref="V4">
       <value>DR2000 / GZC9-A</value>
+      <footprint>Numitron:GZC9-A_B9A_Provisional</footprint>
       <datasheet>${KIPRJMOD}/../../datasheets/dr2000.pdf</datasheet>
       <description>GZC9-A socket; owner reports DR2000-marked tubes with prefix decimal. Pin 1 DP provisional: RCA table assigns DP to DR2010, NC to DR2000. Verify on actual tubes.</description>
       <fields>
         <field name="MPN">DR2000</field>
         <field name="Socket">GZC9-A</field>
         <field name="Manufacturer">RCA / socket seller TBD</field>
-        <field name="FootprintStatus">HOLD: socket-tail measurements</field>
+        <field name="FootprintStatus">PROVISIONAL: 18 mm PCD, 0.5 mm terminal thickness, 2.5 mm holes; fit check before order</field>
         <field name="TubeVariant">Owner confirms DR2000 marking and prefix DP; verify pin 1 before use</field>
-        <field name="Footprint"/>
+        <field name="Footprint">Numitron:GZC9-A_B9A_Provisional</field>
         <field name="Datasheet">${KIPRJMOD}/../../datasheets/dr2000.pdf</field>
         <field name="Description">GZC9-A socket; owner reports DR2000-marked tubes with prefix decimal. Pin 1 DP provisional: RCA table assigns DP to DR2010, NC to DR2000. Verify on actual tubes.</field>
       </fields>
@@ -1634,7 +1638,7 @@
       <property name="MPN" value="DR2000"/>
       <property name="Socket" value="GZC9-A"/>
       <property name="Manufacturer" value="RCA / socket seller TBD"/>
-      <property name="FootprintStatus" value="HOLD: socket-tail measurements"/>
+      <property name="FootprintStatus" value="PROVISIONAL: 18 mm PCD, 0.5 mm terminal thickness, 2.5 mm holes; fit check before order"/>
       <property name="TubeVariant" value="Owner confirms DR2000 marking and prefix DP; verify pin 1 before use"/>
       <property name="Sheetname" value="Four tube drivers"/>
       <property name="Sheetfile" value="TubeDrivers.kicad_sch"/>
@@ -1742,7 +1746,7 @@
       <fields>
         <field name="Reference">V</field>
         <field name="Value">DR2000_FamilySocket</field>
-        <field name="Footprint"/>
+        <field name="Footprint">Numitron:GZC9-A_B9A_Provisional</field>
         <field name="Datasheet">${KIPRJMOD}/../../datasheets/dr2000.pdf</field>
         <field name="Description">GZC9-A socket; owner reports DR2000-marked tubes with prefix decimal. Pin 1 DP provisional: RCA table assigns DP to DR2010, NC to DR2000. Verify on actual tubes.</field>
       </fields>

@@ -9,6 +9,8 @@ kicad-cli sch export netlist --format kicadxml -o review/NumitronTop.net.xml har
 python3 scripts/verify_netlist.py
 python3 scripts/update_bom.py
 kicad-cli sch export svg -o review/ hardware/top-board/NumitronTop.kicad_sch
+python3 scripts/verify_socket_footprint.py
+kicad-cli fp export svg -o review/ --layers F.Cu,F.SilkS,F.Fab,F.CrtYd,Dwgs.User hardware/top-board/libraries/Numitron.pretty
 for input in review/*.svg; do
   rsvg-convert -w 2600 "$input" -o "tmp/render/$(basename "${input%.svg}").png"
 done

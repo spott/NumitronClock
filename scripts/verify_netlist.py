@@ -68,6 +68,8 @@ require("U5",3,"SER_5V")
 joined(("U5",18),("U6",3)); joined(("U6",18),("U7",3)); joined(("U7",18),("U8",3)); joined(("U8",18),("TP5",1))
 # Physical RCA socket pins, independent of graphical segment labels.
 for driver,tube in [("U5","V1"),("U6","V2"),("U7","V3"),("U8","V4")]:
+    assert components[tube].findtext("footprint")=="Numitron:GZC9-A_B9A_Provisional", f"Missing provisional socket footprint: {tube}"
+    checks+=1
     require(tube,2,"V_TUBE")
     for drain,base in [(4,7),(5,8),(6,5),(7,4),(14,3),(15,9),(16,6),(17,1)]:
         joined((driver,drain),(tube,base))
@@ -91,6 +93,6 @@ for ref,part in components.items():
 
 text=f"PASS: {checks} connectivity/document assertions; {len(components)} components; {len(members)} nets.\n"
 text+="Includes rail separation, all IDC pins, SRCK pin 13, all TPIC grounds, 32 filament paths, cascade order, blanking, DVI reset and DNP I2C pull-ups.\n"
-text+="Not verified electrically on hardware. Socket pin-1 decimal connection and unassigned mechanical footprints remain release hold points.\n"
+text+="Not verified on hardware. Provisional socket dimensions and pin-1 decimal connection need checking before ordering; U3 footprint work remains.\n"
 (ROOT/"review/connectivity.txt").write_text(text)
 print(text,end="")

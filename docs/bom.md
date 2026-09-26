@@ -23,13 +23,13 @@ Revision 0.1. Generated from the exported native KiCad netlist by `scripts/updat
 | U3 | 1 | BH1750FVI-TR | BH1750FVI-TR | HOLD | Fit | [PDF](../datasheets/bh1750fvi.pdf) |
 | U4 | 1 | TLV809EA29DBZR | TLV809EA29DBZR | Package_TO_SOT_SMD:SOT-23 | Fit | [PDF](../datasheets/tlv809e.pdf) |
 | U5, U6, U7, U8 | 4 | TPIC6B595DWR | TPIC6B595DWR | Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm | Fit | [PDF](../datasheets/tpic6b595.pdf) |
-| V1, V2, V3, V4 | 4 | DR2000 / GZC9-A | DR2000 | HOLD | Tubes in hand; sockets separate below | [PDF](../datasheets/dr2000.pdf) |
+| V1, V2, V3, V4 | 4 | DR2000 / GZC9-A | DR2000 | Numitron:GZC9-A_B9A_Provisional | Tubes in hand; sockets separate below | [PDF](../datasheets/dr2000.pdf) |
 
 ## Mechanical and cable items
 
 | Item | Quantity | Selection / status |
 |---|---:|---|
-| Tube sockets | 4 | Ordered GZC9-A, [Amazon B0BGBJ7L41](https://www.amazon.com/dp/B0BGBJ7L41). [Dimension drawing](../datasheets/GZC9-A_socket-dimensions.jpg) received from owner 2026-09-21; [remaining terminal and numbering checks](socket.md) precede footprint assignment. Socket footprint belongs to V1-V4's tube/socket assembly. |
+| Tube sockets | 4 | Ordered GZC9-A, [Amazon B0BGBJ7L41](https://www.amazon.com/dp/B0BGBJ7L41). [Drawing](../datasheets/GZC9-A_socket-dimensions.jpg) archived; [provisional footprint assumptions](socket.md) authorized 2026-09-25. Assigned to V1-V4 for layout; check physical fit before ordering. |
 | Cable female connectors | 2 | Wurth 61201623021, [datasheet](../datasheets/idc-socket.pdf). One at each cable end. |
 | Strain-relief caps | 2 | Included in the selected Wurth socket's with-strain-relief specification; confirm supplied pieces and assembled clearance. |
 | Ribbon cable | ~150 mm initially | 3M 3365/16, 28 AWG, 1.27 mm pitch, [datasheet](../datasheets/3m-3365-ribbon.pdf). Final length follows the debugging/enclosure clearance check. |
@@ -41,6 +41,7 @@ TP1-TP5 are bare PCB test pads; they require no purchased components. The bottom
 
 - R20/R21 are omitted when the bottom board supplies the I2C pull-ups. All selected resistors are Yageo RC0603, 1%, 0.1 W; individual part specifications are archived.
 - Capacitor footprint sizes, voltage ratings and dielectric are specified, but exact order codes remain pending. Select from the archived KYOCERA AVX X7R family, and verify effective capacitance at bias before freezing the BOM. C2+C3 must retain at least 2.2 uF total.
-- U3 and V1-V4 deliberately have no assigned footprint. The sensor requires the correct WSOF6I lands with no soldered center pad; socket drill geometry must come from the ordered samples.
+- V1-V4 use Numitron:GZC9-A_B9A_Provisional: assumed 0.5 mm terminal thickness, 18 mm pad circle, 2.5 mm plated holes and 3.8 mm copper pads. The owner authorized using these estimates for layout; verify fit before ordering.
+- U3's WSOF6I land pattern remains to be assigned, with no soldered center pad.
 - U1's C507885 identifier comes from the Obsidian plan. Stock, price, assembly-house availability and substitutions have not been qualified.
 - Use normal-pinout TLV809EA29DBZR, not an R/V pinout variant. Use AHCT logic, not HC. The four TPIC parts use the wide SOIC-20 package.

@@ -1,0 +1,22 @@
+{
+  "name": "GZC9-A_B9A_Provisional",
+  "library": "Numitron",
+  "status": "PROVISIONAL - fit check before PCB order",
+  "source_drawing": "../../datasheets/GZC9-A_socket-dimensions.jpg",
+  "authorized": "2026-09-25",
+  "body_diameter_mm": 18.0,
+  "body_diameter_max_mm": 18.5,
+  "tube_glass_diameter_max_mm": 19.94,
+  "contact_circle_diameter_mm": 12.0,
+  "assumed_pad_circle_diameter_mm": 18.0,
+  "assumed_terminal_thickness_mm": 0.5,
+  "terminal_width_mm": 2.0,
+  "terminal_width_tolerance_mm": 0.1,
+  "plated_hole_diameter_mm": 2.5,
+  "copper_pad_size_mm": 3.8,
+  "courtyard_radius_mm": 12.0,
+  "pin_count": 9,
+  "assumed_pin_step_degrees": 36.0,
+  "pin_1_angle_degrees_xy_down": 54.0,
+  "numbering": "Top/component view: gap down, pin 1 lower right; numbering counterclockwise, pin 9 lower left. Verify against the actual socket."
+}
