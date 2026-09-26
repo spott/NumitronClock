@@ -1,11 +1,8 @@
-SOCKET PLACEMENT STUDY - NOT COMPLETE PCB LAYOUT
-Board outline: 110 x 30 mm; two copper layers.
-Saved native footprints: 4; 36 pads match schematic nets.
-Socket centers relative to upper-left board corner (mm): [(17.0, 15.0), (41.5, 15.0), (68.5, 15.0), (93.0, 15.0)]
-Center pitches (mm): [24.5, 27.0, 24.5]
-Minimum separation between circular socket courtyards: 0.5 mm.
-Minimum socket-pad copper to board edge: 4.100 mm.
-Minimum glass-envelope separation: 4.56 mm.
-Unplaced schematic components (51): C1, C10, C11, C12, C13, C14, C15, C2, C3, C4, C5, C6, C7, C8, C9, J1, Q1, R1, R10, R11, R12, R13, R14, R15, R16, R17, R18, R19, R2, R20, R21, R3, R4, R5, R6, R7, R8, R9, TP1, TP2, TP3, TP4, TP5, U1, U2, U3, U4, U5, U6, U7, U8
-No tracks, vias, copper pours or mounting holes. Underside fit has not been established.
-Socket physical fit, terminal thickness and pin numbering remain provisional.
+TOP-BOARD LAYOUT REVIEW — REVISION 0.2
+540 geometry, component, net and layout checks passed.
+Board: 110 x 40 mm, 2 copper layers, 1.6 mm thickness.
+Parts: 55 schematic components + 4 mounting holes.
+Routing: 1176 track segments; 184 through vias; 2 filled ground zones.
+Schematic parity, copper clearance and complete connectivity: see board-drc.json.
+Board SHA-256: 6abfcb0b7a504680390887570511ecf1a33f0fe280e8d3981f041a85732ef009
+Socket fit, decimal pin, enclosure fit, capacitor order codes and bench checks remain release hold points.

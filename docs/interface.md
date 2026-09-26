@@ -19,7 +19,7 @@ This is the **male header's mating-face view**, looking into its shroud with the
        pin 1 / marked ribbon conductor
 ```
 
-Placement intent: J1 on the **underside** of the top board, its long axis parallel to the tube row and its key notch toward the **rear** of the clock. Preserve the mating-face numbering when flipping the footprint. Placement coordinates await the socket and cable clearance check. Put a visible pin-1 mark, `5V`, `3V3`, and connector revision on the PCB.
+Revision 0.2 placement: J1 is on the **underside**, with its long axis **front to rear**, perpendicular to the tube row. Its body centre is (55, 14.9) mm relative to the board's upper-left in the top view. In that view pin 1 is at (56.27, 6.01) mm and pin 2 at (53.73, 6.01) mm; subsequent rows advance 2.54 mm toward the front. The key notch points toward +X in the top view (toward the minute tubes), and toward the left in the mirrored underside view. The male mating-face numbering above and electrical assignment are unchanged. This orientation creates space between the two tube pairs; confirm cable access and strain-relief clearance in the enclosure. The board includes a pin-1 mark, connector revision and labelled supply test points.
 
 The cable is **straight through: pin n to pin n**, including all six grounds and both 5 V conductors. Confirm the finished assembly with a continuity meter; do not infer numbering from a photograph of the opposite mating face. Power down before separating or reconnecting the boards.
 

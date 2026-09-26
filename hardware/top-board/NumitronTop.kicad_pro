@@ -1,21 +1,52 @@
 {
   "meta": {
     "filename": "NumitronTop.kicad_pro",
-    "version": 1
+    "version": 3
   },
   "net_settings": {
     "classes": [
       {
         "name": "Default",
-        "clearance": 0.2,
+        "clearance": 0.18,
         "track_width": 0.25,
-        "via_diameter": 0.6,
-        "via_drill": 0.3
+        "via_diameter": 0.65,
+        "via_drill": 0.3,
+        "priority": 2147483647
+      },
+      {
+        "name": "Supply",
+        "clearance": 0.18,
+        "track_width": 0.5,
+        "via_diameter": 0.65,
+        "via_drill": 0.3,
+        "priority": 0
+      },
+      {
+        "name": "Ground",
+        "clearance": 0.18,
+        "track_width": 0.35,
+        "via_diameter": 0.65,
+        "via_drill": 0.3,
+        "priority": 1
       }
     ],
     "meta": {
-      "version": 3
-    }
+      "version": 5
+    },
+    "netclass_patterns": [
+      {
+        "netclass": "Supply",
+        "pattern": "+5V"
+      },
+      {
+        "netclass": "Supply",
+        "pattern": "V_TUBE"
+      },
+      {
+        "netclass": "Ground",
+        "pattern": "GND"
+      }
+    ]
   },
   "erc": {
     "erc_exclusions": [],
@@ -24,6 +55,32 @@
     }
   },
   "text_variables": {
-    "DESIGN_STATUS": "SCHEMATIC REVIEW - NOT FOR FABRICATION"
+    "DESIGN_STATUS": "ROUTED PROTOTYPE REVIEW - VERIFY SOCKET FIT BEFORE ORDER"
+  },
+  "board": {
+    "design_settings": {
+      "rules": {
+        "min_clearance": 0.18,
+        "min_track_width": 0.2,
+        "min_via_diameter": 0.6,
+        "min_via_annular_width": 0.15,
+        "min_through_hole_diameter": 0.3,
+        "min_hole_to_hole": 0.25,
+        "min_hole_clearance": 0.25,
+        "min_copper_edge_clearance": 0.5,
+        "min_silk_clearance": 0.15,
+        "min_text_height": 0.65,
+        "min_text_thickness": 0.1
+      },
+      "rule_severities": {
+        "missing_footprint": "error",
+        "footprint_symbol_mismatch": "error",
+        "footprint_symbol_field_mismatch": "error"
+      },
+      "drc_exclusions": [],
+      "meta": {
+        "version": 2
+      }
+    }
   }
 }

@@ -2,9 +2,9 @@
 <export version="E">
   <design>
     <source>/Users/spott/Documents/Electronics/Projects/NumitronClock/hardware/top-board/NumitronTop.kicad_sch</source>
-    <date>2026-09-25T23:29:15</date>
+    <date>2026-09-26T03:52:58</date>
     <tool>Eeschema 10.0.5</tool>
-    <textvar name="DESIGN_STATUS">SCHEMATIC REVIEW - NOT FOR FABRICATION</textvar>
+    <textvar name="DESIGN_STATUS">ROUTED PROTOTYPE REVIEW - VERIFY SOCKET FIT BEFORE ORDER</textvar>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
         <title>Top board: power and interface</title>
@@ -144,13 +144,13 @@
     </comp>
     <comp ref="J1">
       <value>61201621621</value>
-      <footprint>Connector_IDC:IDC-Header_2x08_P2.54mm_Vertical</footprint>
+      <footprint>Numitron:Wurth_61201621621_2x08_P2.54mm</footprint>
       <datasheet>${KIPRJMOD}/../../datasheets/idc-header.pdf</datasheet>
       <description>Wurth 61201621621; 2.54 mm PCB pin grid for 1.27 mm pitch ribbon</description>
       <fields>
         <field name="Manufacturer">Wurth Elektronik</field>
         <field name="MPN">61201621621</field>
-        <field name="Footprint">Connector_IDC:IDC-Header_2x08_P2.54mm_Vertical</field>
+        <field name="Footprint">Numitron:Wurth_61201621621_2x08_P2.54mm</field>
         <field name="Datasheet">${KIPRJMOD}/../../datasheets/idc-header.pdf</field>
         <field name="Description">Wurth 61201621621; 2.54 mm PCB pin grid for 1.27 mm pitch ribbon</field>
       </fields>
@@ -332,14 +332,14 @@
     </comp>
     <comp ref="U1">
       <value>AP7361C-Y5-13</value>
-      <footprint>Package_TO_SOT_SMD:SOT-89-5</footprint>
+      <footprint>Numitron:Diodes_SOT89-5_AP7361C</footprint>
       <datasheet>${KIPRJMOD}/../../datasheets/AP7361C.pdf</datasheet>
       <description>Adjustable LDO; SOT89-5 pinout, tab = pin 2 GND</description>
       <fields>
         <field name="Manufacturer">Diodes Incorporated</field>
         <field name="MPN">AP7361C-Y5-13</field>
         <field name="LCSC">C507885</field>
-        <field name="Footprint">Package_TO_SOT_SMD:SOT-89-5</field>
+        <field name="Footprint">Numitron:Diodes_SOT89-5_AP7361C</field>
         <field name="Datasheet">${KIPRJMOD}/../../datasheets/AP7361C.pdf</field>
         <field name="Description">Adjustable LDO; SOT89-5 pinout, tab = pin 2 GND</field>
       </fields>
@@ -1045,20 +1045,21 @@
     </comp>
     <comp ref="U3">
       <value>BH1750FVI-TR</value>
+      <footprint>Numitron:ROHM_WSOF6I_BH1750_NoCenterPad</footprint>
       <datasheet>${KIPRJMOD}/../../datasheets/bh1750fvi.pdf</datasheet>
       <description>Ambient light sensor; 0x23 with ADDR low; WSOF6I exposed center must NOT be soldered</description>
       <fields>
         <field name="MPN">BH1750FVI-TR</field>
         <field name="Manufacturer">ROHM</field>
-        <field name="FootprintStatus">HOLD: verify WSOF6I land pattern; no center-pad solder</field>
-        <field name="Footprint"/>
+        <field name="FootprintStatus">ROHM 0.25 x 0.55 mm six-land pattern; no center pad; top copper keepout</field>
+        <field name="Footprint">Numitron:ROHM_WSOF6I_BH1750_NoCenterPad</field>
         <field name="Datasheet">${KIPRJMOD}/../../datasheets/bh1750fvi.pdf</field>
         <field name="Description">Ambient light sensor; 0x23 with ADDR low; WSOF6I exposed center must NOT be soldered</field>
       </fields>
       <libsource lib="Numitron" part="BH1750FVI" description="Ambient light sensor; 0x23 with ADDR low; WSOF6I exposed center must NOT be soldered"/>
       <property name="MPN" value="BH1750FVI-TR"/>
       <property name="Manufacturer" value="ROHM"/>
-      <property name="FootprintStatus" value="HOLD: verify WSOF6I land pattern; no center-pad solder"/>
+      <property name="FootprintStatus" value="ROHM 0.25 x 0.55 mm six-land pattern; no center pad; top copper keepout"/>
       <property name="Sheetname" value="Logic / ambient light"/>
       <property name="Sheetfile" value="ControlAndSensor.kicad_sch"/>
       <sheetpath names="/Logic / ambient light/" tstamps="/80c1f917-a0fd-5c73-9f82-08b8ac7ddbdb/"/>
@@ -1695,7 +1696,7 @@
       <fields>
         <field name="Reference">U</field>
         <field name="Value">AP7361C_Y5</field>
-        <field name="Footprint">Package_TO_SOT_SMD:SOT-89-5</field>
+        <field name="Footprint">Numitron:Diodes_SOT89-5_AP7361C</field>
         <field name="Datasheet">${KIPRJMOD}/../../datasheets/AP7361C.pdf</field>
         <field name="Description">Adjustable LDO; SOT89-5 pinout, tab = pin 2 GND</field>
       </fields>
@@ -1713,7 +1714,7 @@
       <fields>
         <field name="Reference">U</field>
         <field name="Value">BH1750FVI</field>
-        <field name="Footprint"/>
+        <field name="Footprint">Numitron:ROHM_WSOF6I_BH1750_NoCenterPad</field>
         <field name="Datasheet">${KIPRJMOD}/../../datasheets/bh1750fvi.pdf</field>
         <field name="Description">Ambient light sensor; 0x23 with ADDR low; WSOF6I exposed center must NOT be soldered</field>
       </fields>
@@ -1768,7 +1769,7 @@
       <fields>
         <field name="Reference">J</field>
         <field name="Value">IDC_2x08</field>
-        <field name="Footprint">Connector_IDC:IDC-Header_2x08_P2.54mm_Vertical</field>
+        <field name="Footprint">Numitron:Wurth_61201621621_2x08_P2.54mm</field>
         <field name="Datasheet">${KIPRJMOD}/../../datasheets/idc-header.pdf</field>
         <field name="Description">Wurth 61201621621; 2.54 mm PCB pin grid for 1.27 mm pitch ribbon</field>
       </fields>
@@ -1901,7 +1902,7 @@
       <node ref="U3" pin="1" pinfunction="VCC_1" pintype="power_in"/>
       <node ref="U4" pin="3" pinfunction="VDD_3" pintype="power_in"/>
     </net>
-    <net code="2" name="+5V" class="Default">
+    <net code="2" name="+5V" class="Supply,Default">
       <node ref="C1" pin="1" pintype="passive"/>
       <node ref="C10" pin="1" pintype="passive"/>
       <node ref="C12" pin="1" pintype="passive"/>
@@ -2105,7 +2106,7 @@
       <node ref="R16" pin="1" pintype="passive"/>
       <node ref="R17" pin="1" pintype="passive"/>
     </net>
-    <net code="45" name="GND" class="Default">
+    <net code="45" name="GND" class="Ground,Default">
       <node ref="C1" pin="2" pintype="passive"/>
       <node ref="C10" pin="2" pintype="passive"/>
       <node ref="C11" pin="2" pintype="passive"/>
@@ -2229,7 +2230,7 @@
       <node ref="U7" pin="13" pinfunction="SRCK_13" pintype="input"/>
       <node ref="U8" pin="13" pinfunction="SRCK_13" pintype="input"/>
     </net>
-    <net code="61" name="V_TUBE" class="Default">
+    <net code="61" name="V_TUBE" class="Supply,Default">
       <node ref="C11" pin="1" pintype="passive"/>
       <node ref="C13" pin="1" pintype="passive"/>
       <node ref="C15" pin="1" pintype="passive"/>

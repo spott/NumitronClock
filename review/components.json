@@ -3,7 +3,7 @@
     "ref": "J1",
     "type": "IDC_2x08",
     "value": "61201621621",
-    "footprint": "Connector_IDC:IDC-Header_2x08_P2.54mm_Vertical",
+    "footprint": "Numitron:Wurth_61201621621_2x08_P2.54mm",
     "fields": {
       "Manufacturer": "Wurth Elektronik",
       "MPN": "61201621621"
@@ -15,7 +15,7 @@
     "ref": "U1",
     "type": "AP7361C_Y5",
     "value": "AP7361C-Y5-13",
-    "footprint": "Package_TO_SOT_SMD:SOT-89-5",
+    "footprint": "Numitron:Diodes_SOT89-5_AP7361C",
     "fields": {
       "Manufacturer": "Diodes Incorporated",
       "MPN": "AP7361C-Y5-13",
@@ -337,11 +337,11 @@
     "ref": "U3",
     "type": "BH1750FVI",
     "value": "BH1750FVI-TR",
-    "footprint": "",
+    "footprint": "Numitron:ROHM_WSOF6I_BH1750_NoCenterPad",
     "fields": {
       "MPN": "BH1750FVI-TR",
       "Manufacturer": "ROHM",
-      "FootprintStatus": "HOLD: verify WSOF6I land pattern; no center-pad solder"
+      "FootprintStatus": "ROHM 0.25 x 0.55 mm six-land pattern; no center pad; top copper keepout"
     },
     "dnp": false,
     "datasheet": "${KIPRJMOD}/../../datasheets/bh1750fvi.pdf"

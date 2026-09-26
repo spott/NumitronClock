@@ -1,3 +1,3 @@
 PASS: 212 connectivity/document assertions; 55 components; 69 nets.
 Includes rail separation, all IDC pins, SRCK pin 13, all TPIC grounds, 32 filament paths, cascade order, blanking, DVI reset and DNP I2C pull-ups.
-Not verified on hardware. Provisional socket dimensions and pin-1 decimal connection need checking before ordering; U3 footprint work remains.
+Not verified on hardware. Provisional socket dimensions and pin-1 decimal connection need checking before ordering; custom package lands and assembly fit require the normal hardware check.

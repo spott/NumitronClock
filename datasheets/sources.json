@@ -147,7 +147,7 @@
   },
   {
     "file": "rohm-wsof6-package.pdf",
-    "description": "ROHM WSOF6 mounting reference; WSOF6I correspondence remains to be checked for U3",
+    "description": "ROHM WSOF6 mounting reference; adapted for U3 WSOF6I as documented in docs/placement.md",
     "source_url": "https://fscdn.rohm.com/en/techdata_basic/ic/package/Jisso_WSOF6-1-2_Rev005s_TR%28MSL3%29.pdf",
     "retrieved": "2026-09-26",
     "pages": 11,

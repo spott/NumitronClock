@@ -93,6 +93,6 @@ for ref,part in components.items():
 
 text=f"PASS: {checks} connectivity/document assertions; {len(components)} components; {len(members)} nets.\n"
 text+="Includes rail separation, all IDC pins, SRCK pin 13, all TPIC grounds, 32 filament paths, cascade order, blanking, DVI reset and DNP I2C pull-ups.\n"
-text+="Not verified on hardware. Provisional socket dimensions and pin-1 decimal connection need checking before ordering; U3 footprint work remains.\n"
+text+="Not verified on hardware. Provisional socket dimensions and pin-1 decimal connection need checking before ordering; custom package lands and assembly fit require the normal hardware check.\n"
 (ROOT/"review/connectivity.txt").write_text(text)
 print(text,end="")

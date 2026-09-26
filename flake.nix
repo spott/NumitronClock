@@ -16,6 +16,7 @@
               (pkgs.python3.withPackages (p: [ p.sexpdata p.pypdf ]))
               pkgs.poppler-utils
               pkgs.librsvg
+              pkgs.freerouting
             ];
             # Use the existing KiCad installation on macOS. No global installs.
             shellHook = ''

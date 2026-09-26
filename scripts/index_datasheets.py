@@ -12,7 +12,7 @@ sources={
     "tpic6b595.pdf": ("TI TPIC6B595; U5-U8", "https://www.ti.com/lit/ds/symlink/tpic6b595.pdf"),
     "sn74ahct125.pdf": ("TI SN74AHCT125; U2", "https://www.ti.com/lit/ds/symlink/sn74ahct125.pdf"),
     "bh1750fvi.pdf": ("ROHM BH1750FVI; U3 (manufacturer PDF hosted by DigiKey)", "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/6165/bh1750fvi-e.pdf"),
-    "rohm-wsof6-package.pdf": ("ROHM WSOF6 mounting reference; WSOF6I correspondence remains to be checked for U3", "https://fscdn.rohm.com/en/techdata_basic/ic/package/Jisso_WSOF6-1-2_Rev005s_TR%28MSL3%29.pdf"),
+    "rohm-wsof6-package.pdf": ("ROHM WSOF6 mounting reference; adapted for U3 WSOF6I as documented in docs/placement.md", "https://fscdn.rohm.com/en/techdata_basic/ic/package/Jisso_WSOF6-1-2_Rev005s_TR%28MSL3%29.pdf"),
     "tlv809e.pdf": ("TI TLV809E family; U4", "https://www.ti.com/lit/ds/symlink/tlv809e.pdf"),
     "mmbt3904.pdf": ("Diodes MMBT3904; Q1", "https://www.diodes.com/datasheet/download/MMBT3904.pdf"),
     "dr2000.pdf": ("RCA Numitron family; V1-V4 (original RCA document hosted by The Valve Museum)", "https://www.r-type.org/pdfs/dr2000.pdf"),

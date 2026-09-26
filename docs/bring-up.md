@@ -1,19 +1,16 @@
 # Bring-up and layout hold points
 
-## During top-board layout
+## Completed layout basis
 
-- Use the assigned **provisional GZC9-A footprint**, as authorized by the owner on 2026-09-25. It assumes 0.5 mm terminal thickness and an 18 mm pad circle, with 2.5 mm round plated holes. See [socket dimensions and assumptions](socket.md). These sample measurements are deferred until the ordering check below.
-- Route the planned decimal channel to candidate pin 1. The owner has confirmed the presence of the decimal; its pin number remains a hardware check before ordering.
-- Assign a verified BH1750 WSOF6I footprint without a soldered center pad. Confirm the exact MLCC order codes and biased capacitance, plus header and semiconductor lands.
-- Fit the tube/glass envelopes to the 110 x 30 mm target. RCA gives a DR2000-series maximum glass diameter of 0.785 in (about 19.94 mm); do not set tube pitch from the smaller socket body alone. Choose a deliberate HH/MM gap and mounting holes after measuring the assemblies.
-- Check underside driver/header clearances, 28 AWG ribbon bend and strain-relief access, and the 25-30 mm board gap. Keep the sensor aperture exposed to room light.
-- Preserve the documented 16-pin connector and supply contract. **WWVB versus GPS is bottom-board work and does not block top-board layout.** Battery sizing remains V2 work.
+The revision 0.2 top PCB uses a 110 × 40 mm working outline, all 55 schematic components, four proposed M2.5 mounting positions, two copper layers and front/back ground pours. It includes the manufacturer-based U1 and J1 lands and six-land BH1750 pattern with an unsoldered centre. The authorized [provisional socket geometry](socket.md) and candidate pin-1 decimal connection are retained. [Layout notes](placement.md) record coordinates, assumptions and tool checks.
 
 ## Before ordering boards
 
 - Compare the socket to a 1:1 footprint printout or fit coupon: PCB-entry terminal centres, full cross-section, seating depth and contact-to-pad numbering. Change the provisional footprint if needed.
 - Verify the actual decimal connection between socket common pin 2 and candidate pin 1 with a current-limited test, then record the mapping.
-- Complete footprint, assembly-clearance and manufacturing-rule checks. LDO copper area and current paths are designed during layout; actual temperature, startup and brownout measurements follow on the assembled prototype.
+- Confirm that the 110 × 40 mm working outline, perpendicular underside connector, ribbon strain relief/bend and proposed M2.5 hardware fit the enclosure and 25–30 mm board spacing. The original 30 mm depth was increased to fit the driver strip.
+- Freeze exact capacitor order codes and verify effective capacitance at operating voltage; C2+C3 must retain at least 2.2 uF total. Inspect the WSOF6I lead/land correspondence, solder-mask openings, stencil and ordered component packages.
+- Review the current ERC/DRC and plots against the chosen fabricator's rules. The layout includes regulator heat-spreading copper and thermal vias; measure actual temperature, startup and brownout on the prototype.
 
 ## Bench sequence
 
@@ -28,4 +25,4 @@
 
 ## Release evidence to record
 
-Keep measured socket drawings, verified tube mapping, connector continuity, oscilloscope captures, regulator/load/temperature measurements, capacitor selection, and the final ERC/DRC reports in the repository. This schematic has not been assembled or measured; its passing automated checks do not close these hold points.
+Keep measured socket drawings, verified tube mapping, connector continuity, oscilloscope captures, regulator/load/temperature measurements, capacitor selection, and the final ERC/DRC reports in the repository. This board has not been assembled or measured; its passing automated checks do not close these hold points.

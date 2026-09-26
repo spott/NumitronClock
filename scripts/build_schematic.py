@@ -56,7 +56,7 @@ def setup_library():
            "TP","TestPoint:TestPoint_Pad_D1.5mm",desc="Bare PCB test pad")
     symbol("AP7361C_Y5",[(4,"IN","power_in",-10.16,5.08,0),(1,"EN","input",-10.16,0,0),
            (5,"OUT","power_out",10.16,5.08,180),(3,"ADJ","input",10.16,0,180),(2,"GND","power_in",0,-7.62,90)],
-           rect(-7.62,7.62,7.62,-5.08),footprint="Package_TO_SOT_SMD:SOT-89-5",
+           rect(-7.62,7.62,7.62,-5.08),footprint="Numitron:Diodes_SOT89-5_AP7361C",
            datasheet="${KIPRJMOD}/../../datasheets/AP7361C.pdf",desc="Adjustable LDO; SOT89-5 pinout, tab = pin 2 GND")
     pins=[]
     for i,(a,y,oe) in enumerate([(2,3,1),(5,6,4),(9,8,10),(12,11,13)]):
@@ -73,7 +73,7 @@ def setup_library():
     symbol("BH1750FVI",[(1,"VCC","power_in",0,12.7,270),(3,"GND","power_in",0,-12.7,90),
            (2,"ADDR","input",-12.7,-5.08,0),(5,"DVI","input",-12.7,5.08,0),
            (6,"SCL","input",12.7,5.08,180),(4,"SDA","bidirectional",12.7,0,180)],
-           rect(-10.16,10.16,10.16,-10.16),datasheet="${KIPRJMOD}/../../datasheets/bh1750fvi.pdf",
+           rect(-10.16,10.16,10.16,-10.16),footprint="Numitron:ROHM_WSOF6I_BH1750_NoCenterPad",datasheet="${KIPRJMOD}/../../datasheets/bh1750fvi.pdf",
            desc="Ambient light sensor; 0x23 with ADDR low; WSOF6I exposed center must NOT be soldered")
     symbol("TLV809EA29DBZ",[(3,"VDD","power_in",0,7.62,270),(1,"GND","power_in",0,-7.62,90),
            (2,"~{RESET}","output",12.7,0,180)],rect(-10.16,5.08,10.16,-5.08),
@@ -84,7 +84,7 @@ def setup_library():
         pins += [(2*i+1,str(2*i+1),"passive",-7.62,8.89-2.54*i,0),
                  (2*i+2,str(2*i+2),"passive",7.62,8.89-2.54*i,180)]
     symbol("IDC_2x08",pins,rect(-5.08,11.43,5.08,-11.43),"J",
-           "Connector_IDC:IDC-Header_2x08_P2.54mm_Vertical","${KIPRJMOD}/../../datasheets/idc-header.pdf",
+           "Numitron:Wurth_61201621621_2x08_P2.54mm","${KIPRJMOD}/../../datasheets/idc-header.pdf",
            "Wurth 61201621621; 2.54 mm PCB pin grid for 1.27 mm pitch ribbon")
     pins=[(2,"VCC","power_in",0,25.4,270),(3,"SER_IN","input",-17.78,17.78,0),
           (13,"SRCK","input",-17.78,10.16,0),(12,"RCK","input",-17.78,5.08,0),
@@ -210,7 +210,7 @@ def build_control(child_id):
     s.text("STARTUP CONTRACT",17.78,224.79,1.524)
     s.text("1. ARM low; configure SER/SRCK/RCK low and BLANK high.\n2. ARM high; clock 32 zero bits, pulse RCK with SRCK low.\n3. Load the desired frame; only then enable BLANK PWM.\n4. BLANK low = lit. A logic one in a drain bit lights a filament.\nStart with 100 kHz SPI mode 0; verify signals before raising speed.",17.78,232.41)
     s.text("AMBIENT LIGHT / 3.3 V I2C",228.6,135.89,1.524)
-    sensor=s.add("BH1750FVI","U3",350.52,177.8,"BH1750FVI-TR",fields={"MPN":"BH1750FVI-TR","Manufacturer":"ROHM","FootprintStatus":"HOLD: verify WSOF6I land pattern; no center-pad solder"})
+    sensor=s.add("BH1750FVI","U3",350.52,177.8,"BH1750FVI-TR",fields={"MPN":"BH1750FVI-TR","Manufacturer":"ROHM","FootprintStatus":"ROHM 0.25 x 0.55 mm six-land pattern; no center pad; top copper keepout"})
     s.rail(sensor["1"],"+3V3"); s.rail(sensor["3"],"GND","down")
     s.stub(sensor["6"],"SCL","right",7.62,True); s.stub(sensor["4"],"SDA","right",7.62,True)
     sup=s.add("TLV809EA29DBZ","U4",261.62,172.72,"TLV809EA29DBZR",fields={"MPN":"TLV809EA29DBZR","Manufacturer":"Texas Instruments"})
@@ -304,7 +304,7 @@ def main():
             root.rail(f["1"],net,"down")
     root.text("Bottom board supplies regulated 3.3 V and protected 5 V.\nBudget up to 0.77 A nominal filament load plus logic.\nVerify cold-filament surge, USB current authorization,\nribbon loss, LDO dropout and enclosure temperature.\nNo battery, charging, USB-C or telemetry circuitry here.",17.78,171.45)
     root.text("MECHANICAL / FOOTPRINT STATUS",266.7,145.415,1.524)
-    root.text("Target: 110 x 30 mm, 2 layers; [HH] gap [MM].\nBoard separation: 25-30 mm.\nGZC9-A footprint assigned provisionally:\n18 mm PCD; assume 0.5 mm terminal thickness;\n2.5 mm plated holes. Fit check before ordering.\nBH1750 land pattern still to be assigned.\nRadio choice is independent of this top board.",266.7,153.035)
+    root.text("Working layout: 110 x 40 mm, 2 layers; [HH] gap [MM].\nBoard separation: 25-30 mm.\nGZC9-A footprint assigned provisionally:\n18 mm PCD; assume 0.5 mm terminal thickness;\n2.5 mm plated holes. Fit check before ordering.\nBH1750: six lands, no soldered center metal.\nRadio choice is independent of this top board.",266.7,153.035)
     control_id=root.child("ControlAndSensor","Logic / ambient light",35.56,223.52,2)
     driver_id=root.child("TubeDrivers","Four tube drivers",165.1,223.52,3)
     root.text("Global nets join the sheets.\nSER_5V -> U5 -> U6 -> U7 -> U8.\nBLANK_5V high = all filaments off.",266.7,223.52)
@@ -314,7 +314,8 @@ def main():
     symbols="\n".join(f'(symbol {q(name)} {d["body"]})' for name,d in LIB.items())
     (OUT/"libraries/Numitron.kicad_sym").write_text(f'(kicad_symbol_lib (version 20231120) (generator "kicad_symbol_editor")\n{symbols}\n)\n')
     (OUT/"sym-lib-table").write_text('(sym_lib_table (version 7)\n (lib (name "Numitron") (type "KiCad") (uri "${KIPRJMOD}/libraries/Numitron.kicad_sym") (options "") (descr "Project-local, datasheet-checked symbols"))\n)\n')
-    (OUT/"NumitronTop.kicad_pro").write_text(json.dumps({"meta":{"filename":"NumitronTop.kicad_pro","version":1},"net_settings":{"classes":[{"name":"Default","clearance":0.2,"track_width":0.25,"via_diameter":0.6,"via_drill":0.3}],"meta":{"version":3}},"erc":{"erc_exclusions":[],"meta":{"version":0}},"text_variables":{"DESIGN_STATUS":"SCHEMATIC REVIEW - NOT FOR FABRICATION"}},indent=2)+"\n")
+    if not (OUT/"NumitronTop.kicad_pro").exists():
+        (OUT/"NumitronTop.kicad_pro").write_text(json.dumps({"meta":{"filename":"NumitronTop.kicad_pro","version":1},"net_settings":{"classes":[{"name":"Default","clearance":0.2,"track_width":0.25,"via_diameter":0.6,"via_drill":0.3}],"meta":{"version":3}},"erc":{"erc_exclusions":[],"meta":{"version":0}},"text_variables":{"DESIGN_STATUS":"LAYOUT REVIEW - NOT FOR FABRICATION"}},indent=2)+"\n")
     (ROOT/"review/components.json").write_text(json.dumps([c for s in (root,control,drivers) for c in s.components if not c["ref"].startswith("#")],indent=2)+"\n")
     print("Wrote three schematic sheets and the project-local symbol library.")
 

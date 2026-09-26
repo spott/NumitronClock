@@ -20,7 +20,7 @@
 | [idc-header.pdf](idc-header.pdf) | Wurth 61201621621; J1 | 8 | [Source](https://www.we-online.com/components/products/datasheet/61201621621.pdf) |
 | [idc-socket.pdf](idc-socket.pdf) | Wurth 61201623021; cable sockets with strain relief | 6 | [Source](https://www.we-online.com/components/products/datasheet/61201623021.pdf) |
 | [mmbt3904.pdf](mmbt3904.pdf) | Diodes MMBT3904; Q1 | 7 | [Source](https://www.diodes.com/datasheet/download/MMBT3904.pdf) |
-| [rohm-wsof6-package.pdf](rohm-wsof6-package.pdf) | ROHM WSOF6 mounting reference; WSOF6I correspondence remains to be checked for U3 | 11 | [Source](https://fscdn.rohm.com/en/techdata_basic/ic/package/Jisso_WSOF6-1-2_Rev005s_TR%28MSL3%29.pdf) |
+| [rohm-wsof6-package.pdf](rohm-wsof6-package.pdf) | ROHM WSOF6 mounting reference; adapted for U3 WSOF6I as documented in docs/placement.md | 11 | [Source](https://fscdn.rohm.com/en/techdata_basic/ic/package/Jisso_WSOF6-1-2_Rev005s_TR%28MSL3%29.pdf) |
 | [rp2350-datasheet.pdf](rp2350-datasheet.pdf) | Raspberry Pi RP2350; bottom-board interface reference, including A2 erratum E9 | 1380 | [Source](https://datasheets.raspberrypi.com/rp2350/rp2350-datasheet.pdf) |
 | [sn74ahct125.pdf](sn74ahct125.pdf) | TI SN74AHCT125; U2 | 41 | [Source](https://www.ti.com/lit/ds/symlink/sn74ahct125.pdf) |
 | [tlv809e.pdf](tlv809e.pdf) | TI TLV809E family; U4 | 52 | [Source](https://www.ti.com/lit/ds/symlink/tlv809e.pdf) |

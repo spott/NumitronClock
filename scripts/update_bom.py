@@ -19,7 +19,7 @@ def sortref(ref):
     m=re.fullmatch(r"([A-Z]+)(\d+)",ref)
     return m[1],int(m[2])
 lines=["# Preliminary top-board BOM","",
-       "Revision 0.1. Generated from the exported native KiCad netlist by `scripts/update_bom.py`. Quantities are for one top board. This is a review BOM, not an order or an assembly release.","",
+       "Revision 0.2. Generated from the exported native KiCad netlist by `scripts/update_bom.py`. Quantities are for one top board. This is a review BOM, not an order or an assembly release.","",
        "| References | Qty | Value / function | Manufacturer part number | Footprint | Assembly | Datasheet |",
        "|---|---:|---|---|---|---|---|"]
 for (value,mpn,fp,dnp,ds),refs in sorted(groups.items(),key=lambda item:sortref(sorted(item[1],key=sortref)[0])):
@@ -34,13 +34,13 @@ lines += ["","## Mechanical and cable items","",
           "| Cable female connectors | 2 | Wurth 61201623021, [datasheet](../datasheets/idc-socket.pdf). One at each cable end. |",
           "| Strain-relief caps | 2 | Included in the selected Wurth socket's with-strain-relief specification; confirm supplied pieces and assembled clearance. |",
           "| Ribbon cable | ~150 mm initially | 3M 3365/16, 28 AWG, 1.27 mm pitch, [datasheet](../datasheets/3m-3365-ribbon.pdf). Final length follows the debugging/enclosure clearance check. |",
-          "| Board spacers / screws | TBD | Target 25-30 mm separation. Mounting-hole count and positions await mechanical fit. |","",
+          "| Board spacers / screws | TBD | Four M2.5 positions with 2.7 mm nonplated holes at (3,3), (107,3), (3,37), (107,37) mm. Target 25-30 mm board separation; confirm actual screw/spacer and cable clearance. |","",
           "TP1-TP5 are bare PCB test pads; they require no purchased components. The bottom-board mate of J1 is outside this top-board BOM.","",
           "## Assembly notes","",
           "- R20/R21 are omitted when the bottom board supplies the I2C pull-ups. All selected resistors are Yageo RC0603, 1%, 0.1 W; individual part specifications are archived.",
           "- Capacitor footprint sizes, voltage ratings and dielectric are specified, but exact order codes remain pending. Select from the archived KYOCERA AVX X7R family, and verify effective capacitance at bias before freezing the BOM. C2+C3 must retain at least 2.2 uF total.",
           "- V1-V4 use Numitron:GZC9-A_B9A_Provisional: assumed 0.5 mm terminal thickness, 18 mm pad circle, 2.5 mm plated holes and 3.8 mm copper pads. The owner authorized using these estimates for layout; verify fit before ordering.",
-          "- U3's WSOF6I land pattern remains to be assigned, with no soldered center pad.",
+          "- U3 uses the custom six-land WSOF6I footprint with no soldered centre pad and a front copper keepout; see layout notes for the older package drawing correspondence. U1 and J1 use manufacturer-specific local footprints.",
           "- U1's C507885 identifier comes from the Obsidian plan. Stock, price, assembly-house availability and substitutions have not been qualified.",
           "- Use normal-pinout TLV809EA29DBZR, not an R/V pinout variant. Use AHCT logic, not HC. The four TPIC parts use the wide SOIC-20 package.",""]
 (root/"docs/bom.md").write_text("\n".join(lines))

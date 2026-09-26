@@ -34,7 +34,7 @@ The TPIC6B595 is a **voltage-switched sink, not a constant-current driver**. The
 
 The [ROHM BH1750FVI datasheet](../datasheets/bh1750fvi.pdf), pp. 6-9 and 13, requires DVI low after VCC becomes valid. A simple RC alone has supply-ramp and rapid-restart conditions. U4, **TLV809EA29DBZR**, instead provides a defined reset from the 3.3 V rail. Its normal DBZ pinout is 1 GND, 2 RESET_N, 3 VDD; the R/V alternate pinout variants are not substitutes. R18=1k and C6=100n add a small release filter. [TI supervisor datasheet](../datasheets/tlv809e.pdf), pp. 4-5 and 9.
 
-The sensor is on 3.3 V with local bypassing and address 0x23. R19=10k holds ADDR low, allowing for the specified input leakage. Its **exposed central metal is not to be soldered or electrically connected** (ROHM p. 16). Do not choose an ordinary exposed-pad six-pin footprint by package size alone. Obtain/verify the WSOF6I recommended lands before assigning its footprint. Place the optical aperture on the tube side with a view of room light and away from direct filament illumination; reserve space for a small shield if required.
+The sensor is on 3.3 V with local bypassing and address 0x23. R19=10k holds ADDR low, allowing for the specified input leakage. Its **exposed central metal is not to be soldered or electrically connected** (ROHM p. 16). Do not choose an ordinary exposed-pad six-pin footprint by package size alone. The custom six-land footprint uses the ROHM mounting reference with the older WSOF6I drawing; see [layout notes](placement.md) for the small pin-1 geometry difference and assembly verification. A front copper/track/via/pad keepout reserves the centre. Place the optical aperture on the tube side with a view of room light and away from direct filament illumination; reserve space for a small shield if required.
 
 ## Tube identity and socket
 
@@ -44,4 +44,4 @@ Socket order link: [Amazon listing B0BGBJ7L41](https://www.amazon.com/dp/B0BGBJ7
 
 WWVB versus GPS is a bottom-board decision and is independent of this top-board layout. The owner explicitly clarified this scope on 2026-09-25; the older Obsidian requirement to select a time source before any layout does not gate the top board.
 
-The stock KiCad footprints assigned to the other parts exist in KiCad 10.0.5. That availability check is not a production land-pattern audit. In particular, compare the header's 1.1 mm recommended drill, SOT89 tab geometry and connector height against the chosen parts before layout release.
+U1 and J1 now use project-local lands checked against the archived Diodes and Wurth recommended patterns, including the stepped regulator ground tab and 1.1 mm header drills. The PCB is a complete 110 × 40 mm working layout; [layout notes](placement.md) record placement, copper and the remaining physical checks. Stock semiconductor/passive footprints still require normal assembly qualification against the ordered parts.
