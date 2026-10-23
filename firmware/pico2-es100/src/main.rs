@@ -174,7 +174,9 @@ fn log_error(error: &AttemptError) {
 async fn main(spawner: Spawner) {
     let p = embassy_rp::init(Default::default());
     let mut en = Output::new(p.PIN_2, Level::Low);
-    let mut irq = Input::new(p.PIN_3, Pull::None); // External pull-up, including in shutdown.
+    // IRQ floats while EN is low (shutdown). The internal pull-up (~50 kΩ) holds it
+    // inactive-high; an external pull-up is optional.
+    let mut irq = Input::new(p.PIN_3, Pull::Up);
     let mut led = Output::new(p.PIN_25, Level::Low);
     let mut config = i2c::Config::default();
     config.frequency = 100_000;

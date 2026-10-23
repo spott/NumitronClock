@@ -70,8 +70,10 @@ module and carrier connector numbering can differ.
 
 Supply **3.3 V**; do not connect ES100 VDD to VBUS/5 V. Use external SDA and SCL
 pull-ups (about 4.7 kΩ to 3V3) if the carrier does not already provide them. The
-firmware disables the internal I²C pull-ups. Fit an external IRQ pull-up (about
-10 kΩ to 3V3) unless already present: ES100 digital pins float in shutdown.
+firmware disables the internal I²C pull-ups. IRQ needs no external resistor: ES100
+digital pins float in shutdown, and the firmware enables the RP2350's internal
+pull-up (about 50 kΩ) on GP3 to hold IRQ inactive-high. An external 10 kΩ to 3V3
+is optional and harmless.
 Check for fitted resistors with the circuit unpowered before adding more.
 No IRQ pull-down is used, including on RP2350 A2 silicon affected by E9.
 
