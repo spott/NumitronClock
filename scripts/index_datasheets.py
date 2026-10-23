@@ -8,6 +8,7 @@ from pypdf import PdfReader
 root=Path(__file__).resolve().parents[1]
 directory=root/"datasheets"
 sources={
+    "es100.pdf": ("Everset ES100 v0.97; WWVB test driver register and timing reference", "https://everset.tech/wp-content/uploads/2014/11/ES100DataSheetver0p97.pdf"),
     "AP7361C.pdf": ("Diodes AP7361C; U1", "https://www.diodes.com/assets/Datasheets/AP7361C.pdf"),
     "tpic6b595.pdf": ("TI TPIC6B595; U5-U8", "https://www.ti.com/lit/ds/symlink/tpic6b595.pdf"),
     "sn74ahct125.pdf": ("TI SN74AHCT125; U2", "https://www.ti.com/lit/ds/symlink/sn74ahct125.pdf"),
@@ -37,7 +38,7 @@ image_sources={
 }
 assert {p.name for p in directory.iterdir() if p.suffix.lower() in {".pdf",".jpg"}}==set(sources)|set(image_sources), "Document/source manifest mismatch"
 records=[]
-retrieved_dates={"rohm-wsof6-package.pdf":"2026-09-26"}
+retrieved_dates={"rohm-wsof6-package.pdf":"2026-09-26", "es100.pdf":"2026-10-23"}
 for filename,(description,url) in sorted(sources.items()):
     path=directory/filename
     data=path.read_bytes()

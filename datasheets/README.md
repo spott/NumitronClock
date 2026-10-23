@@ -1,6 +1,6 @@
 # Archived component datasheets
 
-20 original PDF documents and 1 owner-provided JPEG drawing. The original files are committed with the design. Copyright and ownership remain with their respective publishers. Source URLs, individual receipt dates and SHA-256 hashes are in [sources.json](sources.json); [SHA256SUMS](SHA256SUMS) provides a compact integrity list.
+21 original PDF documents and 1 owner-provided JPEG drawing. The original files are committed with the design. Copyright and ownership remain with their respective publishers. Source URLs, individual receipt dates and SHA-256 hashes are in [sources.json](sources.json); [SHA256SUMS](SHA256SUMS) provides a compact integrity list.
 
 | Local document | Applies to | Pages / format | Source or associated listing |
 |---|---|---:|---|
@@ -17,6 +17,7 @@
 | [avx-x7r.pdf](avx-x7r.pdf) | KYOCERA AVX KGM X7R family; C1-C15 selection reference | 4 | [Source](https://datasheets.kyocera-avx.com/KGM_X7R.pdf) |
 | [bh1750fvi.pdf](bh1750fvi.pdf) | ROHM BH1750FVI; U3 (manufacturer PDF hosted by DigiKey) | 20 | [Source](https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/6165/bh1750fvi-e.pdf) |
 | [dr2000.pdf](dr2000.pdf) | RCA Numitron family; V1-V4 (original RCA document hosted by The Valve Museum) | 12 | [Source](https://www.r-type.org/pdfs/dr2000.pdf) |
+| [es100.pdf](es100.pdf) | Everset ES100 v0.97; WWVB test driver register and timing reference | 26 | [Source](https://everset.tech/wp-content/uploads/2014/11/ES100DataSheetver0p97.pdf) |
 | [idc-header.pdf](idc-header.pdf) | Wurth 61201621621; J1 | 8 | [Source](https://www.we-online.com/components/products/datasheet/61201621621.pdf) |
 | [idc-socket.pdf](idc-socket.pdf) | Wurth 61201623021; cable sockets with strain relief | 6 | [Source](https://www.we-online.com/components/products/datasheet/61201623021.pdf) |
 | [mmbt3904.pdf](mmbt3904.pdf) | Diodes MMBT3904; Q1 | 7 | [Source](https://www.diodes.com/datasheet/download/MMBT3904.pdf) |

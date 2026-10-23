@@ -119,6 +119,15 @@
     "sha256": "82354a22d8bff3141d7e1c71b8af795e54246680e00b2589e289ea376dedcc53"
   },
   {
+    "file": "es100.pdf",
+    "description": "Everset ES100 v0.97; WWVB test driver register and timing reference",
+    "source_url": "https://everset.tech/wp-content/uploads/2014/11/ES100DataSheetver0p97.pdf",
+    "retrieved": "2026-10-23",
+    "pages": 26,
+    "bytes": 473974,
+    "sha256": "192c03f9607fef7690c14a54437cbfb4fec5e55c6eb5e2abef3fcbbb6bb4b0b1"
+  },
+  {
     "file": "idc-header.pdf",
     "description": "Wurth 61201621621; J1",
     "source_url": "https://www.we-online.com/components/products/datasheet/61201621621.pdf",

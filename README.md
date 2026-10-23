@@ -27,6 +27,22 @@ The owner confirms the actual tubes are **marked DR2000 and have prefix decimal 
 
 ## Development
 
+### ES100 time-source test firmware
+
+The reusable async ES100 driver and Pico 2 breadboard program live in
+[`firmware/`](firmware/README.md). Build and check them with the pinned firmware
+toolchain (Rust/Cargo, Pico 2 target, flip-link and picotool are supplied by Nix):
+
+```sh
+nix develop .#firmware --command bash scripts/check_firmware.sh
+```
+
+The generated UF2 is `firmware/target/pico2-es100.uf2`. See the firmware guide for
+wiring, BOOTSEL flashing, USB logs and the hardware test handoff. Physical
+reception has not been validated; this does not decide WWVB versus GPS.
+
+### Hardware tooling
+
 Use the pinned Nix flake; no global package installation is required. KiCad is supplied by the existing local application installation on macOS. The flake pins the supporting Python, Poppler, SVG-rendering and local Freerouting tools, not that external KiCad application.
 
 ```sh
@@ -44,4 +60,4 @@ The review command runs KiCad ERC, audits the saved schematic's netlist and prov
 
 `build_placement.py --write` is a one-time placement capture using KiCad's bundled Python; it refuses to discard routing without an explicit override. `placement.json` is the initial coordinate record, while the saved native board is authoritative. The power routing, local-router exchange and ground-fill helpers likewise require care around later CAD edits; do not run capture scripts just to review the design.
 
-The repository covers the future whole clock, but this revision contains only the top board. The bottom board will supply protected 5 V, regulated 3.3 V, the control interface and I2C pull-ups. Its MCU, USB-C input, RTC, time receiver, user controls and power telemetry are outside this milestone.
+The repository covers the future whole clock. Its hardware design currently contains only the top board; the Pico 2 firmware is a separate time-receiver experiment. The bottom board will supply protected 5 V, regulated 3.3 V, the control interface and I2C pull-ups. Its schematic and layout remain future work.

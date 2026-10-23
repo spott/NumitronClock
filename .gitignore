@@ -11,3 +11,4 @@ result-*
 tmp/
 __pycache__/
 *.pyc
+firmware/target/

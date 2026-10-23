@@ -1,0 +1,15 @@
+[workspace]
+members = ["es100", "pico2-es100"]
+default-members = ["es100"]
+resolver = "2"
+
+[workspace.package]
+edition = "2024"
+rust-version = "1.99"
+
+[profile.release]
+debug = 2
+lto = true
+codegen-units = 1
+opt-level = "s"
+panic = "abort"

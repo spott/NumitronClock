@@ -1,0 +1,6 @@
+[target.thumbv8m.main-none-eabihf]
+linker = "flip-link"
+rustflags = ["-C", "link-arg=--nmagic", "-C", "link-arg=-Tlink.x"]
+
+[alias]
+build-pico2 = "build --release -p pico2-es100 --target thumbv8m.main-none-eabihf"

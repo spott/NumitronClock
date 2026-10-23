@@ -1,0 +1,12 @@
+[package]
+name = "es100"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+description = "Async no_std Everset ES100 full-frame WWVB receiver driver"
+
+[dependencies]
+embedded-hal-async = "1.0.0"
+
+[dev-dependencies]
+futures = { version = "0.3.31", default-features = false, features = ["executor"] }

@@ -1,15 +1,23 @@
 {
-  description = "Numitron clock hardware design and verification tools";
+  description = "Numitron clock hardware and embedded Rust tools";
 
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+  inputs.rust-overlay.url = "github:oxalica/rust-overlay";
+  inputs.rust-overlay.inputs.nixpkgs.follows = "nixpkgs";
 
-  outputs = { self, nixpkgs }:
+  outputs = { self, nixpkgs, rust-overlay }:
     let
-      systems = [ "aarch64-darwin" "x86_64-darwin" "aarch64-linux" "x86_64-linux" ];
+      # The existing Nixpkgs pin has dropped x86_64-darwin support.
+      systems = [ "aarch64-darwin" "aarch64-linux" "x86_64-linux" ];
       forAllSystems = nixpkgs.lib.genAttrs systems;
     in {
       devShells = forAllSystems (system:
-        let pkgs = import nixpkgs { inherit system; };
+        let
+          pkgs = import nixpkgs {
+            inherit system;
+            overlays = [ rust-overlay.overlays.default ];
+          };
+          rustToolchain = pkgs.rust-bin.fromRustupToolchainFile ./firmware/rust-toolchain.toml;
         in {
           default = pkgs.mkShellNoCC {
             packages = [
@@ -25,6 +33,10 @@
                 export PATH="/Applications/KiCad/KiCad.app/Contents/MacOS:$PATH"
               fi
             '';
+          };
+          firmware = pkgs.mkShell {
+            packages = [ rustToolchain pkgs.flip-link pkgs.picotool pkgs.picocom pkgs.python3 pkgs.git ];
+            FLIP_LINK_LD = "${rustToolchain}/lib/rustlib/${pkgs.stdenv.hostPlatform.rust.rustcTarget}/bin/rust-lld";
           };
         });
     };
