@@ -34,8 +34,9 @@ the hardware design tools.
 
 The flake exposes Apple Silicon macOS and x86-64/AArch64 Linux shells. The
 repository's existing Nixpkgs pin has dropped Intel macOS support; it cannot
-provide this development shell on an Intel Mac. Compilation here is verified
-on x86-64 Linux; the other two shells are evaluated, not hardware-tested.
+provide this development shell on an Intel Mac. Compilation and
+`scripts/check_firmware.sh` are verified on x86-64 Linux and Apple Silicon macOS;
+AArch64 Linux is evaluated only. None of this is hardware-tested.
 
 For interactive work:
 
@@ -97,27 +98,49 @@ USB device; the cloud build environment cannot perform the reception experiment.
 
 The program waits three seconds for USB enumeration, starts a full-frame receive
 and records monotonic microseconds immediately after the GPIO falling-edge wait.
-It reads IRQ Status **once** per edge, continues after an unsuccessful cycle,
-and reports UTC, elapsed time, cycle count, raw registers, antenna, DST, leap
-second and next-DST information after a lock. The received second belongs to
+It then waits `IRQ_STATUS_DELAY` (10 ms) before reading IRQ Status: a 2018
+time-nuts report says a read right at the edge returns stale zeros. A nonzero
+status acknowledges the interrupt and is read once. A zero while IRQ is still
+low means nothing was acknowledged, so it waits and reads again, up to 10 reads.
+The `status_reads=` field in each `irq` line shows how many were needed; if it
+is regularly above 1, raise the delay. After an unsuccessful cycle, IRQ must
+return high within 100 ms, or the attempt fails as `IrqStuckLow`.
+
+After a lock it reports UTC, elapsed time, cycle count, raw registers, antenna,
+DST, leap second and next-DST information. The received second belongs to
 that IRQ boundary; the code does not add a minute. `edge_us` is a **software
 observation** with interrupt/executor latency, not a hardware capture or calibrated
 PPS. The receiver itself specifies up to ±100 ms IRQ delay (datasheet p6).
 
+Register reads are an address write followed by a separate read transaction,
+never a combined repeated-start read, which the same report says the ES100
+rejects. The driver tests fail if a combined read is ever issued.
+
 There is one 20-minute reception deadline across all cycles, plus a bounded
-three-second allowance per I²C operation. Every completed attempt lowers EN,
-then waits 30 seconds before restarting. Shutdown uses EN directly so a stuck
-bus cannot prevent it. A wrong device ID, bus fault, invalid frame or unexpected
-IRQ shuts the radio down and keeps logging a diagnostic until the Pico is reset.
+three-second allowance per I²C operation. Every attempt lowers EN, then waits
+30 seconds before restarting. Shutdown uses EN directly so a stuck bus cannot
+prevent it. A wrong device ID, I²C error, invalid frame, stuck or unexpected IRQ
+counts as an error: the radio shuts down, the attempt is logged with
+`result=error consecutive_errors=n/5`, and it retries after the rest period.
+A lock or a reception timeout resets the count. The firmware stops and keeps
+logging a diagnostic until the Pico is reset in two cases:
+
+- five consecutive errors (persistent wiring or pull-up fault), or
+- an I²C operation that hangs past three seconds, because the cancelled
+  transfer may leave the I²C peripheral unusable.
+
 The onboard LED is lit during reception, dark between attempts, and briefly
-blinks every five seconds on such a fault. USB logging is nonblocking and bounded;
+blinks every five seconds once stopped. USB logging is nonblocking and bounded;
 when no terminal is reading, old/new log data may be lost as the buffer fills.
 Keep a terminal attached to collect complete runs.
 
 `NextDst::Scheduled.hour` preserves the ES100's 1–3 hour field. The datasheet
 inconsistently calls this local time (p14) and UTC (p22); this bench program does
-not apply a timezone interpretation. Special next-DST values are preserved
-without treating invalid month/day registers as dates.
+not apply a timezone interpretation. If a "scheduled" next-DST month, day or hour
+fails validation, the frame is still accepted: next DST is reported as
+`Unrecognized` with the raw values, so it can be compared against the real
+schedule. Special next-DST values are preserved without treating invalid
+month/day registers as dates.
 
 ## Bench handoff
 
@@ -129,8 +152,8 @@ time-to-lock into the Obsidian **ES100 Test Plan** results table. Tracking and a
 WWVB/GPS decision remain separate from this software delivery.
 
 The driver tests cover the datasheet's control bytes and status encodings,
-register/burst transactions, acknowledgement ownership, continued receive cycles,
-BCD/calendar validation, leap seconds, next-DST special conditions and I²C errors.
+separate address-write/read transactions (no combined reads), burst reads, acknowledgement ownership, continued receive cycles,
+BCD/calendar validation, leap seconds, next-DST special and unrecognized values and I²C errors.
 Hardware bring-up, physical IRQ timing, USB behavior, timeout/retry behavior on
 silicon and reception quality still need the Pico 2 and receiver.
 

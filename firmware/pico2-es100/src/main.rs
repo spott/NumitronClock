@@ -19,6 +19,17 @@ const RECEIVE_TIMEOUT: Duration = Duration::from_secs(20 * 60);
 const BUS_TIMEOUT: Duration = Duration::from_secs(3);
 const RETRY_DELAY: Duration = Duration::from_secs(30);
 const MODE: ReceiveMode = ReceiveMode::AutomaticStartingWithOne;
+/// Wait between the IRQ edge timestamp and the first IRQ Status read. A 2018
+/// time-nuts report says reading right at the edge returns stale zeros and "a
+/// small read delay is needed", without a figure. Tune on the bench.
+const IRQ_STATUS_DELAY: Duration = Duration::from_millis(10);
+/// If IRQ Status still reads 0 while IRQ is low, nothing was acknowledged:
+/// wait and read again, up to this many reads in total.
+const IRQ_STATUS_READS: u32 = 10;
+/// After an acknowledged cycle-complete, IRQ must return high within this.
+const IRQ_RELEASE_TIMEOUT: Duration = Duration::from_millis(100);
+/// Stop retrying after this many consecutive failed attempts (not timeouts).
+const MAX_CONSECUTIVE_ERRORS: u32 = 5;
 
 bind_interrupts!(struct Irqs {
     USBCTRL_IRQ => usb::InterruptHandler<USB>;
@@ -71,24 +82,20 @@ async fn receive(receiver: &mut Receiver, irq: &mut Input<'static>) -> Result<()
     );
     let mut cycles = 0u32;
     loop {
-        if irq.is_low() {
-            // There is no observed falling edge to timestamp. Reset this run
-            // rather than quietly labelling a late sample as an edge.
-            return Err(AttemptError::IrqStuckLow);
-        }
         with_deadline(deadline, irq.wait_for_falling_edge())
             .await
             .map_err(|_| AttemptError::ReceiveTimeout)?;
         let edge = Instant::now(); // Take before any bus transaction or logging.
-        let status = bus(receiver.irq_status()).await?; // ACK exactly once.
+        let (status, reads) = read_irq_status(receiver, irq).await?;
         cycles += 1;
         let elapsed_ms = (edge - started).as_millis();
         log::info!(
-            "irq edge_us={} elapsed_ms={} cycle={} irq_status=0x{:02x}",
+            "irq edge_us={} elapsed_ms={} cycle={} irq_status=0x{:02x} status_reads={}",
             edge.as_micros(),
             elapsed_ms,
             cycles,
-            status.0
+            status.0,
+            reads
         );
         // Prefer a successful result if both flags happen to be present.
         if status.receive_complete() {
@@ -98,11 +105,34 @@ async fn receive(receiver: &mut Receiver, irq: &mut Input<'static>) -> Result<()
         }
         if status.cycle_complete() {
             log::info!("cycle_complete: unsuccessful; ES100 continues receiving");
+            // The read acknowledged IRQ, so it should already be high again.
+            // If it is not, the next falling edge could never be observed.
+            with_timeout(IRQ_RELEASE_TIMEOUT, irq.wait_for_high())
+                .await
+                .map_err(|_| AttemptError::IrqStuckLow)?;
             // Do not issue another START: it clears the previous result and
             // defeats the ES100's automatic alternating-antenna receive cycle.
             continue;
         }
         return Err(AttemptError::UnexpectedIrq(status.0));
+    }
+}
+
+/// The single owner of IRQ Status reads. A nonzero value acknowledges IRQ, so
+/// it is read once. A zero while IRQ is still low is the stale value seen when
+/// reading too early; nothing was acknowledged, so wait and read again.
+async fn read_irq_status(
+    receiver: &mut Receiver,
+    irq: &mut Input<'static>,
+) -> Result<(es100::IrqStatus, u32), AttemptError> {
+    let mut reads = 0;
+    loop {
+        Timer::after(IRQ_STATUS_DELAY).await;
+        let status = bus(receiver.irq_status()).await?;
+        reads += 1;
+        if status.0 != 0 || irq.is_high() || reads >= IRQ_STATUS_READS {
+            return Ok((status, reads));
+        }
     }
 }
 
@@ -156,9 +186,14 @@ async fn main(spawner: Spawner) {
     spawner.spawn(usb_logger(usb)).unwrap();
     Timer::after_secs(3).await; // Allow enumeration; receive does not require a terminal.
     log::info!("ES100 Pico 2 test firmware {}", env!("CARGO_PKG_VERSION"));
-    log::info!("EN=GP2 IRQ=GP3 SDA=GP4 SCL=GP5; deadline=1200s retry=30s");
+    log::info!(
+        "EN=GP2 IRQ=GP3 SDA=GP4 SCL=GP5; deadline=1200s retry=30s irq_status_delay_ms={} max_consecutive_errors={}",
+        IRQ_STATUS_DELAY.as_millis(),
+        MAX_CONSECUTIVE_ERRORS
+    );
     log::info!("edge_us is a software observation after GPIO wake, not a hardware capture");
     let mut attempt = 0u32;
+    let mut consecutive_errors = 0u32;
     loop {
         attempt += 1;
         log::info!(
@@ -175,22 +210,44 @@ async fn main(spawner: Spawner) {
         // already clears START; a timeout is terminated by this falling EN.
         en.set_low();
         led.set_low();
-        let mut fatal = false;
+        let mut fatal = None;
         match result {
-            Ok(()) => log::info!("attempt={} result=lock", attempt),
+            Ok(()) => {
+                consecutive_errors = 0;
+                log::info!("attempt={} result=lock", attempt);
+            }
             Err(AttemptError::ReceiveTimeout) => {
+                consecutive_errors = 0;
                 log::warn!("attempt={} result=timeout budget_s=1200", attempt);
             }
+            Err(AttemptError::BusTimeout) => {
+                log_error(&AttemptError::BusTimeout);
+                // Do not reuse an I2C peripheral after cancelling a stuck transfer.
+                fatal = Some("I2C transfer timed out; peripheral not reused");
+            }
             Err(ref error) => {
+                // Completed I2C errors (NACK etc.) leave the peripheral usable:
+                // shut down, rest and retry.
+                consecutive_errors += 1;
                 log_error(error);
-                fatal = true;
+                log::warn!(
+                    "attempt={} result=error consecutive_errors={}/{}",
+                    attempt,
+                    consecutive_errors,
+                    MAX_CONSECUTIVE_ERRORS
+                );
+                if consecutive_errors >= MAX_CONSECUTIVE_ERRORS {
+                    fatal = Some("too many consecutive errors");
+                }
             }
         }
-        if fatal {
-            // Do not reuse an I2C peripheral after cancelling a stuck transfer.
+        if let Some(reason) = fatal {
             // Keep USB diagnostics alive with the radio shut down until reset.
             loop {
-                log::error!("EN=low: check wiring/pull-ups and reset the Pico; see prior error");
+                log::error!(
+                    "stopped: {}. EN=low: check wiring/pull-ups and reset the Pico; see prior error",
+                    reason
+                );
                 led.set_high();
                 Timer::after_millis(100).await;
                 led.set_low();

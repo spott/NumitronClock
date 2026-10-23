@@ -15,7 +15,10 @@ impl embedded_hal_async::i2c::Error for BusError {
 
 enum Step {
     Write(Vec<u8>),
+    /// Expect an address write of this register, then a separate read.
     Read(u8, Vec<u8>),
+    /// Second half of `Read`, queued by the mock itself.
+    ReadData(Vec<u8>),
     Fail,
 }
 struct Bus(VecDeque<Step>);
@@ -31,8 +34,11 @@ impl I2c for Bus {
         assert_eq!(address, 0x32, "7-bit address, not shifted wire address");
         match (self.0.pop_front().expect("unexpected I2C access"), ops) {
             (Step::Write(expected), [Operation::Write(actual)]) => assert_eq!(*actual, expected),
-            (Step::Read(register, data), [Operation::Write(actual), Operation::Read(out)]) => {
+            (Step::Read(register, data), [Operation::Write(actual)]) => {
                 assert_eq!(*actual, [register]);
+                self.0.push_front(Step::ReadData(data));
+            }
+            (Step::ReadData(data), [Operation::Read(out)]) => {
                 assert_eq!(out.len(), data.len());
                 out.copy_from_slice(&data);
             }
@@ -173,9 +179,6 @@ fn rejects_malformed_bcd_and_calendar_ranges() {
         (5, 0x60),
         (5, 0x1a),
         (6, 0x61),
-        (7, 0x13),
-        (8, 0x32),
-        (9, 0x04),
     ] {
         let mut raw = FRAME;
         raw[index] = value;
@@ -212,6 +215,43 @@ fn next_dst_special_values_do_not_validate_invalid_date_registers() {
         raw[9] = nibble << 4;
         assert_eq!(decode::<BusError>(raw).unwrap().next_dst, expected);
     }
+}
+
+#[test]
+fn unrecognized_next_dst_keeps_the_received_time() {
+    // Month 13, day 32, hour 4 (the 1-3 range is uncertain: datasheet p14 vs p22).
+    for (index, value) in [(7, 0x13), (8, 0x32), (9, 0x04)] {
+        let mut raw = FRAME;
+        raw[index] = value;
+        let time = decode::<BusError>(raw).unwrap();
+        assert_eq!(time.utc.minute, 57);
+        assert_eq!(
+            time.next_dst,
+            NextDst::Unrecognized {
+                month: raw[7],
+                day: raw[8],
+                hour: raw[9] & 0x0f,
+            }
+        );
+    }
+}
+
+#[test]
+fn combined_write_read_is_never_used() {
+    // The mock panics on a [Write, Read] transaction; exercise every read.
+    block_on(async {
+        let mut driver = Es100::new(bus(vec![
+            Step::Read(0x0d, vec![0x10]),
+            Step::Read(2, vec![1]),
+            Step::Read(3, vec![0x01]),
+            Step::Read(3, FRAME.to_vec()),
+        ]));
+        driver.device_id().await.unwrap();
+        driver.irq_status().await.unwrap();
+        driver.status0().await.unwrap();
+        driver.read_time().await.unwrap();
+        done(driver);
+    });
 }
 
 #[test]

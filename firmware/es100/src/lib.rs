@@ -6,6 +6,11 @@
 //! [`Es100::irq_status`] exactly once: reading that register acknowledges IRQ.
 //! A cycle-complete IRQ is an unsuccessful attempt, not the end of reception.
 //! Lower EN on every exit to shut down, including after a bus error or timeout.
+//!
+//! Every register read is an address write followed by a *separate* read
+//! transaction, never a combined (repeated-start) `write_read`. A 2018
+//! time-nuts report says the ES100 does not accept the combined form and that
+//! the datasheet documents this; the read waveforms on p24 are figures only.
 
 use embedded_hal_async::i2c::I2c;
 
@@ -130,6 +135,15 @@ pub enum NextDst {
         day: u8,
         hour: u8,
     },
+    /// DSTSpecial says "scheduled", but month/day/hour failed validation.
+    /// Raw register values are kept. The datasheet contradicts itself on the
+    /// hour (UTC on p22, 1-3 am local on p14), so this does not invalidate
+    /// the received time.
+    Unrecognized {
+        month: u8,
+        day: u8,
+        hour: u8,
+    },
     OutsideSchedule,
     AlwaysOff,
     AlwaysOn,
@@ -195,10 +209,7 @@ impl<I: I2c> Es100<I> {
     /// another interrupt. ES100 auto-increments register addresses (p23).
     pub async fn read_time(&mut self) -> Result<ReceivedTime, Error<I::Error>> {
         let mut raw = [0; 10];
-        self.i2c
-            .write_read(ADDRESS, &[STATUS0], &mut raw)
-            .await
-            .map_err(Error::I2c)?;
+        self.read_registers(STATUS0, &mut raw).await?;
         decode(raw)
     }
 
@@ -213,11 +224,17 @@ impl<I: I2c> Es100<I> {
 
     async fn read_register(&mut self, register: u8) -> Result<u8, Error<I::Error>> {
         let mut value = [0];
+        self.read_registers(register, &mut value).await?;
+        Ok(value[0])
+    }
+
+    /// Address write, then a separate read: see the module documentation.
+    async fn read_registers(&mut self, first: u8, out: &mut [u8]) -> Result<(), Error<I::Error>> {
         self.i2c
-            .write_read(ADDRESS, &[register], &mut value)
+            .write(ADDRESS, &[first])
             .await
             .map_err(Error::I2c)?;
-        Ok(value[0])
+        self.i2c.read(ADDRESS, out).await.map_err(Error::I2c)
     }
 }
 
@@ -245,6 +262,17 @@ fn days_in_month(year: u16, month: u8) -> u8 {
     }
 }
 
+fn scheduled_dst(month: u8, day: u8, hour: u8) -> NextDst {
+    let parsed = (|| {
+        let month = bcd::<()>(0x0a, month, 1, 12).ok()?;
+        // Next transition may be in another year: allow Feb 29 here.
+        let day = bcd::<()>(0x0b, day, 1, days_in_month(2000, month)).ok()?;
+        let hour = bcd::<()>(0x0c, hour, 1, 3).ok()?;
+        Some(NextDst::Scheduled { month, day, hour })
+    })();
+    parsed.unwrap_or(NextDst::Unrecognized { month, day, hour })
+}
+
 fn decode<E>(raw: [u8; 10]) -> Result<ReceivedTime, Error<E>> {
     let status = Status0(raw[0]);
     if !status.rx_ok() {
@@ -266,13 +294,7 @@ fn decode<E>(raw: [u8; 10]) -> Result<ReceivedTime, Error<E>> {
     };
     let special = raw[9] >> 4;
     let next_dst = match special {
-        0..=7 => {
-            let month = bcd(0x0a, raw[7], 1, 12)?;
-            // Next transition may be in another year: allow Feb 29 here.
-            let day = bcd(0x0b, raw[8], 1, days_in_month(2000, month))?;
-            let hour = bcd(0x0c, raw[9] & 0x0f, 1, 3)?;
-            NextDst::Scheduled { month, day, hour }
-        }
+        0..=7 => scheduled_dst(raw[7], raw[8], raw[9] & 0x0f),
         8 => NextDst::OutsideSchedule,
         9 => NextDst::AlwaysOff,
         10 => NextDst::AlwaysOn,
