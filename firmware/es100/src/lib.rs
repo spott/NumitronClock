@@ -129,16 +129,17 @@ pub struct UtcDateTime {
 
 #[derive(Clone, Copy, Debug, Eq, PartialEq)]
 pub enum NextDst {
-    /// Hour is the receiver's 1..=3 field, without time-zone conversion.
+    /// Hour is **local** time (1..=3 am), not UTC, although datasheet p22
+    /// says UTC. Confirmed on hardware 2026-10-23 in Colorado: the ES100
+    /// reported 1 Nov, hour 2, and US DST ended Sunday 1 Nov 2026 at 2 am local
+    /// (UTC would have been 8).
     Scheduled {
         month: u8,
         day: u8,
         hour: u8,
     },
     /// DSTSpecial says "scheduled", but month/day/hour failed validation.
-    /// Raw register values are kept. The datasheet contradicts itself on the
-    /// hour (UTC on p22, 1-3 am local on p14), so this does not invalidate
-    /// the received time.
+    /// Raw register values are kept, and the received time is still valid.
     Unrecognized {
         month: u8,
         day: u8,

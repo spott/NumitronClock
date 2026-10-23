@@ -136,9 +136,10 @@ blinks every five seconds once stopped. USB logging is nonblocking and bounded;
 when no terminal is reading, old/new log data may be lost as the buffer fills.
 Keep a terminal attached to collect complete runs.
 
-`NextDst::Scheduled.hour` preserves the ES100's 1–3 hour field. The datasheet
-inconsistently calls this local time (p14) and UTC (p22); this bench program does
-not apply a timezone interpretation. If a "scheduled" next-DST month, day or hour
+`NextDst::Scheduled.hour` is **local** time. The datasheet calls it local
+(p14) and UTC (p22); hardware settled it on 2026-10-23, when every lock reported
+next DST as 1 Nov, hour 2, matching the end of US DST at 2 am local (UTC would
+be 8). If a "scheduled" next-DST month, day or hour
 fails validation, the frame is still accepted: next DST is reported as
 `Unrecognized` with the raw values, so it can be compared against the real
 schedule. Special next-DST values are preserved without treating invalid
